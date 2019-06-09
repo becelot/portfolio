@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import styled from "styled-components";
+import Header from "./components/Header";
 
 const Page = styled.div`
  display: block;
@@ -11,7 +12,7 @@ const Page = styled.div`
 const App: React.FC = () => {
   return (
       <Page>
-        Test
+        <Header />
       </Page>
   );
 };
