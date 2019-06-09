@@ -13,9 +13,33 @@ const Wrapper = styled.div`
   justify-content: flex-end;
 `;
 
+const Section = styled.div`
+    padding: 0 20px;
+    cursor: pointer;
+    font-size: 2.2rem;
+    height: 5rem;
+    color: white;
+    line-height: 5rem;
+    
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    
+    &:hover {
+      color: yellow;
+      background-color: forestgreen;
+    }
+    
+  @media only screen and (max-width: 640px){
+    display: none;
+  }
+`;
+
 const Header: React.FC = () => {
     return (
-        <Wrapper></Wrapper>
+        <Wrapper>
+            <Section>Projects</Section>
+            <Section>Skills</Section>
+            <Section>Others</Section>
+        </Wrapper>
     )
 };
 
