@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
 import {Divider, List, ListItem, SwipeableDrawer, withStyles} from "@material-ui/core";
-import {withTranslation} from "react-i18next";
+import {WithTranslation, withTranslation} from "react-i18next";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -103,25 +103,25 @@ const MenuEntry = withStyles({
     }
 })(ListItem);
 
-const Header: React.FC<{t: any}> = ({t}) => {
+const Header: React.FC<WithTranslation> = ({t}) => {
     const [open, setOpen] = useState(false);
 
     return (
         <Wrapper>
             <Section>{t('header.projects')}</Section>
-            <Section>Skills</Section>
-            <Section>Others</Section>
+            <Section>{t('header.skills')}</Section>
+            <Section>{t('header.about-me')}</Section>
             <BurgerSection onClick={() => setOpen(!open)}><FontAwesomeIcon icon={faBars}/></BurgerSection>
             <SwipeableDrawer anchor={'right'} onClose={() => setOpen(false)}
                              onOpen={() => setOpen(true)} open={open}>
                 <BurgerMenu>
                     <BurgerMenuClose onClick={() => setOpen(false)} />
                     <List component='nav'>
-                        <MenuEntry button>Projects</MenuEntry>
+                        <MenuEntry button>{t('header.projects')}</MenuEntry>
                         <Divider/>
-                        <MenuEntry button>Skills</MenuEntry>
+                        <MenuEntry button>{t('header.skills')}</MenuEntry>
                         <Divider/>
-                        <MenuEntry button>Others</MenuEntry>
+                        <MenuEntry button>{t('header.about-me')}</MenuEntry>
                     </List>
                 </BurgerMenu>
             </SwipeableDrawer>
@@ -129,4 +129,4 @@ const Header: React.FC<{t: any}> = ({t}) => {
     );
 };
 
-export default withTranslation()(Header as any);
+export default withTranslation()(Header);
