@@ -2,6 +2,8 @@ import {useEffect, useState} from "react";
 import styled from "styled-components";
 import  React from "react";
 
+const { Parallax } = require('react-parallax');
+
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
@@ -24,8 +26,10 @@ const LandingPage: React.FC = () => {
     }, [count]);
 
     return (
-        <Wrapper id={'home'}>
-        </Wrapper>
+        <Parallax bgImage={'bg/conifer-dawn-daylight.webp'} strength={700}>
+            <Wrapper id={'home'}>
+            </Wrapper>
+        </Parallax>
     );
 };
 
