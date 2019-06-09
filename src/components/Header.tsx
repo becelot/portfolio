@@ -1,5 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faBars} from "@fortawesome/free-solid-svg-icons";
+import {SwipeableDrawer} from "@material-ui/core";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -33,14 +36,30 @@ const Section = styled.div`
   }
 `;
 
+const BurgerSection = styled(Section)`
+  display: none;
+  color: white;
+  
+  @media only screen and (max-width: 640px){
+    display: unset;
+  }
+`;
+
 const Header: React.FC = () => {
+    const [open, setOpen] = useState(false);
+
     return (
         <Wrapper>
             <Section>Projects</Section>
             <Section>Skills</Section>
             <Section>Others</Section>
+            <BurgerSection onClick={() => setOpen(!open)}><FontAwesomeIcon icon={faBars}/></BurgerSection>
+            <SwipeableDrawer anchor={'right'} onClose={() => setOpen(false)}
+                             onOpen={() => setOpen(true)} open={open}>
+                Test
+            </SwipeableDrawer>
         </Wrapper>
-    )
+    );
 };
 
 export default Header;
