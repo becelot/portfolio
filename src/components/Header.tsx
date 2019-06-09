@@ -45,6 +45,54 @@ const BurgerSection = styled(Section)`
   }
 `;
 
+const BurgerMenu = styled.div`
+  width: 50vw;
+  height: 100vh;
+  background: background;
+  
+  display: flex;
+  flex-direction: column;
+`;
+
+const BurgerMenuClose = styled.div`
+    position: relative;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 2.2rem;
+    height: 5rem;
+    color: white;
+    line-height: 5rem;
+    cursor: pointer;
+    
+    width: 30px;
+    
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    
+    &:hover {
+      color: yellow;
+    }
+    
+    :before, :after {
+      content: "";
+      position: absolute;
+      
+      top: 23.5px;
+      height: 3px;
+      width: 20px;
+      background: red;
+      
+      transform-origin: 10px 1.5px;
+    }
+    
+    :before {
+      transform: rotateZ(45deg);
+    }
+    
+    :after {
+      transform: rotateZ(-45deg);
+    }
+`;
+
 const Header: React.FC = () => {
     const [open, setOpen] = useState(false);
 
@@ -56,7 +104,9 @@ const Header: React.FC = () => {
             <BurgerSection onClick={() => setOpen(!open)}><FontAwesomeIcon icon={faBars}/></BurgerSection>
             <SwipeableDrawer anchor={'right'} onClose={() => setOpen(false)}
                              onOpen={() => setOpen(true)} open={open}>
-                Test
+                <BurgerMenu>
+                    <BurgerMenuClose onClick={() => setOpen(false)} />
+                </BurgerMenu>
             </SwipeableDrawer>
         </Wrapper>
     );
