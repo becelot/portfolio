@@ -2,7 +2,17 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
-import {Divider, List, ListItem, SwipeableDrawer, withStyles} from "@material-ui/core";
+import {
+    Button,
+    Divider,
+    List,
+    ListItem,
+    MenuItem, Popover,
+    Select,
+    SvgIcon,
+    SwipeableDrawer,
+    withStyles
+} from "@material-ui/core";
 import {WithTranslation, withTranslation} from "react-i18next";
 
 const Wrapper = styled.div`
@@ -103,11 +113,52 @@ const MenuEntry = withStyles({
     }
 })(ListItem);
 
+const LanguageSelect = withStyles({
+    root: {
+        marginLeft: '1.8rem',
+        fontSize: '1.2rem',
+        color: 'white',
+    },
+    selectMenu: {
+        lineHeight: '1.8em',
+        paddingRight: '20px'
+    },
+    icon: {
+        color: 'white',
+        marginTop: '0.4rem'
+    }
+})(Select);
+
 const Header: React.FC<WithTranslation> = ({t}) => {
     const [open, setOpen] = useState(false);
 
     return (
         <Wrapper>
+            <LanguageSelect value='de' disableUnderline={true} MenuProps={{
+                PaperProps: {
+                    style: {
+                        backgroundColor: 'rgba(0,0,0,0.6)'}
+                },
+                MenuListProps: {
+                    style: {
+                        color: 'white',
+                        fontSize: '1.2em'
+                    }
+
+                }
+            }} >
+                <MenuItem button value={'de'}>
+                    <div style={{height: '1.8rem', display: 'flex'}}>
+                        <img src={'icons/de.svg'} style={{width: '2.4rem', marginRight: '0.5rem'}} />
+                        <div>DE</div>
+                    </div>
+
+                </MenuItem>
+                <MenuItem button value={'en'}>
+                    <img src={'icons/us.svg'} style={{width: '2.4rem', marginRight: '0.5rem'}} />EN
+                </MenuItem>
+            </LanguageSelect>
+            <div style={{flex: '1 1 0'}} />
             <Section>{t('header.projects')}</Section>
             <Section>{t('header.skills')}</Section>
             <Section>{t('header.about-me')}</Section>
