@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Header from "./components/Header";
 
 import './utils/translation';
+import LandingPage from "./components/LandingPage";
 
 const Page = styled.div`
  display: block;
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Suspense fallback={null}>
           <Page>
             <Header />
+            <LandingPage />
           </Page>
       </Suspense>
   );
