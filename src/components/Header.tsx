@@ -2,7 +2,8 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
-import {SwipeableDrawer} from "@material-ui/core";
+import {Divider, List, ListItem, SwipeableDrawer, withStyles} from "@material-ui/core";
+import {withTranslation} from "react-i18next";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -93,12 +94,21 @@ const BurgerMenuClose = styled.div`
     }
 `;
 
-const Header: React.FC = () => {
+const MenuEntry = withStyles({
+    root: {
+        textAlign: 'center',
+        height: '5rem',
+        color: 'white',
+        fontSize: '2.2rem'
+    }
+})(ListItem);
+
+const Header: React.FC<{t: any}> = ({t}) => {
     const [open, setOpen] = useState(false);
 
     return (
         <Wrapper>
-            <Section>Projects</Section>
+            <Section>{t('header.projects')}</Section>
             <Section>Skills</Section>
             <Section>Others</Section>
             <BurgerSection onClick={() => setOpen(!open)}><FontAwesomeIcon icon={faBars}/></BurgerSection>
@@ -106,10 +116,17 @@ const Header: React.FC = () => {
                              onOpen={() => setOpen(true)} open={open}>
                 <BurgerMenu>
                     <BurgerMenuClose onClick={() => setOpen(false)} />
+                    <List component='nav'>
+                        <MenuEntry button>Projects</MenuEntry>
+                        <Divider/>
+                        <MenuEntry button>Skills</MenuEntry>
+                        <Divider/>
+                        <MenuEntry button>Others</MenuEntry>
+                    </List>
                 </BurgerMenu>
             </SwipeableDrawer>
         </Wrapper>
     );
 };
 
-export default Header;
+export default withTranslation()(Header as any);
