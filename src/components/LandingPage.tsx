@@ -9,7 +9,7 @@ import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope, faNewspaper} from "@fortawesome/free-solid-svg-icons";
 import {SocialLink} from "./SocialLink";
 
-const { Parallax } = require('react-parallax');
+import { Parallax } from 'react-parallax';
 
 
 
