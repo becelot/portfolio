@@ -25,6 +25,7 @@ const Wrapper = styled.div`
   
   display: flex;
   justify-content: flex-end;
+  box-sizing: border-box;
 `;
 
 const Section = styled.div`
@@ -121,13 +122,18 @@ const LanguageSelect = withStyles({
     },
     selectMenu: {
         lineHeight: '1.8em',
-        paddingRight: '20px'
+        paddingRight: '24px'
     },
     icon: {
         color: 'white',
-        marginTop: '0.4rem'
     }
 })(Select);
+
+const LanguageItem = withStyles({
+    root: {
+        fontSize: '1.2rem'
+    }
+})(MenuItem);
 
 const LanguageSelectItem: React.FC<{lang: string}> = ({lang}) => {
     return (
@@ -147,9 +153,8 @@ const LanguageSelectTheme = {
     MenuListProps: {
         style: {
             color: 'white',
-            fontSize: '1.2em'
+            fontSize: '1.2rem'
         }
-
     }
 };
 
@@ -163,10 +168,10 @@ const Header: React.FC<WithTranslation> = ({t, i18n}) => {
     }
 
     return (
-        <Wrapper>
+        <Wrapper className={'mui-fixed'}>
             <LanguageSelect onChange={handleLanguageChange} value={i18n.language.substr(0, 2)} disableUnderline={true} MenuProps={LanguageSelectTheme} >
-                <MenuItem button value='de'><LanguageSelectItem lang={'de'}/></MenuItem>
-                <MenuItem button value='en'><LanguageSelectItem lang={'en'}/></MenuItem>
+                <LanguageItem button value='de'><LanguageSelectItem lang={'de'}/></LanguageItem>
+                <LanguageItem button value='en'><LanguageSelectItem lang={'en'}/></LanguageItem>
             </LanguageSelect>
             <div style={{flex: '1 1 0'}} />
             <Section>{t('header.projects')}</Section>
