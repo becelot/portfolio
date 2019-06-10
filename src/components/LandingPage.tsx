@@ -5,6 +5,10 @@ import  React from "react";
 import Typist from 'react-typist';
 import 'react-typist/dist/Typist.css';
 
+import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faEnvelope, faNewspaper} from "@fortawesome/free-solid-svg-icons";
+import {SocialLink} from "./SocialLink";
+
 const { Parallax } = require('react-parallax');
 
 
@@ -73,6 +77,18 @@ const EmptyDiv = styled.div`
   }
 `;
 
+const SocialLinks = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+`;
+
+const SocialLinkPadding = styled.div`
+  display: flex;
+  padding: 0 10px;
+  background: rgba(0,0,0,0.6);
+`;
+
 
 const LandingPage: React.FC = () => {
     const [count, setCount] = useState(0);
@@ -110,6 +126,14 @@ const LandingPage: React.FC = () => {
                         </TextSpinner>
                     </Content>
                 </ContentAlign>
+                <SocialLinks>
+                    <SocialLinkPadding>
+                        <SocialLink title={'Github'} icon={faGithub}/>
+                        <SocialLink title={'LinkedIn'} icon={faLinkedin}/>
+                        <SocialLink title={'Mail'} icon={faEnvelope}/>
+                        <SocialLink title={'Resume'} icon={faNewspaper}/>
+                    </SocialLinkPadding>
+                </SocialLinks>
             </Wrapper>
         </Parallax>
     );
