@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 type SocialProps = {
     title: string;
+    link?: string;
     icon: IconProp;
 }
 
@@ -24,6 +25,7 @@ const Wrapper = styled.a`
   border-right: 6.7px solid transparent;
   
   transition: transform 0.15s ease-in-out;
+  text-decoration: none;
   
   svg {
     font-size: 4rem;
@@ -48,7 +50,7 @@ const Wrapper = styled.a`
 export class SocialLink extends React.Component<SocialProps> {
     public render() {
         return (
-            <Wrapper>
+            <Wrapper href={this.props.link} target={'_blank'}>
                 <FontAwesomeIcon icon={this.props.icon}/>
         {this.props.title}
         </Wrapper>

@@ -128,7 +128,7 @@ const LandingPage: React.FC = () => {
                 </ContentAlign>
                 <SocialLinks>
                     <SocialLinkPadding>
-                        <SocialLink title={'Github'} icon={faGithub}/>
+                        <SocialLink title={'Github'} icon={faGithub} link={'https://github.com/becelot'}/>
                         <SocialLink title={'LinkedIn'} icon={faLinkedin}/>
                         <SocialLink title={'Mail'} icon={faEnvelope}/>
                         <SocialLink title={'Resume'} icon={faNewspaper}/>
