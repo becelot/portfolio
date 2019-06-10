@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {ChangeEvent, useState} from "react";
 import styled from "styled-components";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
@@ -129,34 +129,44 @@ const LanguageSelect = withStyles({
     }
 })(Select);
 
-const Header: React.FC<WithTranslation> = ({t}) => {
+const LanguageSelectItem: React.FC<{lang: string}> = ({lang}) => {
+    return (
+        <div style={{height: '1.8rem', display: 'flex'}}>
+            <img src={`icons/${lang}.svg`} style={{width: '2.4rem', marginRight: '0.5rem'}} />
+            <div>{lang.toUpperCase()}</div>
+        </div>
+    );
+};
+
+const LanguageSelectTheme = {
+    PaperProps: {
+        style: {
+            backgroundColor: 'rgba(0,0,0,0.6)'
+        }
+    },
+    MenuListProps: {
+        style: {
+            color: 'white',
+            fontSize: '1.2em'
+        }
+
+    }
+};
+
+const Header: React.FC<WithTranslation> = ({t, i18n}) => {
     const [open, setOpen] = useState(false);
+
+    function handleLanguageChange(event: ChangeEvent<{value: unknown}>) {
+        if (typeof event.target.value === 'string') {
+            i18n.changeLanguage(event.target.value);
+        }
+    }
 
     return (
         <Wrapper>
-            <LanguageSelect value='de' disableUnderline={true} MenuProps={{
-                PaperProps: {
-                    style: {
-                        backgroundColor: 'rgba(0,0,0,0.6)'}
-                },
-                MenuListProps: {
-                    style: {
-                        color: 'white',
-                        fontSize: '1.2em'
-                    }
-
-                }
-            }} >
-                <MenuItem button value={'de'}>
-                    <div style={{height: '1.8rem', display: 'flex'}}>
-                        <img src={'icons/de.svg'} style={{width: '2.4rem', marginRight: '0.5rem'}} />
-                        <div>DE</div>
-                    </div>
-
-                </MenuItem>
-                <MenuItem button value={'en'}>
-                    <img src={'icons/us.svg'} style={{width: '2.4rem', marginRight: '0.5rem'}} />EN
-                </MenuItem>
+            <LanguageSelect onChange={handleLanguageChange} value={i18n.language.substr(0, 2)} disableUnderline={true} MenuProps={LanguageSelectTheme} >
+                <MenuItem button value='de'><LanguageSelectItem lang={'de'}/></MenuItem>
+                <MenuItem button value='en'><LanguageSelectItem lang={'en'}/></MenuItem>
             </LanguageSelect>
             <div style={{flex: '1 1 0'}} />
             <Section>{t('header.projects')}</Section>
