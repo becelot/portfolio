@@ -26,8 +26,10 @@ const App: React.FC = () => {
           <Suspense fallback={null}>
               <Page>
                 <Header />
-                <LandingPage />
-                <Projects />
+                <main>
+                    <LandingPage />
+                    <Projects />
+                </main>
               </Page>
           </Suspense>
       </ThemeProvider>
