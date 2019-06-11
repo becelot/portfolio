@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import './utils/translation';
 import LandingPage from "./components/LandingPage";
 import Projects from "./components/Projects";
-import {createMuiTheme} from "@material-ui/core";
+import {createMuiTheme} from "@material-ui/core/styles";
 import {ThemeProvider} from "@material-ui/styles";
 
 const Page = styled.div`
@@ -16,23 +16,25 @@ const Page = styled.div`
 
 const theme = createMuiTheme({
     typography: {
-        htmlFontSize: 10
+        htmlFontSize: 10,
     },
 });
 
 const App: React.FC = () => {
   return (
-      <ThemeProvider theme={theme}>
+
           <Suspense fallback={null}>
-              <Page>
-                <Header />
-                <main>
-                    <LandingPage />
-                    <Projects />
-                </main>
-              </Page>
+              <ThemeProvider theme={theme}>
+                  <Page>
+                    <Header />
+                    <main>
+                        <LandingPage />
+                        <Projects />
+                    </main>
+                  </Page>
+              </ThemeProvider>
           </Suspense>
-      </ThemeProvider>
+
   );
 };
 
