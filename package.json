@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "https://becelot.surge.sh",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
@@ -8,7 +9,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "@material-ui/core": "^4.0.2",
+    "@material-ui/core": "^4.1.0",
     "@material-ui/styles": "^4.1.0",
     "@types/jest": "24.0.13",
     "@types/node": "12.0.7",
@@ -48,5 +49,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }
