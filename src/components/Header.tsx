@@ -138,7 +138,7 @@ const LanguageItem = withStyles({
 const LanguageSelectItem: React.FC<{lang: string}> = ({lang}) => {
     return (
         <div style={{height: '1.8rem', display: 'flex'}}>
-            <img src={`icons/${lang}.svg`} style={{width: '2.4rem', marginRight: '0.5rem'}} />
+            <img src={`icons/${lang}.svg`} style={{width: '2.4rem', marginRight: '0.5rem'}} alt={lang} />
             <div>{lang.toUpperCase()}</div>
         </div>
     );
