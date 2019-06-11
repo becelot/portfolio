@@ -15,7 +15,7 @@ import {
 } from "@material-ui/core";
 import {WithTranslation, withTranslation} from "react-i18next";
 
-const Wrapper = styled.div`
+const Wrapper = styled.nav`
   width: 100%;
   height: 5rem;
   position: fixed;
