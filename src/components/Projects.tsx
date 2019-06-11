@@ -88,6 +88,7 @@ const Projects: React.FC = () => {
                                     component='img'
                                     image='projects/random_project_sample.webp'
                                     height='200'
+                                    alt={'Project'}
                                 >
                                 </CardMedia>
 
@@ -118,7 +119,7 @@ const Projects: React.FC = () => {
                                     </Typography>
                                 </ProjectCardContent>
                                 <Divider />
-                                <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#4497e2'}}>
+                                <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>
                                     <FontAwesomeIcon icon={faAngleDown} style={{marginRight: '1rem'}} />
                                     Read more
                                 </Button>
@@ -131,6 +132,7 @@ const Projects: React.FC = () => {
                                     component='img'
                                     image='projects/random_project_sample.webp'
                                     height='200'
+                                    alt={'Project'}
                                 >
                                 </CardMedia>
 
@@ -155,7 +157,7 @@ const Projects: React.FC = () => {
                                     </Typography>
                                 </ProjectCardContent>
                                 <Divider />
-                                <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#4497e2'}}>
+                                <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>
                                     <FontAwesomeIcon icon={faAngleDown} style={{marginRight: '1rem'}} />
                                     Read more
                                 </Button>
@@ -169,6 +171,7 @@ const Projects: React.FC = () => {
                                     component='img'
                                     image='projects/random_project_sample.webp'
                                     height='200'
+                                    alt={'Project'}
                                 >
                                 </CardMedia>
 
@@ -193,7 +196,7 @@ const Projects: React.FC = () => {
                                     </Typography>
                                 </ProjectCardContent>
                                 <Divider />
-                                <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#4497e2'}}>
+                                <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>
                                     <FontAwesomeIcon icon={faAngleDown} style={{marginRight: '1rem'}} />
                                     Read more
                                 </Button>
