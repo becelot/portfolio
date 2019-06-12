@@ -29,19 +29,39 @@ const Wrapper = styled.nav`
 `;
 
 const Section = styled.div`
-    padding: 0 20px;
-    cursor: pointer;
-    font-size: 2.2rem;
-    height: 5rem;
-    color: white;
-    line-height: 5rem;
+  position: relative;
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 2.2rem;
+  height: 5rem;
+  color: white;
+  line-height: 5rem;
+  
+  :after {
+    content: '';
+    position: absolute;
+    width: 100%;
     
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: 0;
     
-    &:hover {
-      color: yellow;
-      background-color: forestgreen;
+    transform: translateY(5px);
+    
+    opacity: 0;
+    
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+
+  &:hover {
+    
+    :after {
+      transform: translateY(0);
+      opacity: 1;
     }
+  }
+    
     
   @media only screen and (max-width: 640px){
     display: none;
@@ -174,6 +194,7 @@ const Header: React.FC<WithTranslation> = ({t, i18n}) => {
                 <LanguageItem button value='en'><LanguageSelectItem lang={'en'}/></LanguageItem>
             </LanguageSelect>
             <div style={{flex: '1 1 0'}} />
+            <Section>{t('header.home')}</Section>
             <Section>{t('header.projects')}</Section>
             <Section>{t('header.skills')}</Section>
             <Section>{t('header.about-me')}</Section>
