@@ -10,6 +10,8 @@ import {faEnvelope, faNewspaper} from "@fortawesome/free-solid-svg-icons";
 import {SocialLink} from "./SocialLink";
 
 import { Parallax } from 'react-parallax';
+import Fade from 'react-reveal/Fade';
+import Slide from 'react-reveal/Slide';
 
 
 
@@ -97,15 +99,18 @@ const LandingPage: React.FC = () => {
     }, [count]);
 
     return (
-        <Parallax bgImage={'bg/conifer-dawn-daylight.webp'} strength={700}>
+        <Parallax bgImage={'bg/conifer-dawn-daylight.jpg'} strength={700}>
             <Wrapper id={'home'}>
                 <ContentAlign>
+
                     <Content>
+                        <Fade bottom>
                         <NameText>Benedict Becker</NameText>
                         <TextSpinner>
                             {count ? (
                                 <Typist stdTypingDelay={0} avgTypingDelay={100} startDelay={200}
                                         onTypingDone={() => setCount(0)}>
+                                    <Typist.Delay ms={1000}/>
                                     Fullstack Developer
                                     <Typist.Delay ms={4000}/>
                                     <Typist.Backspace count={19} delay={200}/>
@@ -124,15 +129,21 @@ const LandingPage: React.FC = () => {
                             )}
 
                         </TextSpinner>
+                    </Fade>
                     </Content>
+
                 </ContentAlign>
                 <SocialLinks>
-                    <SocialLinkPadding>
-                        <SocialLink title={'Github'} icon={faGithub} link={'https://github.com/becelot'}/>
-                        <SocialLink title={'LinkedIn'} icon={faLinkedin}/>
-                        <SocialLink title={'Mail'} icon={faEnvelope}/>
-                        <SocialLink title={'Resume'} icon={faNewspaper}/>
-                    </SocialLinkPadding>
+
+                        <SocialLinkPadding>
+                            <Slide top>
+                                <SocialLink title={'Github'} icon={faGithub} link={'https://github.com/becelot'}/>
+                                <SocialLink title={'LinkedIn'} icon={faLinkedin}/>
+                                <SocialLink title={'Mail'} icon={faEnvelope}/>
+                                <SocialLink title={'Resume'} icon={faNewspaper}/>
+                            </Slide>
+                        </SocialLinkPadding>
+
                 </SocialLinks>
             </Wrapper>
         </Parallax>
