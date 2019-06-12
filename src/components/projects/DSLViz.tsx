@@ -20,8 +20,8 @@ const DSLViz: React.FC<WithTranslation> = ({t}) => {
 
                 <ProjectCardContent>
                     <div style={{flex: '0 0 0', display: 'flex', justifyContent: 'space-evenly'}}>
-                        <ProjectPreviewButton icon={faEye}>Live Preview</ProjectPreviewButton>
-                        <ProjectPreviewButton icon={faCodeBranch}>Source Code</ProjectPreviewButton>
+                        <ProjectPreviewButton disabled tooltip={t('projects.live_nda')} icon={faEye}>Live Preview</ProjectPreviewButton>
+                        <ProjectPreviewButton disabled tooltip={t('projects.source_nda')} icon={faCodeBranch}>Source Code</ProjectPreviewButton>
                     </div>
                     <Typography paragraph style={{marginTop: '1rem'}}>
                         <h4 style={{color: '#008073'}}>DSLViz</h4>
