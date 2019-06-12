@@ -8,6 +8,7 @@ import LandingPage from "./components/LandingPage";
 import Projects from "./components/Projects";
 import {createMuiTheme} from "@material-ui/core/styles";
 import {ThemeProvider} from "@material-ui/styles";
+import config from 'react-reveal/globals';
 
 const Page = styled.div`
  display: block;
@@ -20,6 +21,8 @@ const theme = createMuiTheme({
     },
 });
 
+config({ ssrFadeout: true });
+
 const App: React.FC = () => {
   return (
 
@@ -28,8 +31,12 @@ const App: React.FC = () => {
                   <Page>
                     <Header />
                     <main>
-                        <LandingPage />
-                        <Projects />
+                        <section id='home'>
+                            <LandingPage />
+                        </section>
+                        <section id='projects'>
+                            <Projects />
+                        </section>
                     </main>
                   </Page>
               </ThemeProvider>
