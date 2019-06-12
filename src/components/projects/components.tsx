@@ -8,6 +8,7 @@ export const ProjectCard = withStyles({
     root: {
         margin: '10px',
         maxWidth: '400px',
+        minWidth: '400px',
         height: '100%'
     }
 })(Card);
