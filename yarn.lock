@@ -8340,6 +8340,13 @@ react-parallax@^2.2.0:
   resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-2.2.0.tgz#676ef4d94d0e2e56520f175c1c213eafa8aa6c15"
   integrity sha512-nBOfrfuxjeAUjnovJfDygEh4c7YsiuSylzxI81kqovedI/zvwoHM6CwFiqkRWkTOEqt0TamKtd5N8j7KR6jEHA==
 
+react-reveal@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/react-reveal/-/react-reveal-1.2.2.tgz#f47fbc44debc4c185ae2163a215a9e822c7adfef"
+  integrity sha512-JCv3fAoU6Z+Lcd8U48bwzm4pMZ79qsedSXYwpwt6lJNtj/v5nKJYZZbw3yhaQPPgYePo3Y0NOCoYOq/jcsisuw==
+  dependencies:
+    prop-types "^15.5.10"
+
 react-scripts@3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/react-scripts/-/react-scripts-3.0.1.tgz#e5565350d8069cc9966b5998d3fe3befe3d243ac"
