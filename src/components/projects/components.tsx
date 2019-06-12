@@ -22,11 +22,11 @@ export const ProjectCardContent = withStyles({
     }
 })(CardContent);
 
-export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string}> = ({icon, children, tooltip}) => {
+export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string, disabled?: boolean}> = ({icon, children, tooltip, disabled}) => {
 
     const renderedButton = (
         <a href={'http://google.de'} target={'_blank'} style={{textDecoration: 'none'}}>
-            <Button variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}}>
+            <Button variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}} disabled={disabled}>
                 <div style={{display: "flex", justifyContent: 'center'}}>
                     <FontAwesomeIcon icon={icon} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
                     <div>{children}</div>
