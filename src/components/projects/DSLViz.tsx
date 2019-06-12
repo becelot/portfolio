@@ -24,7 +24,7 @@ const DSLViz: React.FC<WithTranslation> = ({t}) => {
                         <ProjectPreviewButton disabled tooltip={t('projects.source_nda')} icon={faCodeBranch}>Source Code</ProjectPreviewButton>
                     </div>
                     <Typography paragraph style={{marginTop: '1rem'}}>
-                        <h4 style={{color: '#008073'}}>DSLViz</h4>
+                        <h4 style={{color: '#008073'}}>{t('projects.dslviz.name')}</h4>
                         {t('projects.dslviz.short_description')}
                     </Typography>
                 </ProjectCardContent>
