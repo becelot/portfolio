@@ -12,7 +12,7 @@ const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
             <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
                 <CardMedia
                     component='img'
-                    image='projects/deck-history-tracker.png'
+                    image='projects/deck-history-tracker.jpg'
                     height='240'
                     alt={'Project'}
                 >
