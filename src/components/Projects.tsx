@@ -5,6 +5,7 @@ import Fade from 'react-reveal/Fade';
 import {WithTranslation, withTranslation} from "react-i18next";
 import DSLViz from "./projects/DSLViz";
 import {Typography} from "@material-ui/core";
+import DeckHistoryTracker from "./projects/DeckHistoryTracker";
 
 const Header = styled.div`
   width: 70%;
@@ -82,7 +83,7 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
                     <Fade bottom>
 
                         <DSLViz />
-                        <DSLViz />
+                        <DeckHistoryTracker />
                         <DSLViz />
                     </Fade>
                 </Content>
