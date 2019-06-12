@@ -1,55 +1,57 @@
 import React from "react";
-import { Parallax } from 'react-parallax';
 import styled from "styled-components";
-import {
-    Button,
-    Card,
-    CardActions,
-    CardContent,
-    CardHeader,
-    CardMedia,
-    Divider,
-    Typography,
-    withStyles
-} from "@material-ui/core";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAngleDown, faCodeBranch} from "@fortawesome/free-solid-svg-icons";
-import {faEye} from "@fortawesome/free-regular-svg-icons";
+
+import Fade from 'react-reveal/Fade';
+import {WithTranslation, withTranslation} from "react-i18next";
+import DSLViz from "./projects/DSLViz";
+import {Typography} from "@material-ui/core";
 
 const Header = styled.div`
-  width: 100%;
+  width: 70%;
   height: 5rem;
+  position: relative;
   
-  background: background;
   text-align: center;
   line-height: 5rem;
   
   font-size: 4rem;
   color: white;
+  text-transform: uppercase;
+  align-self: center;
   
-  position: absolute;
-  z-index: 3;
-  background: rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+  
+  :before, :after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 30%;
+    border-bottom: 5px solid rgba(0,0,0,0.25);
+  }
+  
+  :after {
+    right: 0;
+  }
 `;
 
 const Wrapper = styled.div`
   width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
-  background-size: cover;
-  background-position: center center;
   
   display: flex;
   flex-direction: column;
   justify-content: center;
   
   position: relative;
-  
-  padding-top: 6rem;
   box-sizing: border-box;
+  
+  padding: 70px 0;
+  
+  background: #39373A;
 `;
 
 const Content = styled.div`
+  box-sizing: border-box;
   width: 100%;
   
   display: flex;
@@ -57,161 +59,36 @@ const Content = styled.div`
   justify-content: space-evenly;
   flex-wrap: wrap;
   
-  margin: -10px;
+  padding: 0 100px;
 `;
 
-const ProjectCard = withStyles({
-    root: {
-        margin: '10px',
-        maxWidth: '400px'
-    }
-})(Card);
+const IntroText = styled(Typography)`
+  width: 50%;
+  text-align: center;
+  align-self: center;
+  
+  color: white;
+`;
 
-const ProjectCardContent = withStyles({
-    root: {
-        display: 'flex',
-        flexDirection: 'column',
-        flex: '1 0 0'
-    }
-})(CardContent);
 
-const Projects: React.FC = () => {
+
+const Projects: React.FC<WithTranslation> = ({t}) => {
     return (
         <>
-            <Header>Projects</Header>
-            <Parallax bgImage={'bg/projects.webp'} strength={700}>
-                <Wrapper>
-                    <Content>
-                        <ProjectCard>
-                            <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
-                                <CardMedia
-                                    component='img'
-                                    image='projects/random_project_sample.webp'
-                                    height='200'
-                                    alt={'Project'}
-                                >
-                                </CardMedia>
+            <Wrapper>
+                <Header>{t('header.projects')}</Header>
+                <IntroText variant={'subtitle1'}>{t('projects.about')}</IntroText>
+                <Content>
+                    <Fade bottom>
 
-                                <ProjectCardContent>
-                                    <div style={{flex: '0 0 0', display: 'flex', justifyContent: 'space-evenly'}}>
-                                        <Button variant={'outlined'} style={{flex: '0 1 40%', fontSize: '1.2rem'}}>
-                                            <div style={{display: "flex", justifyContent: 'center'}}>
-                                                <FontAwesomeIcon icon={faCodeBranch} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
-                                                <div>Source Code</div>
-                                            </div>
-                                        </Button>
-                                        <Button variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}}>
-                                            <div style={{display: "flex", justifyContent: 'center'}}>
-                                                <FontAwesomeIcon icon={faEye} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
-                                                <div>Live Preview</div>
-                                            </div>
-                                        </Button>
-                                    </div>
-
-                                    <Typography paragraph style={{marginTop: '1rem'}}>
-                                        Lorem Ipsum is siersdgknlerhgioöaherg
-                                         fear g
-                                        esrg
-                                        erg rst
-                                        h
-                                        srtjh
-                                        mply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                    </Typography>
-                                </ProjectCardContent>
-                                <Divider />
-                                <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>
-                                    <FontAwesomeIcon icon={faAngleDown} style={{marginRight: '1rem'}} />
-                                    Read more
-                                </Button>
-                            </div>
-                        </ProjectCard>
-
-                        <ProjectCard>
-                            <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
-                                <CardMedia
-                                    component='img'
-                                    image='projects/random_project_sample.webp'
-                                    height='200'
-                                    alt={'Project'}
-                                >
-                                </CardMedia>
-
-                                <ProjectCardContent>
-                                    <div style={{flex: '0 0 0', display: 'flex', justifyContent: 'space-evenly'}}>
-                                        <Button variant={'outlined'} style={{flex: '0 1 40%', fontSize: '1.2rem'}}>
-                                            <div style={{display: "flex", justifyContent: 'center'}}>
-                                                <FontAwesomeIcon icon={faCodeBranch} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
-                                                <div>Source Code</div>
-                                            </div>
-                                        </Button>
-                                        <Button variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}}>
-                                            <div style={{display: "flex", justifyContent: 'center'}}>
-                                                <FontAwesomeIcon icon={faEye} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
-                                                <div>Live Preview</div>
-                                            </div>
-                                        </Button>
-                                    </div>
-
-                                    <Typography paragraph style={{marginTop: '1rem'}}>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                    </Typography>
-                                </ProjectCardContent>
-                                <Divider />
-                                <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>
-                                    <FontAwesomeIcon icon={faAngleDown} style={{marginRight: '1rem'}} />
-                                    Read more
-                                </Button>
-                            </div>
-
-
-                        </ProjectCard>
-                        <ProjectCard>
-                            <div style={{height: '100%', display: 'flex', flexDirection: 'column'}}>
-                                <CardMedia
-                                    component='img'
-                                    image='projects/random_project_sample.webp'
-                                    height='200'
-                                    alt={'Project'}
-                                >
-                                </CardMedia>
-
-                                <ProjectCardContent>
-                                    <div style={{flex: '0 0 0', display: 'flex', justifyContent: 'space-evenly'}}>
-                                        <Button variant={'outlined'} style={{flex: '0 1 40%', fontSize: '1.2rem'}}>
-                                            <div style={{display: "flex", justifyContent: 'center'}}>
-                                                <FontAwesomeIcon icon={faCodeBranch} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
-                                                <div>Source Code</div>
-                                            </div>
-                                        </Button>
-                                        <Button variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}}>
-                                            <div style={{display: "flex", justifyContent: 'center'}}>
-                                                <FontAwesomeIcon icon={faEye} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
-                                                <div>Live Preview</div>
-                                            </div>
-                                        </Button>
-                                    </div>
-
-                                    <Typography paragraph style={{marginTop: '1rem'}}>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                    </Typography>
-                                </ProjectCardContent>
-                                <Divider />
-                                <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>
-                                    <FontAwesomeIcon icon={faAngleDown} style={{marginRight: '1rem'}} />
-                                    Read more
-                                </Button>
-                            </div>
-
-
-                        </ProjectCard>
-                    </Content>
-
-
-
-                </Wrapper>
-            </Parallax>
+                        <DSLViz />
+                        <DSLViz />
+                        <DSLViz />
+                    </Fade>
+                </Content>
+            </Wrapper>
         </>
     );
 };
 
-export default Projects;
+export default withTranslation()(Projects);
