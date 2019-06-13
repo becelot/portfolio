@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 
 import Fade from 'react-reveal/Fade';
@@ -7,8 +7,14 @@ import DSLViz from "./projects/DSLViz";
 import {Typography} from "@material-ui/core";
 import DeckHistoryTracker from "./projects/DeckHistoryTracker";
 import Unnamed from "./projects/Unnamed";
+import {InView} from "react-intersection-observer";
+import {SlideInBottom} from "../animations/SlideInBottom";
+import {Expand} from "../animations/Expand";
 
-const Header = styled.div`
+const HeaderRuleExpand = Expand('30%', 1);
+
+const Header = styled.div<{visible: boolean}>`
+  margin: 0 auto;
   width: 70%;
   height: 5rem;
   position: relative;
@@ -21,15 +27,20 @@ const Header = styled.div`
   text-transform: uppercase;
   align-self: center;
   
+  opacity: 0;
+  
   margin-bottom: 10px;
+  
+  ${props => props.visible ? SlideInBottom(0) : ''}
   
   :before, :after {
     content: '';
     position: absolute;
     top: 50%;
+    width: 0;
     display: block;
-    width: 30%;
     border-bottom: 5px solid rgba(0,0,0,0.25);
+    ${props => props.visible ? HeaderRuleExpand : ''}
   }
   
   :after {
@@ -75,10 +86,14 @@ const IntroText = styled(Typography)`
 
 
 const Projects: React.FC<WithTranslation> = ({t}) => {
+    const [headerVisible, setHeaderVisible] = useState(false);
+
     return (
         <>
             <Wrapper>
-                <Header>{t('header.projects')}</Header>
+                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-20%'} triggerOnce={true} onChange={(inView) => setHeaderVisible(inView)}>
+                    <Header visible={headerVisible}>{t('header.projects')}</Header>
+                </InView>
                 <IntroText variant={'subtitle1'}>{t('projects.about')}</IntroText>
                 <Content>
                     <Fade bottom>
