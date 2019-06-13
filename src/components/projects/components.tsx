@@ -1,6 +1,5 @@
 import {Button, Card, CardContent, Tooltip, withStyles} from "@material-ui/core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEye} from "@fortawesome/free-regular-svg-icons";
 import React from "react";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 
@@ -38,8 +37,6 @@ export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string, d
             {button}
         </a>
     );
-
-    console.log(Boolean(tooltip));
 
     return tooltip ? (<Tooltip title={tooltip}>{renderedButton}</Tooltip>) : renderedButton;
 };
