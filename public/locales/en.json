@@ -15,6 +15,10 @@
       "name": "DSLViz",
       "short_description": "A web framework based on Angular to visualize domain-specific languages."
     },
+    "unnamed": {
+      "name": "<English Name>",
+      "short_description": "<English short description>"
+    },
     "live_nda": "Live preview is currently under NDA.",
     "read_more": "Read more",
     "source_nda": "Source Code is currently under NDA."

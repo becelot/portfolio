@@ -6,6 +6,7 @@ import {WithTranslation, withTranslation} from "react-i18next";
 import DSLViz from "./projects/DSLViz";
 import {Typography} from "@material-ui/core";
 import DeckHistoryTracker from "./projects/DeckHistoryTracker";
+import Unnamed from "./projects/Unnamed";
 
 const Header = styled.div`
   width: 70%;
@@ -84,7 +85,7 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
 
                         <DSLViz />
                         <DeckHistoryTracker />
-                        <DSLViz />
+                        <Unnamed />
                     </Fade>
                 </Content>
             </Wrapper>
