@@ -1,7 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 import styled from "styled-components";
 
-import Fade from 'react-reveal/Fade';
 import {WithTranslation, withTranslation} from "react-i18next";
 import DSLViz from "./projects/DSLViz";
 import {Typography} from "@material-ui/core";
@@ -95,19 +94,16 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
     return (
         <>
             <Wrapper>
-                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-20%'} triggerOnce={true}>
+                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-40%'} triggerOnce={true}>
                     {({inView, ref}) => (<Header visible={inView} ref={ref}>{t('header.projects')}</Header>)}
                 </InView>
-                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-20%'} triggerOnce={true}>
+                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-40%'} triggerOnce={true}>
                     {({inView, ref}) => (<IntroText visible={inView} ref={ref} variant={'subtitle1'}>{t('projects.about')}</IntroText>)}
                 </InView>
                 <Content>
-                    <Fade bottom>
-
-                        <DSLViz />
-                        <DeckHistoryTracker />
-                        <Unnamed />
-                    </Fade>
+                    <DSLViz />
+                    <DeckHistoryTracker />
+                    <Unnamed />
                 </Content>
             </Wrapper>
         </>
