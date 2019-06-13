@@ -25,8 +25,6 @@ config({ ssrFadeout: true });
 
 const App: React.FC = () => {
   return (
-
-          <Suspense fallback={null}>
               <ThemeProvider theme={theme}>
                   <Page>
                     <Header />
@@ -40,7 +38,6 @@ const App: React.FC = () => {
                     </main>
                   </Page>
               </ThemeProvider>
-          </Suspense>
 
   );
 };

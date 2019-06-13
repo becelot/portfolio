@@ -16,6 +16,7 @@ i18n
         },
         fallbackLng: 'de',
         react: {
-            wait: true
+            wait: true,
+            useSuspense: false,
         }
     });
