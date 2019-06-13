@@ -8,28 +8,7 @@ import WebFont from 'webfontloader';
 
 const ExtendedApp = withSSR()(App as any);
 
-render(<ExtendedApp initialLanguage='de' initialI18nStore={{
-    "header": {
-        "about-me": "Über mich",
-        "home": "Home",
-        "projects": "Projekte",
-        "skills": "Erfahrung"
-    },
-    "projects": {
-        "about": "Ich habe über die Jahre eine Vielzahl an Applikationen geschrieben und veröffentlicht. Darunter fallen nicht nur Web Applikationen, sondern auch Android/iOS und .NET Anwendungen.",
-        "dht": {
-            "name": "Deck History Tracker",
-            "short_description": "Eine <a href=\"https://twitch.tv\">Twitch.tv</a> Erweiterung, die vom Streamer gespielte Decks veranschaulicht."
-        },
-        "dslviz": {
-            "name": "DSLViz",
-            "short_description": "Ein auf Angular basierendes Webframework zur Visualisierung von Domänenspezifischen Sprachen."
-        },
-        "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich.",
-        "read_more": "Mehr Informationen",
-        "source_nda": "Der Source Code ist wegen NDA nicht zugänglich."
-    }
-}} />, document.getElementById('root'));
+render(<ExtendedApp initialLanguage='de' initialI18nStore={{}} />, document.getElementById('root'));
 
 WebFont.load({
     custom: {
