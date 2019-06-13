@@ -19,12 +19,12 @@ const DSLViz: React.FC<WithTranslation> = ({t}) => {
                 </CardMedia>
 
                 <ProjectCardContent>
-                    <div style={{flex: '0 0 0', display: 'flex', justifyContent: 'space-evenly'}}>
+                    <div style={{flex: '0 0 0', display: 'flex', justifyContent: 'space-evenly', marginBottom: '1rem'}}>
                         <ProjectPreviewButton disabled tooltip={t('projects.live_nda')} icon={faEye}>Live Preview</ProjectPreviewButton>
                         <ProjectPreviewButton disabled tooltip={t('projects.source_nda')} icon={faCodeBranch}>Source Code</ProjectPreviewButton>
                     </div>
-                    <Typography paragraph style={{marginTop: '1rem'}}>
-                        <h4 style={{color: '#008073'}}>{t('projects.dslviz.name')}</h4>
+                    <Typography variant='h6' style={{fontWeight: 'bold', color: '#008073', marginBottom: '0.5rem'}}>{t('projects.dslviz.name')}</Typography>
+                    <Typography paragraph>
                         {t('projects.dslviz.short_description')}
                     </Typography>
                 </ProjectCardContent>
