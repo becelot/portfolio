@@ -8,8 +8,9 @@ import {Typography} from "@material-ui/core";
 import DeckHistoryTracker from "./projects/DeckHistoryTracker";
 import Unnamed from "./projects/Unnamed";
 import {InView} from "react-intersection-observer";
-import {SlideInBottom} from "../animations/SlideInBottom";
-import {Expand} from "../animations/Expand";
+import SlideInBottom from "../animations/SlideInBottom";
+import Expand from "../animations/Expand";
+import SlideInRight from "../animations/SlideInRight";
 
 const HeaderRuleExpand = Expand('30%', 1);
 
@@ -75,26 +76,31 @@ const Content = styled.div`
   padding: 0 100px;
 `;
 
-const IntroText = styled(Typography)`
+const IntroText = styled(Typography)<{visible: boolean}>`
   width: 50%;
   text-align: center;
   align-self: center;
   
   color: white;
+  opacity: 0;
+  
+  ${props => props.visible ? SlideInRight(0) : ''}
 `;
 
 
 
-const Projects: React.FC<WithTranslation> = ({t}) => {
-    const [headerVisible, setHeaderVisible] = useState(false);
 
+
+const Projects: React.FC<WithTranslation> = ({t}) => {
     return (
         <>
             <Wrapper>
-                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-20%'} triggerOnce={true} onChange={(inView) => setHeaderVisible(inView)}>
-                    <Header visible={headerVisible}>{t('header.projects')}</Header>
+                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-20%'} triggerOnce={true}>
+                    {({inView, ref}) => (<Header visible={inView} ref={ref}>{t('header.projects')}</Header>)}
                 </InView>
-                <IntroText variant={'subtitle1'}>{t('projects.about')}</IntroText>
+                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-20%'} triggerOnce={true}>
+                    {({inView, ref}) => (<IntroText visible={inView} ref={ref} variant={'subtitle1'}>{t('projects.about')}</IntroText>)}
+                </InView>
                 <Content>
                     <Fade bottom>
 
