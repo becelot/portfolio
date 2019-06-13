@@ -24,16 +24,22 @@ export const ProjectCardContent = withStyles({
 
 export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string, disabled?: boolean}> = ({icon, children, tooltip, disabled}) => {
 
-    const renderedButton = (
+    const button = (
+        <Button variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}} disabled={disabled}>
+            <div style={{display: "flex", justifyContent: 'center'}}>
+                <FontAwesomeIcon icon={icon} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
+                <div>{children}</div>
+            </div>
+        </Button>
+    );
+
+    const renderedButton = disabled ? (<div>{button}</div>) : (
         <a href={'http://google.de'} target={'_blank'} style={{textDecoration: 'none'}}>
-            <Button variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}} disabled={disabled}>
-                <div style={{display: "flex", justifyContent: 'center'}}>
-                    <FontAwesomeIcon icon={icon} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
-                    <div>{children}</div>
-                </div>
-            </Button>
+            {button}
         </a>
     );
+
+    console.log(Boolean(tooltip));
 
     return tooltip ? (<Tooltip title={tooltip}>{renderedButton}</Tooltip>) : renderedButton;
 };
