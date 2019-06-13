@@ -10,7 +10,7 @@ const ExpandKeyframes = (target: string) => keyframes`
     }
 `;
 
-export const Expand = (target: string, delay: number) => css`
+export default (target: string, delay: number) => css`
     animation: ${ExpandKeyframes(target)} 1s 1 ${delay}s;
     animation-fill-mode: forwards; 
 `;

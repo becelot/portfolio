@@ -1,7 +1,7 @@
 import {css, keyframes} from "styled-components";
 
 
-export const SlideInBottomKeyframe = keyframes`
+const SlideInBottomKeyframe = keyframes`
     from {
         opacity: 0;
         transform: translateY(100px);
@@ -12,7 +12,7 @@ export const SlideInBottomKeyframe = keyframes`
     }
 `;
 
-export const SlideInBottom = (delay: number) => css`
+export default (delay: number) => css`
     animation: ${SlideInBottomKeyframe} 1s 1 ${delay}s;
     animation-fill-mode: forwards;
 `;
