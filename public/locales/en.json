@@ -1,7 +1,22 @@
 {
   "header": {
     "about-me": "About me",
+    "home": "Home",
     "projects": "Projects",
     "skills": "Skills"
+  },
+  "projects": {
+    "about": "Depending on the projects requirements, I use the appropriate toolset for the given problem. I like to write front and backends, but am also proficient in writing Android/iOS and .NET applications.",
+    "dht": {
+      "name": "Deck History Tracker",
+      "short_description": "<a href=\"https://twitch.tv\">Twitch.tv</a> extension that shows the decks that a streamer recently played."
+    },
+    "dslviz": {
+      "name": "DSLViz",
+      "short_description": "A web framework based on Angular to visualize domain-specific languages."
+    },
+    "live_nda": "Live preview is currently under NDA.",
+    "read_more": "Read more",
+    "source_nda": "Source Code is currently under NDA."
   }
 }
