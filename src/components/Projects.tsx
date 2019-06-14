@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {css, keyframes} from "styled-components";
 
 import {WithTranslation, withTranslation} from "react-i18next";
 import DSLViz from "./projects/DSLViz";
@@ -11,6 +11,8 @@ import SlideInBottom from "../animations/SlideInBottom";
 import Expand from "../animations/Expand";
 import SlideInRight from "../animations/SlideInRight";
 import StaggerInView from "../utils/StaggerInView";
+import FlipInX from "../animations/FlipInX";
+import ZoomIn from "../animations/ZoomIn";
 
 const HeaderRuleExpand = Expand('30%', 1);
 
@@ -89,8 +91,6 @@ const IntroText = styled(Typography)<{visible: string}>`
 
 
 
-
-
 const Projects: React.FC<WithTranslation> = ({t}) => {
     return (
         <>
@@ -102,7 +102,7 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
                     {({inView, ref}) => (<IntroText visible={inView.toString()} ref={ref} variant={'subtitle1'}>{t('projects.about')}</IntroText>)}
                 </InView>
                 <Content>
-                    <StaggerInView animation={SlideInBottom} stagger={0.5}>
+                    <StaggerInView animation={ZoomIn} stagger={0.5}>
                         <DSLViz />
                         <DeckHistoryTracker />
                         <Unnamed />
