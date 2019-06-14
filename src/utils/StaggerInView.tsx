@@ -1,5 +1,5 @@
 import React from "react";
-import {InView, useInView} from "react-intersection-observer";
+import {InView} from "react-intersection-observer";
 import styled, {FlattenSimpleInterpolation} from "styled-components";
 
 
