@@ -1,21 +1,22 @@
 import React from "react";
-import styled, {css, keyframes} from "styled-components";
+import styled from "styled-components";
 
 import {WithTranslation, withTranslation} from "react-i18next";
 import DSLViz from "./projects/DSLViz";
 import {Typography} from "@material-ui/core";
 import DeckHistoryTracker from "./projects/DeckHistoryTracker";
 import Unnamed from "./projects/Unnamed";
-import {InView} from "react-intersection-observer";
 import SlideInBottom from "../animations/SlideInBottom";
 import Expand from "../animations/Expand";
 import SlideInRight from "../animations/SlideInRight";
 import StaggerInView from "../utils/StaggerInView";
 import ZoomIn from "../animations/ZoomIn";
+import withAnimationTrigger from "../utils/withAnimationTrigger";
 
 const HeaderRuleExpand = Expand('30%', 1);
 
-const Header = styled.div<{visible: boolean}>`
+
+const Header = withAnimationTrigger(styled.div<{visible: boolean}>`
   margin: 0 auto;
   width: 70%;
   height: 5rem;
@@ -48,7 +49,7 @@ const Header = styled.div<{visible: boolean}>`
   :after {
     right: 0;
   }
-`;
+`);
 
 const Wrapper = styled.div`
   width: 100%;
@@ -77,7 +78,7 @@ const Content = styled.div`
   padding: 0 100px;
 `;
 
-const IntroText = styled(Typography)<{visible: string}>`
+const IntroText = withAnimationTrigger(styled(Typography)<{visible: boolean}>`
   width: 50%;
   text-align: center;
   align-self: center;
@@ -85,8 +86,8 @@ const IntroText = styled(Typography)<{visible: string}>`
   color: white;
   opacity: 0;
   
-  ${props => props.visible === 'true' ? SlideInRight(0) : ''}
-`;
+  ${props => props.visible ? SlideInRight(0) : ''}
+`);
 
 
 
@@ -94,12 +95,8 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
     return (
         <>
             <Wrapper>
-                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-20%'} triggerOnce={true}>
-                    {({inView, ref}) => (<Header visible={inView} ref={ref}>{t('header.projects')}</Header>)}
-                </InView>
-                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-20%'} triggerOnce={true}>
-                    {({inView, ref}) => (<IntroText visible={inView.toString()} ref={ref} variant={'subtitle1'}>{t('projects.about')}</IntroText>)}
-                </InView>
+                <Header>{t('header.projects')}</Header>
+                <IntroText variant={'subtitle1'}>{t('projects.about')}</IntroText>
                 <Content>
                     <StaggerInView animation={ZoomIn} stagger={0.5}>
                         <DSLViz />
