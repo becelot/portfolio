@@ -6,6 +6,7 @@ import styled from "styled-components";
 type SocialProps = {
     title: string;
     link?: string;
+    className?: string;
     icon: IconProp;
 }
 
@@ -47,13 +48,15 @@ const Wrapper = styled.a`
   }
 `;
 
-export class SocialLink extends React.Component<SocialProps> {
+class SocialLink extends React.Component<SocialProps> {
     public render() {
         return (
-            <Wrapper href={this.props.link} target={'_blank'}>
+            <Wrapper className={this.props.className} href={this.props.link} target={'_blank'}>
                 <FontAwesomeIcon icon={this.props.icon}/>
-        {this.props.title}
-        </Wrapper>
-    );
+                {this.props.title}
+            </Wrapper>
+        );
     }
 }
+
+export default SocialLink;
