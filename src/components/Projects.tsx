@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 import {WithTranslation, withTranslation} from "react-i18next";
 import DSLViz from "./projects/DSLViz";
@@ -13,6 +13,7 @@ import StaggerInView from "../utils/StaggerInView";
 import ZoomIn from "../animations/ZoomIn";
 import withAnimationTrigger from "../utils/withAnimationTrigger";
 import withAnimation from "../utils/withAnimation";
+import MensaApp from "./projects/MensaApp";
 
 const HeaderRuleExpand = Expand('30%', 1);
 
@@ -79,7 +80,7 @@ const Content = styled.div`
   padding: 0 100px;
 `;
 
-const IntroText = withAnimation(styled(Typography)`
+const IntroText = withAnimation(styled.div`
   width: 50%;
   text-align: center;
   align-self: center;
@@ -88,6 +89,9 @@ const IntroText = withAnimation(styled(Typography)`
   opacity: 0;
 `, SlideInRight(0));
 
+const cardItemStyle = css`
+    margin: 30px;
+`;
 
 
 const Projects: React.FC<WithTranslation> = ({t}) => {
@@ -95,12 +99,13 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
         <>
             <Wrapper>
                 <Header>{t('header.projects')}</Header>
-                <IntroText variant={'subtitle1'}>{t('projects.about')}</IntroText>
+                <IntroText><Typography paragraph variant={'subtitle1'}>{t('projects.about')}</Typography></IntroText>
                 <Content>
-                    <StaggerInView animation={ZoomIn} stagger={0.5}>
+                    <StaggerInView itemStyle={cardItemStyle} animation={ZoomIn} stagger={0.5}>
                         <DSLViz />
                         <DeckHistoryTracker />
                         <Unnamed />
+                        <MensaApp />
                     </StaggerInView>
                 </Content>
             </Wrapper>
