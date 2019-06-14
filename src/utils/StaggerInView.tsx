@@ -6,14 +6,15 @@ import styled, {FlattenSimpleInterpolation} from "styled-components";
 export type AnimationHandle = (delay: number) => FlattenSimpleInterpolation;
 
 export interface StaggerProps {
+    itemStyle?: FlattenSimpleInterpolation;
     stagger: number;
     animation: AnimationHandle;
 }
 
-export const StaggerWrapper = styled.div<{animation: AnimationHandle, stagger?: number}>`
-    height: fit-content;
-    width: fit-content;
+export const StaggerWrapper = styled.div<{itemStyle?: FlattenSimpleInterpolation; animation: AnimationHandle, stagger?: number}>`
     opacity: 0;
+    ${props => props.itemStyle}
+    
     ${props => props.stagger !== undefined ? props.animation(props.stagger) : ''}
 `;
 
@@ -36,7 +37,7 @@ const StaggerInView: React.FC<StaggerProps> = props => {
         return (
             <InView triggerOnce={true} rootMargin={'-20%'}>
                 {({inView, ref}) => (
-                    <StaggerWrapper animation={props.animation} stagger={inView ? stagger() : undefined} ref={ref}>{child}</StaggerWrapper>
+                    <StaggerWrapper itemStyle={props.itemStyle} animation={props.animation} stagger={inView ? stagger() : undefined} ref={ref}>{child}</StaggerWrapper>
                 )}
             </InView>
         );
