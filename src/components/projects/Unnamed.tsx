@@ -6,7 +6,6 @@ import {faAngleDown, faCodeBranch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {WithTranslation, withTranslation} from "react-i18next";
 
-
 const Unnamed: React.FC<WithTranslation> = ({t}) => {
     return (
         <ProjectCard>
@@ -25,7 +24,6 @@ const Unnamed: React.FC<WithTranslation> = ({t}) => {
                         <ProjectPreviewButton disabled tooltip={t('projects.source_nda')} icon={faCodeBranch}>Source Code</ProjectPreviewButton>
                     </div>
                     <Typography variant='h6' style={{fontWeight: 'bold', color: '#008073', marginBottom: '0.5rem'}}>{t('projects.unnamed.name')}</Typography>
-
                     <Typography paragraph>
                         {t('projects.unnamed.short_description')}
                     </Typography>
