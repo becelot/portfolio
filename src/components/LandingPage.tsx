@@ -10,10 +10,7 @@ import {faEnvelope, faNewspaper} from "@fortawesome/free-solid-svg-icons";
 import SocialLink from "./SocialLink";
 
 import { Parallax } from 'react-parallax';
-import Fade from 'react-reveal/Fade';
-import Slide from 'react-reveal/Slide';
 import StaggerInView from "../utils/StaggerInView";
-import SlideInBottom from "../animations/SlideInBottom";
 import FlipInX from "../animations/FlipInX";
 
 
