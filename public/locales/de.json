@@ -15,12 +15,16 @@
       "name": "DSLViz",
       "short_description": "Ein auf Angular basierendes Webframework zur Visualisierung von Domänenspezifischen Sprachen."
     },
+    "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich.",
+    "mensa": {
+      "name": "MensaApp",
+      "short_description": "Eine Android-Anwendung, die aktuelle und zukünftige Menüs von verschiedenen Mensen herunterlädt und anzeigt. Die Menüs werden von einem eigenen Backend bereitgestellt."
+    },
+    "read_more": "Mehr Informationen",
+    "source_nda": "Der Source Code ist wegen NDA nicht zugänglich.",
     "unnamed": {
       "name": "<Deutscher Name>",
       "short_description": "<Deutsche Kurzbeschreibung>"
-    },
-    "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich.",
-    "read_more": "Mehr Informationen",
-    "source_nda": "Der Source Code ist wegen NDA nicht zugänglich."
+    }
   }
 }

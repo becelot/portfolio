@@ -15,12 +15,16 @@
       "name": "DSLViz",
       "short_description": "A web framework based on Angular to visualize domain-specific languages."
     },
+    "live_nda": "Live preview is currently under NDA.",
+    "mensa": {
+      "name": "MensaApp",
+      "short_description": "An Android application that downloads and visualizes current and future meals in university canteens. Meals are retrieved from a custom backend."
+    },
+    "read_more": "Read more",
+    "source_nda": "Source Code is currently under NDA.",
     "unnamed": {
       "name": "<English Name>",
       "short_description": "<English short description>"
-    },
-    "live_nda": "Live preview is currently under NDA.",
-    "read_more": "Read more",
-    "source_nda": "Source Code is currently under NDA."
+    }
   }
 }
