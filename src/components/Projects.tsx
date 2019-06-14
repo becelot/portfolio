@@ -10,6 +10,7 @@ import {InView} from "react-intersection-observer";
 import SlideInBottom from "../animations/SlideInBottom";
 import Expand from "../animations/Expand";
 import SlideInRight from "../animations/SlideInRight";
+import StaggerInView from "../utils/StaggerInView";
 
 const HeaderRuleExpand = Expand('30%', 1);
 
@@ -75,7 +76,7 @@ const Content = styled.div`
   padding: 0 100px;
 `;
 
-const IntroText = styled(Typography)<{visible: boolean}>`
+const IntroText = styled(Typography)<{visible: string}>`
   width: 50%;
   text-align: center;
   align-self: center;
@@ -83,7 +84,7 @@ const IntroText = styled(Typography)<{visible: boolean}>`
   color: white;
   opacity: 0;
   
-  ${props => props.visible ? SlideInRight(0) : ''}
+  ${props => props.visible === 'true' ? SlideInRight(0) : ''}
 `;
 
 
@@ -94,16 +95,18 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
     return (
         <>
             <Wrapper>
-                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-40%'} triggerOnce={true}>
+                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-20%'} triggerOnce={true}>
                     {({inView, ref}) => (<Header visible={inView} ref={ref}>{t('header.projects')}</Header>)}
                 </InView>
-                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-40%'} triggerOnce={true}>
-                    {({inView, ref}) => (<IntroText visible={inView} ref={ref} variant={'subtitle1'}>{t('projects.about')}</IntroText>)}
+                <InView style={{width: '100%', textAlign: 'center'}} rootMargin={'-20%'} triggerOnce={true}>
+                    {({inView, ref}) => (<IntroText visible={inView.toString()} ref={ref} variant={'subtitle1'}>{t('projects.about')}</IntroText>)}
                 </InView>
                 <Content>
-                    <DSLViz />
-                    <DeckHistoryTracker />
-                    <Unnamed />
+                    <StaggerInView animation={SlideInBottom} stagger={0.5}>
+                        <DSLViz />
+                        <DeckHistoryTracker />
+                        <Unnamed />
+                    </StaggerInView>
                 </Content>
             </Wrapper>
         </>
