@@ -107,13 +107,12 @@ const LandingPage: React.FC = () => {
                 <ContentAlign>
 
                     <Content>
-                        <Fade bottom>
                         <NameText>Benedict Becker</NameText>
                         <TextSpinner>
                             {count ? (
-                                <Typist stdTypingDelay={0} avgTypingDelay={100} startDelay={200}
+                                <Typist stdTypingDelay={0} avgTypingDelay={100}
                                         onTypingDone={() => setCount(0)}>
-                                    <Typist.Delay ms={1000}/>
+                                    <Typist.Delay ms={2000}/>
                                     Fullstack Developer
                                     <Typist.Delay ms={4000}/>
                                     <Typist.Backspace count={19} delay={200}/>
@@ -132,7 +131,6 @@ const LandingPage: React.FC = () => {
                             )}
 
                         </TextSpinner>
-                    </Fade>
                     </Content>
 
                 </ContentAlign>
