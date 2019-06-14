@@ -11,7 +11,6 @@ import SlideInBottom from "../animations/SlideInBottom";
 import Expand from "../animations/Expand";
 import SlideInRight from "../animations/SlideInRight";
 import StaggerInView from "../utils/StaggerInView";
-import FlipInX from "../animations/FlipInX";
 import ZoomIn from "../animations/ZoomIn";
 
 const HeaderRuleExpand = Expand('30%', 1);
