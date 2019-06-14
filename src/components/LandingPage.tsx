@@ -7,11 +7,14 @@ import 'react-typist/dist/Typist.css';
 
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope, faNewspaper} from "@fortawesome/free-solid-svg-icons";
-import {SocialLink} from "./SocialLink";
+import SocialLink from "./SocialLink";
 
 import { Parallax } from 'react-parallax';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
+import StaggerInView from "../utils/StaggerInView";
+import SlideInBottom from "../animations/SlideInBottom";
+import FlipInX from "../animations/FlipInX";
 
 
 
@@ -136,12 +139,12 @@ const LandingPage: React.FC = () => {
                 <SocialLinks>
 
                         <SocialLinkPadding>
-                            <Slide top>
+                            <StaggerInView animation={FlipInX} stagger={0.5}>
                                 <SocialLink title={'Github'} icon={faGithub} link={'https://github.com/becelot'}/>
                                 <SocialLink title={'LinkedIn'} icon={faLinkedin}/>
                                 <SocialLink title={'Mail'} icon={faEnvelope}/>
                                 <SocialLink title={'Resume'} icon={faNewspaper}/>
-                            </Slide>
+                            </StaggerInView>
                         </SocialLinkPadding>
 
                 </SocialLinks>
