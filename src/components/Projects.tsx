@@ -53,7 +53,7 @@ const Header = withAnimationTrigger(styled.div<{visible: boolean}>`
     right: 0;
   }
   
-  ${media.lessThan('large')`
+  ${media.lessThan('huge')`
     font-size: 3.4rem;
     
     :before, :after {
@@ -101,14 +101,17 @@ const IntroText = withAnimation(styled(Typography).attrs(props => ({paragraph: t
   
   color: white;
   opacity: 0;
+  font-size: 2rem !important;
   
   
-  ${media.between('medium', 'large')`
+  ${media.between('medium', 'huge')`
     width: 60%;
+    font-size: 1.8rem !important;
   `}
   
   ${media.lessThan('medium')`
     width: 80%;
+    font-size: 1.6rem !important;
   `}
 `, SlideInRight(0));
 
