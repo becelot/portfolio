@@ -14,6 +14,7 @@ import ZoomIn from "../animations/ZoomIn";
 import withAnimationTrigger from "../utils/withAnimationTrigger";
 import withAnimation from "../utils/withAnimation";
 import MensaApp from "./projects/MensaApp";
+import media from "../utils/media";
 
 const HeaderRuleExpand = Expand('30%', 1);
 
@@ -51,6 +52,19 @@ const Header = withAnimationTrigger(styled.div<{visible: boolean}>`
   :after {
     right: 0;
   }
+  
+  ${media.lessThan('large')`
+    font-size: 3.4rem;
+    
+    :before, :after {
+        border-bottom: 4.25px solid rgba(0,0,0,0.25);
+    }
+  `}
+  
+  ${media.lessThan('medium')`
+    width: 90%;
+    font-size: 2.7rem;
+  `}
 `);
 
 const Wrapper = styled.div`
@@ -80,13 +94,22 @@ const Content = styled.div`
   padding: 0 100px;
 `;
 
-const IntroText = withAnimation(styled.div`
+const IntroText = withAnimation(styled(Typography).attrs(props => ({paragraph: true, variant: 'subtitle1'}))`
   width: 50%;
   text-align: center;
   align-self: center;
   
   color: white;
   opacity: 0;
+  
+  
+  ${media.between('medium', 'large')`
+    width: 60%;
+  `}
+  
+  ${media.lessThan('medium')`
+    width: 80%;
+  `}
 `, SlideInRight(0));
 
 const cardItemStyle = css`
@@ -99,7 +122,7 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
         <>
             <Wrapper>
                 <Header>{t('header.projects')}</Header>
-                <IntroText><Typography paragraph variant={'subtitle1'}>{t('projects.about')}</Typography></IntroText>
+                <IntroText>{t('projects.about')}</IntroText>
                 <Content>
                     <StaggerInView itemStyle={cardItemStyle} animation={ZoomIn} stagger={0.5}>
                         <DSLViz />
