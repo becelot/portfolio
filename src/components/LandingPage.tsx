@@ -53,13 +53,19 @@ const NameText = styled.span`
   font-size: 9rem;
   margin-bottom: 10px;
   
-  ${media.between('medium', 'huge')`
+  ${media.between('large', 'huge')`
     font-size: 7rem;
+    margin-bottom: 0;
+  `}
+  
+  ${media.between('medium', 'large')`
+    font-size: 6rem;
     margin-bottom: 0;
   `}
   
   ${media.lessThan('medium')`
     font-size: 5rem;
+    margin-bottom: 0;
   `}
 `;
 
@@ -72,8 +78,12 @@ const TextSpinner = styled.div`
       color: #9d56ff;
     }
     
-    ${media.between('medium', 'huge')`
+    ${media.between('large', 'huge')`
         font-size: 4rem;
+    `}
+    
+    ${media.between('medium', 'large')`
+        font-size: 3.5rem;
     `}
     
     ${media.lessThan('medium')`
@@ -84,8 +94,12 @@ const TextSpinner = styled.div`
 const EmptyDiv = styled.div`
   height: 57px;
   
-  ${media.between('medium', 'huge')`
+  ${media.between('large', 'huge')`
     height: 46px;
+  `}
+  
+  ${media.between('medium', 'large')`
+    height: 40px;
   `}
   
   ${media.lessThan('medium')`
