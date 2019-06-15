@@ -52,7 +52,7 @@ export const TechnologyBar = styled.div`
 `;
 
 export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string, url?: string}> = ({icon, children, tooltip, url}) => {
-    const disabled = Boolean(url);
+    const disabled = !Boolean(url);
 
     const button = (
         <Button variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}} disabled={disabled}>
