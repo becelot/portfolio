@@ -51,7 +51,8 @@ export const TechnologyBar = styled.div`
     flex: 0 0 0;
 `;
 
-export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string, disabled?: boolean}> = ({icon, children, tooltip, disabled}) => {
+export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string, url?: string}> = ({icon, children, tooltip, url}) => {
+    const disabled = Boolean(url);
 
     const button = (
         <Button variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}} disabled={disabled}>
@@ -68,5 +69,5 @@ export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string, d
         </a>
     );
 
-    return tooltip ? (<Tooltip title={tooltip}>{renderedButton}</Tooltip>) : renderedButton;
+    return tooltip && disabled ? (<Tooltip title={tooltip}>{renderedButton}</Tooltip>) : renderedButton;
 };
