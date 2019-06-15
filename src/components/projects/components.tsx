@@ -1,7 +1,8 @@
-import {Button, Card, CardContent, Tooltip, withStyles} from "@material-ui/core";
+import {Button, Card, CardContent, Tooltip, Typography, withStyles} from "@material-ui/core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React from "react";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
+import styled, {css} from "styled-components";
 
 export const ProjectCard = withStyles({
     root: {
@@ -20,6 +21,28 @@ export const ProjectCardContent = withStyles({
         padding: '16px 16px 0 16px',
     }
 })(CardContent);
+
+export const TechnologyBadge = styled.span`
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3px 6px;
+    background: #BF4E4E;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    
+    margin-left: 10px;
+    margin-right: 10px;
+`;
+
+export const TechnologyBar = styled(Typography).attrs((props: any) => ({paragraph: true}))`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flext-start;
+    
+    flex: 0 0 0;
+`;
 
 export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string, disabled?: boolean}> = ({icon, children, tooltip, disabled}) => {
 
