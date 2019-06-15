@@ -4,7 +4,9 @@ import {Button, CardMedia, Divider, Typography} from "@material-ui/core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-regular-svg-icons";
 import {faAngleDown, faCodeBranch} from "@fortawesome/free-solid-svg-icons";
-import {ProjectCard, ProjectCardContent, ProjectPreviewButton} from "./components";
+import {ProjectCard, ProjectCardContent, ProjectPreviewButton, TechnologyBadge, TechnologyBar} from "./components";
+import styled from "styled-components";
+
 
 const DSLViz: React.FC<WithTranslation> = ({t}) => {
     return (
@@ -24,10 +26,16 @@ const DSLViz: React.FC<WithTranslation> = ({t}) => {
                         <ProjectPreviewButton disabled tooltip={t('projects.source_nda')} icon={faCodeBranch}>Source Code</ProjectPreviewButton>
                     </div>
                     <Typography variant='h6' style={{fontWeight: 'bold', color: '#008073', marginBottom: '0.5rem'}}>{t('projects.dslviz.name')}</Typography>
-                    <Typography paragraph>
+                    <Typography>
                         {t('projects.dslviz.short_description')}
                     </Typography>
                 </ProjectCardContent>
+
+                <TechnologyBar variant={'h6'}>
+                    <TechnologyBadge>Angular</TechnologyBadge>
+                    <TechnologyBadge>Framework</TechnologyBadge>
+                    <TechnologyBadge>DSL</TechnologyBadge>
+                </TechnologyBar>
                 <Divider />
                 <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>
                     <FontAwesomeIcon icon={faAngleDown} style={{marginRight: '1rem'}} />

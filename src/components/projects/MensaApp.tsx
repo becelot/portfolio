@@ -4,7 +4,7 @@ import {Button, CardMedia, Divider, Typography} from "@material-ui/core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-regular-svg-icons";
 import {faAngleDown, faCodeBranch} from "@fortawesome/free-solid-svg-icons";
-import {ProjectCard, ProjectCardContent, ProjectPreviewButton} from "./components";
+import {ProjectCard, ProjectCardContent, ProjectPreviewButton, TechnologyBadge, TechnologyBar} from "./components";
 import styled from "styled-components";
 
 const Image = styled.img`
@@ -31,9 +31,14 @@ const MensaApp: React.FC<WithTranslation> = ({t}) => {
                     </div>
                     <Typography variant='h6' style={{fontWeight: 'bold', color: '#008073', marginBottom: '0.5rem'}}>{t('projects.mensa.name')}</Typography>
 
-                    <Typography paragraph dangerouslySetInnerHTML={{__html: t('projects.mensa.short_description')}} />
+                    <Typography dangerouslySetInnerHTML={{__html: t('projects.mensa.short_description')}} />
 
                 </ProjectCardContent>
+                <TechnologyBar variant={'h6'}>
+                    <TechnologyBadge>Android</TechnologyBadge>
+                    <TechnologyBadge>Scala</TechnologyBadge>
+                    <TechnologyBadge>Proxy</TechnologyBadge>
+                </TechnologyBar>
                 <Divider />
                 <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>
                     <FontAwesomeIcon icon={faAngleDown} style={{marginRight: '1rem'}} />

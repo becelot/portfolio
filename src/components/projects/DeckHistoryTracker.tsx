@@ -4,7 +4,21 @@ import {Button, CardMedia, Divider, Typography} from "@material-ui/core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-regular-svg-icons";
 import {faAngleDown, faCodeBranch} from "@fortawesome/free-solid-svg-icons";
-import {ProjectCard, ProjectCardContent, ProjectPreviewButton} from "./components";
+import {
+    ProjectCard,
+    ProjectCardContent,
+    ProjectPreviewButton,
+    TechnologyBadge,
+    TechnologyBar
+} from "./components";
+import StaggerInView from "../../utils/StaggerInView";
+import FlipInX from "../../animations/FlipInX";
+import {css} from "styled-components";
+
+const items = css`
+    flex: 0 0 113.25px;
+    margin: 0 10px;
+`;
 
 const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
     return (
@@ -25,9 +39,17 @@ const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
                     </div>
                     <Typography variant='h6' style={{fontWeight: 'bold', color: '#008073', marginBottom: '0.5rem'}}>{t('projects.dht.name')}</Typography>
 
-                    <Typography paragraph dangerouslySetInnerHTML={{__html: t('projects.dht.short_description')}} />
+                    <Typography dangerouslySetInnerHTML={{__html: t('projects.dht.short_description')}} />
 
                 </ProjectCardContent>
+
+                <TechnologyBar paragraph variant={'h6'}>
+                    <StaggerInView itemStyle={items} stagger={0.5} animation={FlipInX}>
+                        <TechnologyBadge>React</TechnologyBadge>
+                        <TechnologyBadge>Python</TechnologyBadge>
+                        <TechnologyBadge>PostgreSQL</TechnologyBadge>
+                    </StaggerInView>
+                </TechnologyBar>
                 <Divider />
                 <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>
                     <FontAwesomeIcon icon={faAngleDown} style={{marginRight: '1rem'}} />
