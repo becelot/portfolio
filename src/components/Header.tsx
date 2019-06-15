@@ -12,6 +12,7 @@ import {
     withStyles
 } from "@material-ui/core";
 import {WithTranslation, withTranslation} from "react-i18next";
+import media from "../utils/media";
 
 const Wrapper = styled.nav`
   width: 100%;
@@ -60,19 +61,18 @@ const Section = styled.div`
     }
   }
     
-    
-  @media only screen and (max-width: 640px){
+  ${media.lessThan('small')`
     display: none;
-  }
+  `}
 `;
 
 const BurgerSection = styled(Section)`
   display: none;
   color: white;
   
-  @media only screen and (max-width: 640px){
+  ${media.lessThan('small')`
     display: unset;
-  }
+  `}
 `;
 
 const BurgerMenu = styled.div`
