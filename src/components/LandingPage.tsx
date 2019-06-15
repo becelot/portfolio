@@ -53,8 +53,9 @@ const NameText = styled.span`
   font-size: 9rem;
   margin-bottom: 10px;
   
-  ${media.between('medium', 'large')`
+  ${media.between('medium', 'huge')`
     font-size: 7rem;
+    margin-bottom: 0;
   `}
   
   ${media.lessThan('medium')`
@@ -71,7 +72,7 @@ const TextSpinner = styled.div`
       color: #9d56ff;
     }
     
-    ${media.between('medium', 'large')`
+    ${media.between('medium', 'huge')`
         font-size: 4rem;
     `}
     
@@ -83,7 +84,7 @@ const TextSpinner = styled.div`
 const EmptyDiv = styled.div`
   height: 57px;
   
-  ${media.between('medium', 'large')`
+  ${media.between('medium', 'huge')`
     height: 46px;
   `}
   

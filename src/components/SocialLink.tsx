@@ -38,7 +38,7 @@ const Wrapper = styled.a`
     transform: translateY(-20px);
   }
   
-  ${media.between('medium', 'large')`
+  ${media.between('medium', 'huge')`
     font-size: 2rem;
     width: 7.75rem;
     
