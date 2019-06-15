@@ -12,6 +12,7 @@ import SocialLink from "./SocialLink";
 import { Parallax } from 'react-parallax';
 import StaggerInView from "../utils/StaggerInView";
 import FlipInX from "../animations/FlipInX";
+import media from "../utils/media";
 
 
 
@@ -49,13 +50,16 @@ const Content = styled.div`
 
 const NameText = styled.span`
   flex: 1 1 0;
-  font-size: 10rem;
-  margin-bottom: 20px;
+  font-size: 9rem;
+  margin-bottom: 10px;
   
-  @media only screen and (max-width: 880px), only screen and (max-height: 550px){
-    font-size: 4rem;
-    margin-bottom: 10px;
-  }
+  ${media.between('medium', 'large')`
+    font-size: 7rem;
+  `}
+  
+  ${media.lessThan('medium')`
+    font-size: 5rem;
+  `}
 `;
 
 const TextSpinner = styled.div`
@@ -67,16 +71,25 @@ const TextSpinner = styled.div`
       color: #9d56ff;
     }
     
-  @media only screen and (max-width: 880px), only screen and (max-height: 550px) {
-    font-size: 2rem;
-  }
+    ${media.between('medium', 'large')`
+        font-size: 4rem;
+    `}
+    
+    ${media.lessThan('medium')`
+        font-size: 3rem;
+    `}
 `;
 
 const EmptyDiv = styled.div`
   height: 57px;
-  @media only screen and (max-width: 880px), only screen and (max-height: 550px) {
-    height: 23px;
-  }
+  
+  ${media.between('medium', 'large')`
+    height: 46px;
+  `}
+  
+  ${media.lessThan('medium')`
+    height: 34px;
+  `}
 `;
 
 const SocialLinks = styled.div`
