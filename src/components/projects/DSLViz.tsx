@@ -4,9 +4,16 @@ import {Button, CardMedia, Divider, Typography} from "@material-ui/core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-regular-svg-icons";
 import {faAngleDown, faCodeBranch} from "@fortawesome/free-solid-svg-icons";
-import {ProjectCard, ProjectCardContent, ProjectPreviewButton, TechnologyBadge, TechnologyBar} from "./components";
-import styled from "styled-components";
-
+import {
+    ProjectCard,
+    ProjectCardContent,
+    ProjectPreviewButton,
+    TechnologyBadge,
+    TechnologyBadgeWrapper,
+    TechnologyBar
+} from "./components";
+import StaggerInView from "../../utils/StaggerInView";
+import FlipInX from "../../animations/FlipInX";
 
 const DSLViz: React.FC<WithTranslation> = ({t}) => {
     return (
@@ -31,10 +38,12 @@ const DSLViz: React.FC<WithTranslation> = ({t}) => {
                     </Typography>
                 </ProjectCardContent>
 
-                <TechnologyBar variant={'h6'}>
-                    <TechnologyBadge>Angular</TechnologyBadge>
-                    <TechnologyBadge>Framework</TechnologyBadge>
-                    <TechnologyBadge>DSL</TechnologyBadge>
+                <TechnologyBar>
+                    <StaggerInView itemStyle={TechnologyBadgeWrapper} stagger={0.4} animation={FlipInX}>
+                        <TechnologyBadge>Angular</TechnologyBadge>
+                        <TechnologyBadge>Framework</TechnologyBadge>
+                        <TechnologyBadge>DSL</TechnologyBadge>
+                    </StaggerInView>
                 </TechnologyBar>
                 <Divider />
                 <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>

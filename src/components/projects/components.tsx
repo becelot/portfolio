@@ -22,7 +22,7 @@ export const ProjectCardContent = withStyles({
     }
 })(CardContent);
 
-export const TechnologyBadge = styled.span`
+export const TechnologyBadge = styled(Typography).attrs((props: any) => ({variant: 'h6'}))`
     display: block;
     box-sizing: border-box;
     width: 100%;
@@ -36,10 +36,17 @@ export const TechnologyBadge = styled.span`
     margin-right: 10px;
 `;
 
-export const TechnologyBar = styled(Typography).attrs((props: any) => ({paragraph: true}))`
+export const TechnologyBadgeWrapper = css`
+    flex: 1 0 0;
+    margin: 0 10px;
+`;
+
+export const TechnologyBar = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: flext-start;
+    justify-content: flex-start;
+    
+    margin-bottom: 16px;
     
     flex: 0 0 0;
 `;

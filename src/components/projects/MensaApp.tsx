@@ -4,13 +4,16 @@ import {Button, CardMedia, Divider, Typography} from "@material-ui/core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-regular-svg-icons";
 import {faAngleDown, faCodeBranch} from "@fortawesome/free-solid-svg-icons";
-import {ProjectCard, ProjectCardContent, ProjectPreviewButton, TechnologyBadge, TechnologyBar} from "./components";
-import styled from "styled-components";
-
-const Image = styled.img`
-    
-`;
-
+import {
+    ProjectCard,
+    ProjectCardContent,
+    ProjectPreviewButton,
+    TechnologyBadge,
+    TechnologyBadgeWrapper,
+    TechnologyBar
+} from "./components";
+import FlipInX from "../../animations/FlipInX";
+import StaggerInView from "../../utils/StaggerInView";
 
 const MensaApp: React.FC<WithTranslation> = ({t}) => {
     return (
@@ -34,10 +37,12 @@ const MensaApp: React.FC<WithTranslation> = ({t}) => {
                     <Typography dangerouslySetInnerHTML={{__html: t('projects.mensa.short_description')}} />
 
                 </ProjectCardContent>
-                <TechnologyBar variant={'h6'}>
-                    <TechnologyBadge>Android</TechnologyBadge>
-                    <TechnologyBadge>Scala</TechnologyBadge>
-                    <TechnologyBadge>Proxy</TechnologyBadge>
+                <TechnologyBar>
+                    <StaggerInView stagger={0.5} animation={FlipInX} itemStyle={TechnologyBadgeWrapper}>
+                        <TechnologyBadge>Android</TechnologyBadge>
+                        <TechnologyBadge>Scala</TechnologyBadge>
+                        <TechnologyBadge>Proxy</TechnologyBadge>
+                    </StaggerInView>
                 </TechnologyBar>
                 <Divider />
                 <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>

@@ -8,17 +8,11 @@ import {
     ProjectCard,
     ProjectCardContent,
     ProjectPreviewButton,
-    TechnologyBadge,
+    TechnologyBadge, TechnologyBadgeWrapper,
     TechnologyBar
 } from "./components";
 import StaggerInView from "../../utils/StaggerInView";
 import FlipInX from "../../animations/FlipInX";
-import {css} from "styled-components";
-
-const items = css`
-    flex: 0 0 113.25px;
-    margin: 0 10px;
-`;
 
 const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
     return (
@@ -43,8 +37,8 @@ const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
 
                 </ProjectCardContent>
 
-                <TechnologyBar paragraph variant={'h6'}>
-                    <StaggerInView itemStyle={items} stagger={0.5} animation={FlipInX}>
+                <TechnologyBar>
+                    <StaggerInView itemStyle={TechnologyBadgeWrapper} stagger={0.5} animation={FlipInX}>
                         <TechnologyBadge>React</TechnologyBadge>
                         <TechnologyBadge>Python</TechnologyBadge>
                         <TechnologyBadge>PostgreSQL</TechnologyBadge>

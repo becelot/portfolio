@@ -1,19 +1,19 @@
 import React from "react";
-import {ProjectCard, ProjectCardContent, ProjectPreviewButton, TechnologyBadge, TechnologyBar} from "./components";
+import {
+    ProjectCard,
+    ProjectCardContent,
+    ProjectPreviewButton,
+    TechnologyBadge,
+    TechnologyBadgeWrapper,
+    TechnologyBar
+} from "./components";
 import {Button, CardMedia, Divider, Typography} from "@material-ui/core";
 import {faEye} from "@fortawesome/free-regular-svg-icons";
 import {faAngleDown, faCodeBranch} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {WithTranslation, withTranslation} from "react-i18next";
-import {css} from "styled-components";
 import StaggerInView from "../../utils/StaggerInView";
 import FlipInX from "../../animations/FlipInX";
-
-
-const items = css`
-    flex: 0 0 113.25px;
-    margin: 0 10px;
-`;
 
 const Unnamed: React.FC<WithTranslation> = ({t}) => {
     return (
@@ -38,11 +38,11 @@ const Unnamed: React.FC<WithTranslation> = ({t}) => {
                     </Typography>
                 </ProjectCardContent>
 
-                <TechnologyBar variant={'h6'}>
-                    <StaggerInView stagger={0.5} animation={FlipInX} itemStyle={items}>
+                <TechnologyBar>
+                    <StaggerInView stagger={0.5} animation={FlipInX} itemStyle={TechnologyBadgeWrapper}>
                         <TechnologyBadge>Angular</TechnologyBadge>
                         <TechnologyBadge>Python</TechnologyBadge>
-                        <TechnologyBadge>C#</TechnologyBadge>
+                        <TechnologyBadge>C#/WPF</TechnologyBadge>
                     </StaggerInView>
                 </TechnologyBar>
                 <Divider />
