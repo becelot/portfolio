@@ -29,6 +29,7 @@
     "react-scripts": "3.0.1",
     "react-typist": "^2.0.5",
     "styled-components": "^4.3.1",
+    "styled-media-query": "^2.1.2",
     "typescript": "3.5.1"
   },
   "scripts": {
