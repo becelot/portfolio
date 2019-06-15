@@ -2,6 +2,7 @@ import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 import styled from "styled-components";
+import media from "../utils/media";
 
 type SocialProps = {
     title: string;
@@ -37,15 +38,25 @@ const Wrapper = styled.a`
     transform: translateY(-20px);
   }
   
-  @media only screen and (max-width: 880px), only screen and (max-height: 550px){
-    font-size: 1.5rem;
+  ${media.between('medium', 'large')`
+    font-size: 2rem;
+    width: 7.75rem;
+    
+    svg {
+        font-size: 3.3rem;
+        margin-bottom: 0.83rem;
+    }
+  `}
+  
+  ${media.lessThan('medium')`
+    font-size: 1.6rem;
     width: 70px;
   
     svg {
       font-size: 2.5rem;
       margin-bottom: 6.25px;
     }
-  }
+  `}
 `;
 
 class SocialLink extends React.Component<SocialProps> {
