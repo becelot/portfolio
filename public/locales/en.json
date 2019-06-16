@@ -25,6 +25,10 @@
     "unnamed": {
       "name": "<English Name>",
       "short_description": "English short description"
+    },
+    "vt": {
+      "name": "VocTrainer",
+      "short_description": "Application that enables the user to add vocabulary by lesson and category. Randomly generates questionnaires by lesson, category or from all added words."
     }
   }
 }

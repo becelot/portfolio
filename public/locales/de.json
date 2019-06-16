@@ -25,6 +25,10 @@
     "unnamed": {
       "name": "<Deutscher Name>",
       "short_description": "Deutsche Kurzbeschreibung"
+    },
+    "vt": {
+      "name": "VocTrainer",
+      "short_description": "Anwendung, mit der der Benutzer Vokabeln nach Lektion und Kategorie hinzufügen kann. Generiert zufällig Fragebögen nach Lektion, Kategorie oder aus allen hinzugefügten Wörtern."
     }
   }
 }

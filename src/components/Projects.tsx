@@ -15,6 +15,7 @@ import withAnimationTrigger from "../utils/withAnimationTrigger";
 import withAnimation from "../utils/withAnimation";
 import MensaApp from "./projects/MensaApp";
 import media from "../utils/media";
+import VocTrainer from "./projects/VocTrainer";
 
 const HeaderRuleExpand = Expand('30%', 1);
 
@@ -132,6 +133,7 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
                         <DeckHistoryTracker />
                         <Unnamed />
                         <MensaApp />
+                        <VocTrainer />
                     </StaggerInView>
                 </Content>
             </Wrapper>
