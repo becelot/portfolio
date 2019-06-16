@@ -22,13 +22,14 @@ export const ProjectCardContent = withStyles({
     }
 })(CardContent);
 
-export const TechnologyBadge = styled(Typography).attrs((props: any) => ({variant: 'h6'}))`
+export const TechnologyBadge = styled(Typography).attrs((props: any) => ({variant: 'subtitle1'}))`
     display: block;
     box-sizing: border-box;
     width: 100%;
     padding: 3px 6px;
-    background: #BF4E4E;
+    background: #BF4E4E; // #BF4E4E; #DEC0DE
     color: white;
+    font-weight: 550 !important;
     text-align: center;
     border-radius: 5px;
     

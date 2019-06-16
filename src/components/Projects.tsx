@@ -127,7 +127,7 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
                 <Header>{t('header.projects')}</Header>
                 <IntroText>{t('projects.about')}</IntroText>
                 <Content>
-                    <StaggerInView itemStyle={cardItemStyle} animation={ZoomIn} stagger={0.5}>
+                    <StaggerInView itemStyle={cardItemStyle} animation={ZoomIn} stagger={0.2}>
                         <DSLViz />
                         <DeckHistoryTracker />
                         <Unnamed />

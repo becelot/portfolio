@@ -36,7 +36,7 @@ const ProjectLayout: React.FC<WithTranslation & ProjectLayoutProps> = ({t, child
                     {children}
                 </ProjectCardContent>
                 <TechnologyBar>
-                    <StaggerInView stagger={0.5} animation={FlipInX} itemStyle={TechnologyBadgeWrapper}>
+                    <StaggerInView stagger={0.4} animation={FlipInX} itemStyle={TechnologyBadgeWrapper}>
                         {technologyBadges.map(badge => (<TechnologyBadge key={badge}>{badge}</TechnologyBadge>))}
                     </StaggerInView>
                 </TechnologyBar>
