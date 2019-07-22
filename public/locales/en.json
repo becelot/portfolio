@@ -13,7 +13,7 @@
     },
     "dslviz": {
       "name": "DSLViz",
-      "short_description": "A web framework based on Angular to visualize domain-specific languages."
+      "short_description": "<h4>Problem</h4>A web framework based on Angular to visualize domain-specific languages. The framework enables developers to implement the well-known AST datastructure in the form of web components, while simultaneously allowing to specify, how users can interact with them. This information is aggregated by the framework, allowing end-users to create models for the DSL visually, rather than relying on the user to learn the abstract syntax of a programming language."
     },
     "live_nda": "Live preview is currently under NDA.",
     "mensa": {
