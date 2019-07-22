@@ -177,7 +177,7 @@ const LandingPage: React.FC = () => {
                         <SocialLinkPadding>
                             <StaggerInView animation={FlipInX} stagger={0.5}>
                                 <SocialLink title={'Github'} icon={faGithub} link={'https://github.com/becelot'}/>
-                                <SocialLink title={'LinkedIn'} icon={faLinkedin}/>
+                                <SocialLink title={'LinkedIn'} icon={faLinkedin} link={'https://www.linkedin.com/in/benedict-becker-9a20b018b/'}/>
                                 <SocialLink title={'Mail'} icon={faEnvelope}/>
                                 <SocialLink title={'Resume'} icon={faNewspaper}/>
                             </StaggerInView>
