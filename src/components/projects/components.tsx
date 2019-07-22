@@ -18,7 +18,7 @@ export const ProjectCardContent = withStyles({
     root: {
         display: 'flex',
         flexDirection: 'column',
-        padding: '16px 16px 0 16px',
+        padding: '16px 16px 0 24px',
     }
 })(CardContent);
 
