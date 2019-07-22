@@ -6,7 +6,7 @@ import ProjectDefaultContent from "./ProjectDefaultContent";
 const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
     return (
         <ProjectLayout
-            technologyBadges={['React', 'Python', 'PostgreSQL']}
+            technologyBadges={['React', 'HTML', 'CSS', 'Python', 'Flask', 'PostgreSQL', 'C#', 'WPF']}
             image={'projects/deck-history-tracker.jpg'}
             projectPrefix={'dht'}
         >
