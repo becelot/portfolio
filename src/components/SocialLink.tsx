@@ -20,17 +20,17 @@ const Wrapper = styled.a`
   cursor: pointer;
   
   width: 93px;
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: white;
   
-  border-left: 6.7px solid transparent;
-  border-right: 6.7px solid transparent;
+  border-left: 5.58px solid transparent;
+  border-right: 5.58px solid transparent;
   
   transition: transform 0.15s ease-in-out;
   text-decoration: none !important;
   
   svg {
-    font-size: 4rem;
+    font-size: 3.333rem;
     margin-bottom: 10px;
   }
   
