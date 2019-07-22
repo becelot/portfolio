@@ -13,7 +13,17 @@
     },
     "dslviz": {
       "name": "DSLViz",
-      "short_description": "Ein auf Angular basierendes Webframework zur Visualisierung von Domänenspezifischen Sprachen."
+      "problem": "Problem",
+      "problem_description": "Domain-specific languages (DSL) are programming languages built for a specific domain. They reduce the vocabulary of general-purpose languages and thus their accessibility for end-users, i.e. users without experience in programming and computer science. However, these languages still have to be tought to the user.",
+      "project": "Projekt",
+      "short_description": "Ein auf Angular basierendes Webframework zur Visualisierung von Domänenspezifischen Sprachen.",
+      "solution": "Lösung",
+      "solution-0": "Framework, dass auf Angular aufbaut",
+      "solution-1": "Richtet sich an Entwickler von DSLs",
+      "solution-2": "Spezifiziere die Interaktionsmöglichkeiten mit dem AST",
+      "solution-3": "Keine lokale Nutzerinstallation nötig. Wird im Browser ausgeführt!",
+      "solution-4": "Plugin-System: Ausdrucksstärke des Frameworks erweiterbar",
+      "solution_description": "..."
     },
     "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich.",
     "mensa": {
