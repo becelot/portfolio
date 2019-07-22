@@ -6,7 +6,7 @@ import ProjectDefaultContent from "./ProjectDefaultContent";
 const DSLViz: React.FC<WithTranslation> = ({t}) => {
     return (
         <ProjectLayout
-            technologyBadges={['Angular', 'Framework', 'DSL']}
+            technologyBadges={['Angular', 'HTML5', 'SASS', 'TypeScript', 'DSL', 'AST']}
             image={'projects/editor-preview.png'}
             projectPrefix={'dslviz'}
         >

@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import React from "react";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 import styled, {css} from "styled-components";
+import {faDotCircle} from "@fortawesome/free-regular-svg-icons";
 
 export const ProjectCard = withStyles({
     root: {
@@ -17,25 +18,33 @@ export const ProjectCardContent = withStyles({
     root: {
         display: 'flex',
         flexDirection: 'column',
-        flex: '1 0 0',
         padding: '16px 16px 0 16px',
     }
 })(CardContent);
 
-export const TechnologyBadge = styled(Typography).attrs((props: any) => ({variant: 'subtitle1'}))`
+export interface TechnologyLabel {
+    label: string;
+}
+
+export const TechnologyBadgeLayout = styled(Typography)`
     display: block;
     box-sizing: border-box;
-    width: 100%;
-    padding: 3px 6px;
-    background: #BF4E4E; // #BF4E4E; #DEC0DE
-    color: white;
-    font-weight: 550 !important;
-    text-align: center;
-    border-radius: 5px;
+    color: black;
     
-    flex: 0 0 0;
+    flex: 0 0 40%;
     margin: 10px;
 `;
+
+export const TechnologyBadge: React.FC<TechnologyLabel> = ({label}) => {
+    return (
+        <TechnologyBadgeLayout style={{margin: '5px'}}>
+            <FontAwesomeIcon icon={faDotCircle} color={'#4497e2'} size={'lg'} style={{marginRight: '1.5rem'}} />
+            {label}
+        </TechnologyBadgeLayout>
+    );
+};
+
+
 
 export const TechnologyBadgeWrapper = css`
     flex: 1 0 0;
@@ -48,8 +57,6 @@ export const TechnologyBar = styled.div`
     justify-content: flex-start;
     
     margin-bottom: 16px;
-    
-    flex: 0 0 0;
 `;
 
 export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string, url?: string}> = ({icon, children, tooltip, url}) => {

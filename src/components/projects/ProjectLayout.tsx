@@ -39,21 +39,21 @@ const ProjectLayout: React.FC<WithTranslation & ProjectLayoutProps> = ({t, child
                         <ProjectPreviewButton url={livePreview} tooltip={t('projects.live_nda')} icon={faEye}>Live Preview</ProjectPreviewButton>
                         <ProjectPreviewButton url={sourcePreview} tooltip={t('projects.source_nda')} icon={faCodeBranch}>Source Code</ProjectPreviewButton>
                     </div>
+                    <div style={{flex: '0 0 0', padding: '16px', fontWeight: 550}}>
+                        Used technology
+                    </div>
+                    <div style={{flex: '0 0 0', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', paddingLeft: '16px'}}>
+                        {technologyBadges.map(badge => (<TechnologyBadge key={badge} label={badge} />))}
+                    </div>
                 </div>
-                <div style={{flex: '3 1 0', display: 'flex', flexDirection: 'column'}}>
+                <div style={{flex: '3 1 0'}}>
                     <ProjectCardContent>
                         <Typography variant='h6' style={{fontWeight: 'bold', color: '#008073', marginBottom: '0.5rem'}}>{t(`projects.${projectPrefix}.name`)}</Typography>
-
+                        <Divider style={{marginTop: '-5px'}}/>
                         <Typography dangerouslySetInnerHTML={{__html: t(`projects.${projectPrefix}.short_description`)}} />
                     </ProjectCardContent>
-                    <TechnologyBar>
-                            {technologyBadges.map(badge => (<TechnologyBadge key={badge}>{badge}</TechnologyBadge>))}
-                    </TechnologyBar>
-                    <Divider/>
-                    <Button style={{width: '100%', textAlign: 'center', flex: '0 0 auto', color: '#3767e2'}}>
-                        <FontAwesomeIcon icon={faAngleDown} style={{marginRight: '1rem'}}/>
-                        {t('projects.read_more')}
-                    </Button>
+
+
                 </div>
             </div>
         </ProjectCard>
