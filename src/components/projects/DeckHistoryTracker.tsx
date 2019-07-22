@@ -8,8 +8,8 @@ const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
         <ProjectLayout
             technologyBadges={['React', 'Python', 'PostgreSQL']}
             image={'projects/deck-history-tracker.jpg'}
+            projectPrefix={'dht'}
         >
-            <ProjectDefaultContent projectPrefix={'dht'} />
         </ProjectLayout>
     );
 };

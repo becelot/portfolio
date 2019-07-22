@@ -7,8 +7,8 @@ import styled, {css} from "styled-components";
 export const ProjectCard = withStyles({
     root: {
         margin: '10px',
-        maxWidth: '400px',
-        minWidth: '400px',
+        maxWidth: '80vw',
+        minWidth: '80vw',
         height: '100%'
     }
 })(Card);
@@ -33,8 +33,8 @@ export const TechnologyBadge = styled(Typography).attrs((props: any) => ({varian
     text-align: center;
     border-radius: 5px;
     
-    margin-left: 10px;
-    margin-right: 10px;
+    flex: 0 0 0;
+    margin: 10px;
 `;
 
 export const TechnologyBadgeWrapper = css`

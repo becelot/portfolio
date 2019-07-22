@@ -12,8 +12,9 @@ const MensaApp: React.FC<WithTranslation> = ({t}) => {
         <ProjectLayout
             technologyBadges={['Android', 'Java', 'Scala']}
             image={'projects/mensa-app.png'}
+            projectPrefix={'mensa'}
+            livePreview={'http://google.de'}
         >
-            <ProjectDefaultContent projectPrefix={'mensa'} livePreview={'http://google.de'} />
         </ProjectLayout>
     );
 };

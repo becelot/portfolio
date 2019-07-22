@@ -5,10 +5,7 @@ import ProjectDefaultContent from "./ProjectDefaultContent";
 
 const Unnamed: React.FC<WithTranslation> = ({t}) => {
     return (
-        <ProjectLayout technologyBadges={['Angular', 'Python', 'C#/WPF']} image={'projects/unnamed-project.png'}>
-            <ProjectDefaultContent
-                projectPrefix={'unnamed'}
-            />
+        <ProjectLayout technologyBadges={['Angular', 'Python', 'C#/WPF']} image={'projects/unnamed-project.png'} projectPrefix={'unnamed'}>
         </ProjectLayout>
     );
 };

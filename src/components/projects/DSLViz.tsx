@@ -8,8 +8,8 @@ const DSLViz: React.FC<WithTranslation> = ({t}) => {
         <ProjectLayout
             technologyBadges={['Angular', 'Framework', 'DSL']}
             image={'projects/editor-preview.png'}
+            projectPrefix={'dslviz'}
         >
-            <ProjectDefaultContent projectPrefix={'dslviz'} />
         </ProjectLayout>
     );
 };
