@@ -9,7 +9,12 @@
     "about": "Depending on the projects requirements, I use the appropriate toolset for the given problem. I like to write front and backends, but am also proficient in writing Android/iOS and .NET applications.",
     "dht": {
       "name": "Deck History Tracker",
-      "short_description": "<a href=\"https://twitch.tv\">Twitch.tv</a> extension that shows the decks that a streamer recently played."
+      "problem": "Problem",
+      "problem_description": "Hearthstone is a card game designed by <a href=\"\">Blizzard Entertainment</a>. It is not only a popular game, but often streamed and watched on <a href=\"https://twitch.tv\">Twitch.tv</a>. Viewers are often requesting the decklists that a streamer recently played on stream. Most often, they are only able to provide the currently played decklist.",
+      "project": "Project",
+      "short_description": "<a href=\"https://twitch.tv\">Twitch.tv</a> extension that shows the decks that a streamer recently played.",
+      "solution": "Solution",
+      "solution_description": "This extension tracks recently played decks and visualizes them in an overlay installed into the streamers stream. Users can browse recent decklists and import them into their game, without leaving the stream. They can also see, how the deck evolved over time, and what choices a streamer made. Key features are:"
     },
     "dslviz": {
       "name": "DSLViz",
