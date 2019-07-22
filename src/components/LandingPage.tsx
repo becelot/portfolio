@@ -9,7 +9,6 @@ import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope, faNewspaper} from "@fortawesome/free-solid-svg-icons";
 import SocialLink from "./SocialLink";
 
-import { Parallax } from 'react-parallax';
 import StaggerInView from "../utils/StaggerInView";
 import FlipInX from "../animations/FlipInX";
 import media from "../utils/media";
@@ -18,10 +17,7 @@ import media from "../utils/media";
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.4));
-  background-size: cover;
-  background-position: center center;
+  height: 80vh;
   
   display: flex;
   flex-direction: column;
@@ -30,11 +26,23 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
+const Background = styled.div`
+  background: url(bg/conifer-dawn-daylight.jpg);
+  background-size: cover;
+  background-position: center center;
+  
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+`;
+
 const ContentAlign = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  position: relative
+  position: relative;
+  z-index: 2;
 `;
 
 const Content = styled.div`
@@ -54,7 +62,7 @@ const NameText = styled.span`
   margin-bottom: 10px;
   
   ${media.between('large', 'huge')`
-    font-size: 7rem;
+    font-size: 5rem;
     margin-bottom: 0;
   `}
   
@@ -79,7 +87,7 @@ const TextSpinner = styled.div`
     }
     
     ${media.between('large', 'huge')`
-        font-size: 4rem;
+        font-size: 2.9rem;
     `}
     
     ${media.between('medium', 'large')`
@@ -95,7 +103,7 @@ const EmptyDiv = styled.div`
   height: 57px;
   
   ${media.between('large', 'huge')`
-    height: 46px;
+    height: 33px;
   `}
   
   ${media.between('medium', 'large')`
@@ -111,12 +119,17 @@ const SocialLinks = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 120px;
+  
+  ${media.between('medium', 'large')`
+    margin-top: 85px;
+  `}
 `;
 
 const SocialLinkPadding = styled.div`
   display: flex;
   padding: 0 10px;
   background: rgba(0,0,0,0.6);
+  z-index: 3;
 `;
 
 
@@ -127,8 +140,8 @@ const LandingPage: React.FC = () => {
     }, [count]);
 
     return (
-        <Parallax bgImage={'bg/conifer-dawn-daylight.jpg'} strength={700}>
             <Wrapper id={'home'}>
+                <Background />
                 <ContentAlign>
 
                     <Content>
@@ -171,8 +184,8 @@ const LandingPage: React.FC = () => {
                         </SocialLinkPadding>
 
                 </SocialLinks>
+
             </Wrapper>
-        </Parallax>
     );
 };
 
