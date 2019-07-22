@@ -7,7 +7,7 @@ import {Typography} from "@material-ui/core";
 const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
     return (
         <ProjectLayout
-            technologyBadges={['React', 'Redux', 'HTML', 'CSS', 'Python', 'Flask', 'PostgreSQL', 'JWT', 'Authorization', 'C#', 'WPF']}
+            technologyBadges={['React', 'Redux', 'HTML', 'CSS', 'Webpack', 'Python', 'Flask', 'PostgreSQL', 'JWT', 'Authorization', 'C#', 'WPF', 'CI/CD', 'Heroku-Cloud']}
             image={'projects/deck-history-tracker.jpg'}
             projectPrefix={'dht'}
         >
