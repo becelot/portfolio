@@ -49,7 +49,7 @@ const ProjectLayout: React.FC<WithTranslation & ProjectLayoutProps> = ({t, child
                 <div style={{flex: '3 1 0'}}>
                     <ProjectCardContent>
                         <Typography variant='h6' style={{fontWeight: 'bold', color: '#008073', marginBottom: '0.5rem'}}>{t(`projects.${projectPrefix}.name`)}</Typography>
-                        <Divider style={{marginTop: '-5px'}}/>
+                        <Divider style={{margin: '-5px 0 5px 0'}}/>
                         <Typography dangerouslySetInnerHTML={{__html: t(`projects.${projectPrefix}.short_description`)}} />
                     </ProjectCardContent>
 
