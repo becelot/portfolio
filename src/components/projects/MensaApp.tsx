@@ -10,7 +10,7 @@ import ProjectDefaultContent from "./ProjectDefaultContent";
 const MensaApp: React.FC<WithTranslation> = ({t}) => {
     return (
         <ProjectLayout
-            technologyBadges={['Android', 'Java', 'Scala']}
+            technologyBadges={['Android', 'Java', 'Scala', 'Play Framework']}
             image={'projects/mensa-app.png'}
             projectPrefix={'mensa'}
             livePreview={'http://google.de'}
