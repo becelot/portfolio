@@ -30,7 +30,7 @@ const Header = withAnimationTrigger(styled.div<{visible: boolean}>`
   line-height: 5rem;
   
   font-size: 4rem;
-  color: white;
+  color: black;
   text-transform: uppercase;
   align-self: center;
   
@@ -78,9 +78,12 @@ const Wrapper = styled.div`
   position: relative;
   box-sizing: border-box;
   
-  padding: 70px 0;
+  padding: 35px 0;
   
-  background: #39373A;
+  // background: #e7e7e7; // #39373A;
+  background: url(bg/bg.png) repeat;
+    
+  border-top: 3px solid black;
 `;
 
 const Content = styled.div`
@@ -100,7 +103,7 @@ const IntroText = withAnimation(styled(Typography).attrs(props => ({paragraph: t
   text-align: center;
   align-self: center;
   
-  color: white;
+  color: black;
   opacity: 0;
   font-size: 2rem !important;
   
