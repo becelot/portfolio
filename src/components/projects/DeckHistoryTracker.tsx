@@ -11,6 +11,24 @@ const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
             image={'projects/deck-history-tracker.jpg'}
             projectPrefix={'dht'}
         >
+            <Typography variant={'h6'}>
+                {t('projects.dht.project')}
+            </Typography>
+            <Typography>
+                {t('projects.dht.short_description')}
+            </Typography> <br />
+            <Typography variant={'h6'}>
+                {t('projects.dht.problem')}
+            </Typography>
+            <Typography>
+                {t('projects.dht.problem_description')}
+            </Typography> <br />
+            <Typography variant={'h6'}>
+                {t('projects.dht.solution')}
+            </Typography>
+            <Typography>
+                {t('projects.dht.solution_description')}
+            </Typography> <br />
         </ProjectLayout>
     );
 };
