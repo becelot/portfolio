@@ -9,7 +9,7 @@ import {faDotCircle} from "@fortawesome/free-regular-svg-icons";
 const DSLViz: React.FC<WithTranslation> = ({t}) => {
     return (
         <ProjectLayout
-            technologyBadges={['Angular', 'HTML5', 'SASS', 'TypeScript', 'DSL', 'AST']}
+            technologyBadges={['Angular', 'HTML5', 'SASS', 'TypeScript', 'RxJS', 'JSON', 'DSL', 'AST']}
             image={'projects/editor-preview.png'}
             projectPrefix={'dslviz'}
         >
