@@ -11,7 +11,7 @@ import {faAndroid} from "@fortawesome/free-brands-svg-icons";
 const MensaApp: React.FC<WithTranslation> = ({t}) => {
     return (
         <ProjectLayout
-            technologyBadges={['Android', 'Java', 'Scala', 'Play Framework', 'HTML', 'RegEx', 'Socket', 'HTTP', 'XML', 'JSON']}
+            technologyBadges={['Android', 'Java', 'Scala', 'Play Framework', 'HTML', 'RegEx', 'Socket', 'HTTP', 'JSON', 'Cloud']}
             image={'projects/mensa-app.png'}
             projectPrefix={'mensa'}
             sourcePreview={[
@@ -31,8 +31,7 @@ const MensaApp: React.FC<WithTranslation> = ({t}) => {
             <Typography variant={'h6'}>
                 {t('projects.mensa.project')}
             </Typography>
-            <Typography>
-                {t('projects.mensa.short_description')}
+            <Typography dangerouslySetInnerHTML={{__html: t(`projects.mensa.short_description`)}}>
             </Typography> <br />
         </ProjectLayout>
     );
