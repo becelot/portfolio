@@ -37,9 +37,10 @@
     },
     "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich.",
     "mensa": {
+      "live_nda": "Keine Webvorschau verfügbar, da es sich um eine Android Applikation handelt",
       "name": "MensaApp",
       "project": "Projekt",
-      "short_description": "Eine Android-Anwendung, die aktuelle und zukünftige Menüs von verschiedenen Mensen herunterlädt und anzeigt. Die Menüs werden von einem eigenen Backend bereitgestellt."
+      "short_description": "Android-Anwendung, die aktuelle und zukünftige Menüs von verschiedenen Mensen herunterlädt und anzeigt. Ein Backend lädt die neuen Menüs der Woche vom Universitätsserver runter, analysiert die heruntergeladene Webseite mittels RegEx, und speichert die Ergebnisse zwischen. Die Android Applikation kann sich darauf mit dem Backend verbinen, um die Gerichte herunterzuladen. Das Backend fungiert also als eine Art Proxy-Server, der teure Anfragen minimiert."
     },
     "read_more": "Mehr Informationen",
     "source_nda": "Der Source Code ist wegen NDA nicht zugänglich.",

@@ -28,6 +28,12 @@ const MensaApp: React.FC<WithTranslation> = ({t}) => {
                 }
             ]}
         >
+            <Typography variant={'h6'}>
+                {t('projects.mensa.project')}
+            </Typography>
+            <Typography>
+                {t('projects.mensa.short_description')}
+            </Typography> <br />
         </ProjectLayout>
     );
 };
