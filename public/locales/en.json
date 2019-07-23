@@ -18,6 +18,7 @@
       "solution-1": "No extra effort for users. Integrates seamlessly into the <a href=\"https://twitch.tv\" target=\"_blank\">twitch.tv</a> experience.",
       "solution-2": "Manages and visualizes deck history. Revert deck to a previous version!",
       "solution-3": "Authorization and session management using JWT",
+      "solution-4": "Authenticate account with <a href=\"https://twitch.tv\" target=\"_blank\">Twitch.tv-Login</a>",
       "solution_description": "This extension tracks recently played decks and visualizes them in an overlay installed into the streamers stream. Users can browse recent decklists and import them into their game, without leaving the stream. They can also see, how the deck evolved over time, and what choices a streamer made. Key features are:"
     },
     "dslviz": {
@@ -37,6 +38,7 @@
     "live_nda": "Live preview is currently under NDA.",
     "mensa": {
       "name": "MensaApp",
+      "project": "Project",
       "short_description": "An Android application that downloads and visualizes current and future meals in university canteens. Meals are retrieved from a custom backend."
     },
     "read_more": "Read more",

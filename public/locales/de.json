@@ -17,7 +17,8 @@
       "solution-0": "Kein zusätzlicher Aufwand für Streamer. Extrahiert und speichert gespielte Decks automatisch.",
       "solution-1": "Kein zusätzlicher Aufwand für den Nutzer. Fügt sich nahtlos in das <a href=\"https://twitch.tv\" target=\"_blank\">twitch.tv</a> -Erlebnis ein.",
       "solution-2": "Verwaltet und visualisiert die Deckänderungen. Setze Deck auf eine frühere Version zurück!",
-      "solution-3": "",
+      "solution-3": "Authorisierung und Session Management basierend auf JWT",
+      "solution-4": "Authorisiere Account mithilfe von <a href=\"https://twitch.tv\" target=\"_blank\">Twitch.tv-Login</a>",
       "solution_description": "Diese Erweiterung verfolgt kürzlich gespielte Decks und visualisiert sie in einem Overlay, das im Stream des Streamers installiert ist. Benutzer können die neuesten Decklisten durchsuchen und in ihr Spiel importieren, ohne den Stream zu verlassen. Sie können auch sehen, wie sich das Deck im Laufe der Zeit entwickelt hat und welche Entscheidungen ein Streamer getroffen hat. Hauptmerkmale sind:"
     },
     "dslviz": {
@@ -37,6 +38,7 @@
     "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich.",
     "mensa": {
       "name": "MensaApp",
+      "project": "Projekt",
       "short_description": "Eine Android-Anwendung, die aktuelle und zukünftige Menüs von verschiedenen Mensen herunterlädt und anzeigt. Die Menüs werden von einem eigenen Backend bereitgestellt."
     },
     "read_more": "Mehr Informationen",
