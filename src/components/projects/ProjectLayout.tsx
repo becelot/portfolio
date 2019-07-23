@@ -13,14 +13,22 @@ import StaggerInView from "../../utils/StaggerInView";
 import FlipInX from "../../animations/FlipInX";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-regular-svg-icons";
+import {IconProp} from "@fortawesome/fontawesome-svg-core";
 
+
+export interface AdvancedSourceControl {
+    link: string;
+    name: string;
+    icon: IconProp;
+    iconSize?: "4x" | "lg" | "xs" | "sm" | "1x" | "2x" | "3x" | "5x" | "6x" | "7x" | "8x" | "9x" | "10x" | undefined;
+}
 
 export interface ProjectLayoutProps {
     image: string;
     technologyBadges: string[];
     projectPrefix: string;
     livePreview?: string;
-    sourcePreview?: string;
+    sourcePreview?: string | Array<AdvancedSourceControl>;
 }
 
 const ProjectLayout: React.FC<WithTranslation & ProjectLayoutProps> = ({t, children, image, technologyBadges, projectPrefix, livePreview, sourcePreview}) => {

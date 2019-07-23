@@ -1,9 +1,20 @@
-import {Button, Card, CardContent, Tooltip, Typography, withStyles} from "@material-ui/core";
+import {
+    Button,
+    Card,
+    CardContent,
+    Dialog, DialogContent, DialogContentText,
+    DialogTitle,
+    Slide,
+    Tooltip,
+    Typography,
+    withStyles
+} from "@material-ui/core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, {useState} from "react";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
 import styled, {css} from "styled-components";
 import {faDotCircle} from "@fortawesome/free-regular-svg-icons";
+import {AdvancedSourceControl} from "./ProjectLayout";
 
 export const ProjectCard = withStyles({
     root: {
@@ -59,23 +70,91 @@ export const TechnologyBar = styled.div`
     margin-bottom: 16px;
 `;
 
-export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string, url?: string}> = ({icon, children, tooltip, url}) => {
+const SourceButton = styled.a`
+    text-decoration: none;
+    color: black;
+    flex: 0 0 0;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    font-weight: 480;
+    
+    padding-bottom: 5px;
+    
+    transition: background 0.2s ease-in-out;
+    
+    :hover {
+        background: #e7e7e7;
+        text-decoration: none;
+    }
+`;
+
+export const ProjectPreviewButton: React.FC<{icon: IconProp, tooltip?: string, url?: string | AdvancedSourceControl[]}> = ({icon, children, tooltip, url}) => {
+    const [open, setOpen] = useState(false);
     const disabled = !Boolean(url);
 
-    const button = (
-        <Button variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}} disabled={disabled}>
-            <div style={{display: "flex", justifyContent: 'center'}}>
-                <FontAwesomeIcon icon={icon} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
-                <div>{children}</div>
-            </div>
-        </Button>
-    );
+    let button = (<></>);
 
-    const renderedButton = disabled ? (<div>{button}</div>) : (
-        <a href={'http://google.de'} target={'_blank'} style={{textDecoration: 'none'}}>
+
+    if (Array.isArray(url)) {
+
+        const handleClickOpen = () => {
+            setOpen(true);
+        };
+
+        const handleClose = () => {
+            setOpen(false);
+        };
+
+        button = (
+            <>
+                <Button onClick={handleClickOpen} variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}} disabled={disabled}>
+                    <div style={{display: "flex", justifyContent: 'center'}}>
+                        <FontAwesomeIcon icon={icon} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
+                        <div>{children}</div>
+                    </div>
+                </Button>
+                <Dialog
+                    open={open}
+                    keepMounted
+                    onClose={handleClose}
+                    aria-labelledby="alert-dialog-slide-title"
+                    aria-describedby="alert-dialog-slide-description"
+                >
+                    <DialogTitle id="alert-dialog-slide-title">Select project</DialogTitle>
+                    <DialogContent>
+                        <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row'}}>
+                            {url.map((source: AdvancedSourceControl) => (<>
+                                <SourceButton href={source.link} target={'_blank'}>
+                                    <div style={{width: '80px', height: '80px', background: '#e7e7e7', borderRadius: '50%', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '10px 15px '}}>
+                                        <FontAwesomeIcon icon={source.icon} size={source.iconSize ? source.iconSize : '4x'} />
+                                    </div>
+
+                                    {source.name}
+                                </SourceButton>
+                            </>))}
+                        </div>
+                    </DialogContent>
+                </Dialog>
+            </>
+        );
+    } else {
+        button = (
+            <Button variant={'outlined'} style={{flex: '0 1 40%' , fontSize: '1.2rem'}} disabled={disabled}>
+                <div style={{display: "flex", justifyContent: 'center'}}>
+                    <FontAwesomeIcon icon={icon} color={'#4497e2'} size={'lg'} style={{marginRight: '0.5rem'}} />
+                    <div>{children}</div>
+                </div>
+            </Button>
+        );
+    }
+
+
+    const renderedButton = typeof url === 'string' ? (
+        <a href={url} target={'_blank'} style={{textDecoration: 'none'}}>
             {button}
         </a>
-    );
+    ) : (<div>{button}</div>);
 
     return tooltip && disabled ? (<Tooltip title={tooltip}>{renderedButton}</Tooltip>) : renderedButton;
 };
