@@ -134,7 +134,6 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
                     <StaggerInView itemStyle={cardItemStyle} animation={ZoomIn} stagger={0.2}>
                         <DSLViz />
                         <DeckHistoryTracker />
-                        <Unnamed />
                         <MensaApp />
                         <VocTrainer />
                     </StaggerInView>
