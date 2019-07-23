@@ -5,6 +5,8 @@ import ProjectDefaultContent from "./ProjectDefaultContent";
 import {Typography} from "@material-ui/core";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDotCircle} from "@fortawesome/free-regular-svg-icons";
+import {faTwitch} from "@fortawesome/free-brands-svg-icons";
+import {faServer, faShareAlt} from "@fortawesome/free-solid-svg-icons";
 
 const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
     return (
@@ -12,6 +14,26 @@ const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
             technologyBadges={['React', 'Redux', 'HTML', 'CSS', 'Webpack', 'Python', 'Flask', 'PostgreSQL', 'JWT', 'Authorization', 'C#', 'WPF', 'CI/CD', 'Heroku-Cloud']}
             image={'projects/deck-history-tracker.jpg'}
             projectPrefix={'dht'}
+            sourcePreview={[
+                {
+                    link: 'https://github.com/becelot/dh-twitch-frontend',
+                    name: 'Twitch',
+                    icon: faTwitch,
+                    iconSize: '3x'
+                },
+                {
+                    link: 'https://github.com/becelot/dh-backend',
+                    name: 'Backend',
+                    icon: faServer,
+                    iconSize: '3x'
+                },
+                {
+                    link: 'https://github.com/becelot/dh-hdt-client',
+                    name: 'Client',
+                    icon: faShareAlt,
+                    iconSize: '3x'
+                }
+            ]}
         >
             <Typography variant={'h6'}>
                 {t('projects.dht.project')}
