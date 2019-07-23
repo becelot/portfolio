@@ -9,6 +9,7 @@ import Projects from "./components/Projects";
 import {createMuiTheme} from "@material-ui/core/styles";
 import {ThemeProvider} from "@material-ui/styles";
 import config from 'react-reveal/globals';
+import Experience from "./components/Experience";
 
 const Page = styled.div`
  display: block;
@@ -36,6 +37,9 @@ const App: React.FC = () => {
                         </section>
                         <section id='projects'>
                             <Projects />
+                        </section>
+                        <section id='work'>
+                            <Experience />
                         </section>
                     </main>
                   </Page>

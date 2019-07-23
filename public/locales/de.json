@@ -1,4 +1,16 @@
 {
+  "experience": {
+    "data": {
+      "short_description": "Feature-Extraktion aus der ImageNet-Datenbank",
+      "title": "Wissenschaftliche Hilfskraft"
+    },
+    "eod": {
+      "header": "Kooperation",
+      "short_description": "Entwurf und Implementierung einer Stromausfall-Detektierungssoftware",
+      "title": "Wissenschaftliche Hilfskraft"
+    },
+    "header": "Erfahrung"
+  },
   "header": {
     "about-me": "Über mich",
     "home": "Home",

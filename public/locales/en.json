@@ -1,4 +1,16 @@
 {
+  "experience": {
+    "data": {
+      "short_description": "Feature extraction from the ImageNet database",
+      "title": "Research Assistant"
+    },
+    "eod": {
+      "header": "Cooperation",
+      "short_description": "Implementation and design of an energy outage detection system",
+      "title": "Research Assistant"
+    },
+    "header": "Experience"
+  },
   "header": {
     "about-me": "About me",
     "home": "Home",
