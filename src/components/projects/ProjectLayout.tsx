@@ -42,6 +42,7 @@ const ProjectLayout: React.FC<WithTranslation & ProjectLayoutProps> = ({t, child
                         image={image}
                         height='240'
                         alt={'Project'}
+                        style={{objectFit: 'contain'}}
                     />
                     <div style={{flex: '0 0 0', display: 'flex', justifyContent: 'space-evenly', margin: '1rem 0'}}>
                         <ProjectPreviewButton url={livePreview} tooltip={t(`projects.${projectPrefix}.live_nda`)} icon={faEye}>Live Preview</ProjectPreviewButton>
