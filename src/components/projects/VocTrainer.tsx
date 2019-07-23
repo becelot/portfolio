@@ -5,7 +5,7 @@ import ProjectLayout from "./ProjectLayout";
 const VocTrainer: React.FC<WithTranslation> = ({t}) => {
     return (
         <ProjectLayout
-            technologyBadges={['C#', 'WPF', 'XML']}
+            technologyBadges={['C#', 'WPF', 'MahApps', 'XML']}
             image={'projects/voc-trainer.png'}
             projectPrefix={'vt'} sourcePreview={'https://github.com/becelot/VocTrainer'}
         >
