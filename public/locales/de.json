@@ -10,11 +10,15 @@
     "dht": {
       "name": "Deck History Tracker",
       "problem": "Problem",
-      "problem_description": "Hearthstone ist ein Sammelkarten-Spiel, dass von <a href=\"\">Blizzard Entertainment</a> veröffentlicht wurde. Zurzeit wird es allerdings nicht nur häufig gespielt, sondern auch auf <a href=\"https://twitch.tv\">Twitch.tv</a> gestreamed. Dabei tritt regelmäßig die selbe Frage in Streams auf: \"Welche Decks hast du in letzter Zeit gespielt?\" - Meist können Streamer allerdings dabei nur die aktuelleste Deckliste anbieten.",
+      "problem_description": "Hearthstone ist ein Sammelkarten-Spiel, dass von <a href=\"https://www.blizzard.com/\" target=\"_blank\">Blizzard Entertainment</a> veröffentlicht wurde. Zurzeit wird es allerdings nicht nur häufig gespielt, sondern auch auf <a href=\"https://twitch.tv\" target=\"_blank\">Twitch.tv</a> gestreamed. Dabei tritt regelmäßig die selbe Frage in Streams auf: \"Welche Decks hast du in letzter Zeit gespielt?\" - Meist können Streamer allerdings dabei nur die aktuelleste Deckliste anbieten.",
       "project": "Projekt",
-      "short_description": "Eine <a href=\"https://twitch.tv\">Twitch.tv</a> Erweiterung, die vom Streamer gespielte Decks veranschaulicht.",
+      "short_description": "Eine <a href=\"https://twitch.tv\" target=\"_blank\">Twitch.tv</a> Erweiterung, die vom Streamer gespielte Decks veranschaulicht.",
       "solution": "Lösung",
-      "solution_description": "Diese Erweiterung "
+      "solution-0": "Kein zusätzlicher Aufwand für Streamer. Extrahiert und speichert gespielte Decks automatisch.",
+      "solution-1": "Kein zusätzlicher Aufwand für den Nutzer. Fügt sich nahtlos in das <a href=\"https://twitch.tv\" target=\"_blank\">twitch.tv</a> -Erlebnis ein.",
+      "solution-2": "Verwaltet und visualisiert die Deckänderungen. Setze Deck auf eine frühere Version zurück!",
+      "solution-3": "",
+      "solution_description": "Diese Erweiterung verfolgt kürzlich gespielte Decks und visualisiert sie in einem Overlay, das im Stream des Streamers installiert ist. Benutzer können die neuesten Decklisten durchsuchen und in ihr Spiel importieren, ohne den Stream zu verlassen. Sie können auch sehen, wie sich das Deck im Laufe der Zeit entwickelt hat und welche Entscheidungen ein Streamer getroffen hat. Hauptmerkmale sind:"
     },
     "dslviz": {
       "name": "DSLViz",
@@ -28,7 +32,7 @@
       "solution-2": "Spezifiziere die Interaktionsmöglichkeiten mit dem AST",
       "solution-3": "Keine lokale Nutzerinstallation nötig. Wird im Browser ausgeführt!",
       "solution-4": "Plugin-System: Ausdrucksstärke des Frameworks erweiterbar",
-      "solution_description": "..."
+      "solution_description": "DSLViz ist ein Framework, dass auf den Datenstrukturen aus der Entwicklung von DSLs aufbaut. Das Framework erlaubt es, visuelle Web-Komponenten mit den einzelnen Objekten zu verbinden, und gleichzitig die Interaktionsmöglichkeiten zu spezifizieren. DSLViz sammelt diese Informationen, um das DSL Modell, dass der Endnutzer bearbeitet, zu visualisieren und interaktiv bearbeitbar zu gestalten. Hauptmerkmale sind:"
     },
     "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich.",
     "mensa": {

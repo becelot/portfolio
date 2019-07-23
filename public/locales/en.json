@@ -10,10 +10,14 @@
     "dht": {
       "name": "Deck History Tracker",
       "problem": "Problem",
-      "problem_description": "Hearthstone is a card game designed by <a href=\"\">Blizzard Entertainment</a>. It is not only a popular game, but often streamed and watched on <a href=\"https://twitch.tv\">Twitch.tv</a>. Viewers are often requesting the decklists that a streamer recently played on stream. Most often, they are only able to provide the currently played decklist.",
+      "problem_description": "Hearthstone is a card game designed by <a href=\"https://www.blizzard.com/\" target=\"_blank\">Blizzard Entertainment</a>. It is not only a popular game, but often streamed and watched on <a href=\"https://twitch.tv\" target=\"_blank\">Twitch.tv</a>. Viewers are often requesting the decklists that a streamer recently played on stream. Most often, they are only able to provide the currently played decklist.",
       "project": "Project",
-      "short_description": "<a href=\"https://twitch.tv\">Twitch.tv</a> extension that shows the decks that a streamer recently played.",
+      "short_description": "<a href=\"https://twitch.tv\" target=\"_blank\">Twitch.tv</a> extension that shows the decks that a streamer recently played.",
       "solution": "Solution",
+      "solution-0": "No extra effort for streamer. Extracts and saves played decks automatically.",
+      "solution-1": "No extra effort for users. Integrates seamlessly into the <a href=\"https://twitch.tv\" target=\"_blank\">twitch.tv</a> experience.",
+      "solution-2": "Manages and visualizes deck history. Revert deck to a previous version!",
+      "solution-3": "Authorization and session management using JWT",
       "solution_description": "This extension tracks recently played decks and visualizes them in an overlay installed into the streamers stream. Users can browse recent decklists and import them into their game, without leaving the stream. They can also see, how the deck evolved over time, and what choices a streamer made. Key features are:"
     },
     "dslviz": {
