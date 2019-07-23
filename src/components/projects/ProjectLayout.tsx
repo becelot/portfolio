@@ -44,8 +44,8 @@ const ProjectLayout: React.FC<WithTranslation & ProjectLayoutProps> = ({t, child
                         alt={'Project'}
                     />
                     <div style={{flex: '0 0 0', display: 'flex', justifyContent: 'space-evenly', margin: '1rem 0'}}>
-                        <ProjectPreviewButton url={livePreview} tooltip={t('projects.live_nda')} icon={faEye}>Live Preview</ProjectPreviewButton>
-                        <ProjectPreviewButton url={sourcePreview} tooltip={t('projects.source_nda')} icon={faCodeBranch}>Source Code</ProjectPreviewButton>
+                        <ProjectPreviewButton url={livePreview} tooltip={t(`projects.${projectPrefix}.live_nda`)} icon={faEye}>Live Preview</ProjectPreviewButton>
+                        <ProjectPreviewButton url={sourcePreview} tooltip={t(`projects.${projectPrefix}.source_nda`)} icon={faCodeBranch}>Source Code</ProjectPreviewButton>
                     </div>
                     <div style={{flex: '0 0 0', padding: '16px', fontWeight: 550}}>
                         Used technology

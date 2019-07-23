@@ -22,6 +22,7 @@
       "solution_description": "Diese Erweiterung verfolgt kürzlich gespielte Decks und visualisiert sie in einem Overlay, das im Stream des Streamers installiert ist. Benutzer können die neuesten Decklisten durchsuchen und in ihr Spiel importieren, ohne den Stream zu verlassen. Sie können auch sehen, wie sich das Deck im Laufe der Zeit entwickelt hat und welche Entscheidungen ein Streamer getroffen hat. Hauptmerkmale sind:"
     },
     "dslviz": {
+      "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich.",
       "name": "DSLViz",
       "problem": "Problem",
       "problem_description": "Domain-specific languages (DSL) are programming languages built for a specific domain. They reduce the vocabulary of general-purpose languages and thus their accessibility for end-users, i.e. users without experience in programming and computer science. However, these languages still have to be tought to the user.",
@@ -33,7 +34,8 @@
       "solution-2": "Spezifiziere die Interaktionsmöglichkeiten mit dem AST",
       "solution-3": "Keine lokale Nutzerinstallation nötig. Wird im Browser ausgeführt!",
       "solution-4": "Plugin-System: Ausdrucksstärke des Frameworks erweiterbar",
-      "solution_description": "DSLViz ist ein Framework, dass auf den Datenstrukturen aus der Entwicklung von DSLs aufbaut. Das Framework erlaubt es, visuelle Web-Komponenten mit den einzelnen Objekten zu verbinden, und gleichzitig die Interaktionsmöglichkeiten zu spezifizieren. DSLViz sammelt diese Informationen, um das DSL Modell, dass der Endnutzer bearbeitet, zu visualisieren und interaktiv bearbeitbar zu gestalten. Hauptmerkmale sind:"
+      "solution_description": "DSLViz ist ein Framework, dass auf den Datenstrukturen aus der Entwicklung von DSLs aufbaut. Das Framework erlaubt es, visuelle Web-Komponenten mit den einzelnen Objekten zu verbinden, und gleichzitig die Interaktionsmöglichkeiten zu spezifizieren. DSLViz sammelt diese Informationen, um das DSL Modell, dass der Endnutzer bearbeitet, zu visualisieren und interaktiv bearbeitbar zu gestalten. Hauptmerkmale sind:",
+      "source_nda": "Der Source Code ist wegen NDA nicht zugänglich."
     },
     "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich.",
     "mensa": {

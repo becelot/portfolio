@@ -22,6 +22,7 @@
       "solution_description": "This extension tracks recently played decks and visualizes them in an overlay installed into the streamers stream. Users can browse recent decklists and import them into their game, without leaving the stream. They can also see, how the deck evolved over time, and what choices a streamer made. Key features are:"
     },
     "dslviz": {
+      "live_nda": "Live preview is currently under NDA.",
       "name": "DSLViz",
       "problem": "Problem",
       "problem_description": "Domain-specific languages (DSL) are programming languages built for a specific domain. They reduce the vocabulary of general-purpose languages and thus their accessibility for end-users, i.e. users without experience in programming and computer science. However, they DSLs suffer from two problems. They don't use the visual capabilities of humans and still have to be tought to the user in the first place.",
@@ -33,7 +34,8 @@
       "solution-2": "Specify interaction possibilities with AST nodes",
       "solution-3": "No user-installation needed. Just run it in the browser!",
       "solution-4": "Plugin-System: Extend the expressiveness of the framework",
-      "solution_description": "DSLViz is a framework that enables developers to implement the well-known AST datastructure used in DSL development, but represented in the form of visual web component. Simultaneously, it allows to specify, how users can interact with AST nodes. This information is aggregated by the framework, allowing end-users to create models for the DSL visually, rather than relying on the user to learn the abstract syntax of the programming language. Key features are:"
+      "solution_description": "DSLViz is a framework that enables developers to implement the well-known AST datastructure used in DSL development, but represented in the form of visual web component. Simultaneously, it allows to specify, how users can interact with AST nodes. This information is aggregated by the framework, allowing end-users to create models for the DSL visually, rather than relying on the user to learn the abstract syntax of the programming language. Key features are:",
+      "source_nda": "Source Code is currently under NDA."
     },
     "live_nda": "Live preview is currently under NDA.",
     "mensa": {
