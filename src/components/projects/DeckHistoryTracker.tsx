@@ -46,6 +46,16 @@ const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
                     <div>
                         {t('projects.dht.solution-2')}</div>
                 </Typography>
+                <Typography style={{display: 'flex', flexDirection: 'row', marginTop: '5px'}}>
+                    <FontAwesomeIcon icon={faDotCircle} color={'#4497e2'} size={'lg'} style={{marginRight: '1.5rem'}} />
+                    <div>
+                        {t('projects.dht.solution-3')}</div>
+                </Typography>
+                <Typography style={{display: 'flex', flexDirection: 'row', marginTop: '5px'}}>
+                    <FontAwesomeIcon icon={faDotCircle} color={'#4497e2'} size={'lg'} style={{marginRight: '1.5rem'}} />
+                    <div dangerouslySetInnerHTML={{__html: t(`projects.dht.solution-4`)}}>
+                    </div>
+                </Typography>
             </div>
         </ProjectLayout>
     );
