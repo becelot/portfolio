@@ -21,7 +21,11 @@ export const ProjectCard = withStyles({
         margin: '10px',
         maxWidth: '80vw',
         minWidth: '80vw',
-        height: '100%'
+        height: '100%',
+        '@media (max-width: 768px)': {
+            maxWidth: '95vw',
+            minWidth: '95vw'
+        }
     }
 })(Card);
 
