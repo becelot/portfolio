@@ -32,25 +32,25 @@ const DSLViz: React.FC<WithTranslation> = ({t}) => {
                 {t('projects.dslviz.solution_description')}
             </Typography> <br />
             <div style={{paddingLeft: '24px'}}>
-            <Typography>
+            <Typography style={{display: 'flex', flexDirection: 'row'}}>
                 <FontAwesomeIcon icon={faDotCircle} color={'#4497e2'} size={'lg'} style={{marginRight: '1.5rem'}} />
-                {t('projects.dslviz.solution-0')}
+                <div>{t('projects.dslviz.solution-0')}</div>
             </Typography>
-                <Typography style={{marginTop: '5px'}}>
+                <Typography style={{marginTop: '5px', display: 'flex', flexDirection: 'row'}}>
                     <FontAwesomeIcon icon={faDotCircle} color={'#4497e2'} size={'lg'} style={{marginRight: '1.5rem'}} />
-                    {t('projects.dslviz.solution-1')}
+                    <div>{t('projects.dslviz.solution-1')}</div>
                 </Typography>
-                <Typography style={{marginTop: '5px'}}>
+                <Typography style={{marginTop: '5px', display: 'flex', flexDirection: 'row'}}>
                     <FontAwesomeIcon icon={faDotCircle} color={'#4497e2'} size={'lg'} style={{marginRight: '1.5rem'}} />
-                    {t('projects.dslviz.solution-2')}
+                    <div>{t('projects.dslviz.solution-2')}</div>
                 </Typography>
-                <Typography style={{marginTop: '5px'}}>
+                <Typography style={{marginTop: '5px', display: 'flex', flexDirection: 'row'}}>
                     <FontAwesomeIcon icon={faDotCircle} color={'#4497e2'} size={'lg'} style={{marginRight: '1.5rem'}} />
-                    {t('projects.dslviz.solution-3')}
+                    <div>{t('projects.dslviz.solution-3')}</div>
                 </Typography>
-                <Typography style={{marginTop: '5px'}}>
+                <Typography style={{marginTop: '5px', display: 'flex', flexDirection: 'row'}}>
                     <FontAwesomeIcon icon={faDotCircle} color={'#4497e2'} size={'lg'} style={{marginRight: '1.5rem'}} />
-                    {t('projects.dslviz.solution-4')}
+                    <div>{t('projects.dslviz.solution-4')}</div>
                 </Typography>
             </div>
         </ProjectLayout>
