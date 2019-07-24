@@ -58,21 +58,21 @@ const Content = styled.div`
 
 const NameText = styled.span`
   flex: 1 1 0;
-  font-size: 9rem;
+  font-size: 7rem;
   margin-bottom: 10px;
   
   ${media.between('large', 'huge')`
-    font-size: 5rem;
-    margin-bottom: 0;
-  `}
-  
-  ${media.between('medium', 'large')`
     font-size: 6rem;
     margin-bottom: 0;
   `}
   
-  ${media.lessThan('medium')`
+  ${media.between('medium', 'large')`
     font-size: 5rem;
+    margin-bottom: 0;
+  `}
+  
+  ${media.lessThan('medium')`
+    font-size: 4rem;
     margin-bottom: 0;
   `}
 `;
@@ -80,38 +80,38 @@ const NameText = styled.span`
 const TextSpinner = styled.div`
     flex: 1 1 0;
     box-sizing: border-box;
-    font-size: 5rem;
+    font-size: 4rem;
     
     span {
       color: #9d56ff;
     }
     
     ${media.between('large', 'huge')`
-        font-size: 2.9rem;
-    `}
-    
-    ${media.between('medium', 'large')`
         font-size: 3.5rem;
     `}
     
-    ${media.lessThan('medium')`
+    ${media.between('medium', 'large')`
         font-size: 3rem;
+    `}
+    
+    ${media.lessThan('medium')`
+        font-size: 2.7rem;
     `}
 `;
 
 const EmptyDiv = styled.div`
-  height: 57px;
+  height: 46px;
   
   ${media.between('large', 'huge')`
-    height: 33px;
+    height: 43.33px;
   `}
   
   ${media.between('medium', 'large')`
-    height: 40px;
+    height: 34px;
   `}
   
   ${media.lessThan('medium')`
-    height: 34px;
+    height: 31px;
   `}
 `;
 
