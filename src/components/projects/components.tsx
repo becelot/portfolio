@@ -41,8 +41,7 @@ export const TechnologyBadgeLayout = styled(Typography)`
     display: block;
     box-sizing: border-box;
     color: black;
-    
-    flex: 0 0 40%;
+
     margin: 10px;
 `;
 

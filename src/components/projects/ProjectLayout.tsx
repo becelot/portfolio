@@ -14,6 +14,7 @@ import FlipInX from "../../animations/FlipInX";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEye} from "@fortawesome/free-regular-svg-icons";
 import {IconProp} from "@fortawesome/fontawesome-svg-core";
+import styled from "styled-components";
 
 
 export interface AdvancedSourceControl {
@@ -31,18 +32,22 @@ export interface ProjectLayoutProps {
     sourcePreview?: string | Array<AdvancedSourceControl>;
 }
 
+const ProjectLeftColumn = styled.div`
+  flex: 2 1 0;
+  max-width: 500px;
+`;
+
 const ProjectLayout: React.FC<WithTranslation & ProjectLayoutProps> = ({t, children, image, technologyBadges, projectPrefix, livePreview, sourcePreview}) => {
 
     return (
         <ProjectCard>
             <div style={{height: '100%', display: 'flex', flexDirection: 'row'}}>
-                <div style={{flex: '2 1 0'}}>
+                <div style={{flex: '2 1 0', maxWidth: '500px', borderRight: '2px solid #e7e7e7', boxShadow: '3px 0 20px 0 #e7e7e7'}}>
                     <CardMedia
                         component='img'
                         image={image}
-                        height='240'
                         alt={'Project'}
-                        style={{objectFit: 'contain'}}
+                        style={{objectFit: 'contain', width: '100%', maxHeight: '370px'}}
                     />
                     <div style={{flex: '0 0 0', display: 'flex', justifyContent: 'space-evenly', margin: '1rem 0'}}>
                         <ProjectPreviewButton url={livePreview} tooltip={t(`projects.${projectPrefix}.live_nda`)} icon={faEye}>Live Preview</ProjectPreviewButton>
@@ -51,8 +56,10 @@ const ProjectLayout: React.FC<WithTranslation & ProjectLayoutProps> = ({t, child
                     <div style={{flex: '0 0 0', padding: '16px', fontWeight: 550}}>
                         Used technology
                     </div>
-                    <div style={{flex: '0 0 0', display: 'flex', flexDirection: 'row', flexWrap: 'wrap', paddingLeft: '16px'}}>
+                    <div style={{flex: '0 0 0',  paddingLeft: '16px', justifyContent: 'center', display: 'flex'}}>
+                        <div style={{display: 'grid', gridTemplateColumns: '1fr 1fr', flex: '0 0 400px'}}>
                         {technologyBadges.map(badge => (<TechnologyBadge key={badge} label={badge} />))}
+                        </div>
                     </div>
                 </div>
                 <div style={{flex: '3 1 0'}}>
