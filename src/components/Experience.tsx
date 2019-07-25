@@ -1,12 +1,14 @@
 import React from "react";
 import {withTranslation, WithTranslation} from "react-i18next";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import withAnimationTrigger from "../utils/withAnimationTrigger";
 import SlideInBottom from "../animations/SlideInBottom";
 import media from "../utils/media";
 import Expand from "../animations/Expand";
 import {ProjectCard} from "./projects/components";
 import {CardContent, CardHeader, Divider, Typography} from "@material-ui/core";
+import SlideInRight from "../animations/SlideInRight";
+import StaggerInView from "../utils/StaggerInView";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -80,56 +82,62 @@ const WorkHeader = styled.h2`
     flex-direction: row;
 `;
 
+const cardItemStyle = css`
+    margin: 30px;
+`;
+
 const Experience: React.FC<WithTranslation> = ({t}) => {
     return (
         <Wrapper>
             <Header>{t('experience.header')}</Header>
             <div style={{alignItems: 'center', display: 'flex', flexDirection: 'column', margin: '30px'}}>
-                <ProjectCard>
-                    <WorkHeader>
-                        <img src={'bg/rwth-aachen-university-vector-logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 30px 0 15px'}} />
-                        {t('experience.eod.header')}
-                        <div style={{flex: '1 1 0'}} />
-                        <img src={'bg/EON_Logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 15px', float: 'right'}} />
-                    </WorkHeader>
-                    <Divider style={{margin: '-5px 0 0 0'}}/>
+                <StaggerInView animation={SlideInRight} stagger={0.2}>
+                    <ProjectCard>
+                        <WorkHeader>
+                            <img src={'bg/rwth-aachen-university-vector-logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 30px 0 15px'}} />
+                            {t('experience.eod.header')}
+                            <div style={{flex: '1 1 0'}} />
+                            <img src={'bg/EON_Logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 15px', float: 'right'}} />
+                        </WorkHeader>
+                        <Divider style={{margin: '-5px 0 0 0'}}/>
 
-                    <CardContent>
-                        <Typography variant={'h6'}>
-                            {t('experience.eod.title')}
-                        </Typography>
-                        <Typography style={{fontStyle: 'italic'}}>
-                            {t('experience.eod.short_description')}
-                        </Typography> <br/>
+                        <CardContent>
+                            <Typography variant={'h6'}>
+                                {t('experience.eod.title')}
+                            </Typography>
+                            <Typography style={{fontStyle: 'italic'}}>
+                                {t('experience.eod.short_description')}
+                            </Typography> <br/>
 
-                        <Typography dangerouslySetInnerHTML={{__html: t(`experience.eod.job`)}}></Typography>
-                        <br/>
-                    </CardContent>
-                    <div style={{background: 'rgba(0, 0, 0, 0.03)'}}>
-                        <Typography style={{color: '#666', padding: '20px', fontSize: '0.85em'}}>{t('experience.eod.time')}</Typography>
-                    </div>
-                </ProjectCard>
-                <ProjectCard>
-                    <WorkHeader>
-                        <img src={'bg/rwth-aachen-university-vector-logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 30px 0 15px'}} />
-                        RWTH Aachen
-                    </WorkHeader>
-                    <Divider style={{margin: '-5px 0 0 0'}}/>
+                            <Typography dangerouslySetInnerHTML={{__html: t(`experience.eod.job`)}}></Typography>
+                            <br/>
+                        </CardContent>
+                        <div style={{background: 'rgba(0, 0, 0, 0.03)'}}>
+                            <Typography style={{color: '#666', padding: '20px', fontSize: '0.85em'}}>{t('experience.eod.time')}</Typography>
+                        </div>
+                    </ProjectCard>
+                    <ProjectCard>
+                        <WorkHeader>
+                            <img src={'bg/rwth-aachen-university-vector-logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 30px 0 15px'}} />
+                            RWTH Aachen
+                        </WorkHeader>
+                        <Divider style={{margin: '-5px 0 0 0'}}/>
 
-                    <CardContent>
-                        <Typography variant={'h6'}>
-                            {t('experience.data.title')}
-                        </Typography>
-                        <Typography style={{fontStyle: 'italic'}}>
-                            {t('experience.data.short_description')}
-                        </Typography> <br/>
-                        <Typography dangerouslySetInnerHTML={{__html: t(`experience.data.job`)}}></Typography>
-                        <br/>
-                    </CardContent>
-                    <div style={{background: 'rgba(0, 0, 0, 0.03)'}}>
-                        <Typography style={{color: '#666', padding: '20px', fontSize: '0.85em'}}>{t('experience.data.time')}</Typography>
-                    </div>
-                </ProjectCard>
+                        <CardContent>
+                            <Typography variant={'h6'}>
+                                {t('experience.data.title')}
+                            </Typography>
+                            <Typography style={{fontStyle: 'italic'}}>
+                                {t('experience.data.short_description')}
+                            </Typography> <br/>
+                            <Typography dangerouslySetInnerHTML={{__html: t(`experience.data.job`)}}></Typography>
+                            <br/>
+                        </CardContent>
+                        <div style={{background: 'rgba(0, 0, 0, 0.03)'}}>
+                            <Typography style={{color: '#666', padding: '20px', fontSize: '0.85em'}}>{t('experience.data.time')}</Typography>
+                        </div>
+                    </ProjectCard>
+                </StaggerInView>
             </div>
         </Wrapper>
     );
