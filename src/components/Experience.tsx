@@ -82,10 +82,6 @@ const WorkHeader = styled.h2`
     flex-direction: row;
 `;
 
-const cardItemStyle = css`
-    margin: 30px;
-`;
-
 const Experience: React.FC<WithTranslation> = ({t}) => {
     return (
         <Wrapper>
