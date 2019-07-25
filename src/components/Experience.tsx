@@ -133,6 +133,24 @@ const Experience: React.FC<WithTranslation> = ({t}) => {
                             <Typography style={{color: '#666', padding: '20px', fontSize: '0.85em'}}>{t('experience.data.time')}</Typography>
                         </div>
                     </ProjectCard>
+                    <ProjectCard>
+                        <WorkHeader>
+                            <img src={'bg/rwth-aachen-university-vector-logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 30px 0 15px'}} />
+                            RWTH Aachen
+                        </WorkHeader>
+                        <Divider style={{margin: '-5px 0 0 0'}}/>
+
+                        <CardContent>
+                            <Typography variant={'h6'}>
+                                {t('experience.db.title')}
+                            </Typography> <br/>
+                            <Typography dangerouslySetInnerHTML={{__html: t(`experience.db.job`)}}></Typography>
+                            <br/>
+                        </CardContent>
+                        <div style={{background: 'rgba(0, 0, 0, 0.03)'}}>
+                            <Typography style={{color: '#666', padding: '20px', fontSize: '0.85em'}}>{t('experience.db.time')}</Typography>
+                        </div>
+                    </ProjectCard>
                 </StaggerInView>
             </div>
         </Wrapper>

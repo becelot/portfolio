@@ -1,10 +1,16 @@
 {
   "experience": {
     "data": {
-      "job": "Optimierung von ",
+      "job": "Meine Aufgaben umfassten:<br/>  <ul> \t<li><div>Optimierung von bereits implementieren Data-Mining Algorithmen zur Extraktion von Features aus Bildern</div></li> \t<li><div>Recherche und Implementierung weiterer Feature-Extraktions Algorithmen</div></li> \t<li><div>Vergleich und Bewertung der verschiedenen Extraktionsalgorithmen im Bezug auf die Anwendbarkeit von gängigen Vergleichsmetriken</div></li> </ul>",
       "short_description": "Feature-Extraktion aus der ImageNet-Datenbank",
       "time": "September 2014 - März 2015 | Aachen",
       "title": "Wissenschaftliche Hilfskraft"
+    },
+    "db": {
+      "header": "RWTH Aachen",
+      "job": "Ansprechpartner für Fragen von Studierenden zur Datenbanken-Vorlesung. Außerdem habe ich die wöchentlichen Abgaben von Studierenden bewertet.",
+      "time": "April 2014 - September 2014 | Aachen",
+      "title": "Tutor - Datenbanken Vorlesung RWTH Aachen"
     },
     "eod": {
       "header": "Kooperation",

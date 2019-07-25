@@ -1,10 +1,16 @@
 {
   "experience": {
     "data": {
-      "job": "Optimization of high-performance Data-Mining algorithms for image recognition.",
+      "job": "My contributions:<br/>  <ul> \t<li><div>Optimization of already implemented data mining algorithms</div></li> \t<li><div>Research and implementation of additional feature extraction algorithms</div></li> \t<li><div>Compare and evaluate the different approaches to the applicability of common comparison metrics</div></li> </ul>",
       "short_description": "Feature extraction from the ImageNet database",
       "time": "September 2014 - March 2015 | Aachen",
       "title": "Research Assistant"
+    },
+    "db": {
+      "header": "RWTH Aachen Universtiy",
+      "job": "Contact for questions from students about the database-course. Additionally, I corrected the weekly exercise handed in by students.",
+      "time": "April 2014 - September 2014 | Aachen",
+      "title": "Tutor for Databases course at RWTH Aachen"
     },
     "eod": {
       "header": "Cooperation",
