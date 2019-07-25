@@ -1,12 +1,16 @@
 {
   "experience": {
     "data": {
+      "job": "Optimization of high-performance Data-Mining algorithms for image recognition.",
       "short_description": "Feature extraction from the ImageNet database",
+      "time": "September 2014 - March 2015 | Aachen",
       "title": "Research Assistant"
     },
     "eod": {
       "header": "Cooperation",
-      "short_description": "Implementation and design of an energy outage detection system",
+      "job": "A cooperation between RWTH Aachen University and E.ON. I supported the project throughout the entire lifecycle, from the initial design to the final deployment. My contributions include:<br/> <ul> \t<li><div>Developed Android Application used by E.ON end-users (Java)</div></li> \t<li><div>Optimized and designed backend algorithms and data structures (Python)</div></li>  \t<li><div>Implemented a web-based User-Interface for data visualization and process monitoring (Angular, TypeScript)</div></li>  \t<li><div>Integrationstests, including a simulator (Java) and a WYSIWYG data generator (C#/WPF)</div></li>  \t<li><div>Definition of a DSL that allows to describe the behavior of the Android application and the simulated devices (MPS)</div></li> </ul>",
+      "short_description": "Design and implementation of an energy outage detection system",
+      "time": "April 2017 - May 2019 | Aachen",
       "title": "Research Assistant"
     },
     "header": "Experience"
