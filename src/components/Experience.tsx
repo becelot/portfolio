@@ -100,8 +100,14 @@ const Experience: React.FC<WithTranslation> = ({t}) => {
                         </Typography>
                         <Typography style={{fontStyle: 'italic'}}>
                             {t('experience.eod.short_description')}
-                        </Typography>
+                        </Typography> <br/>
+
+                        <Typography dangerouslySetInnerHTML={{__html: t(`experience.eod.job`)}}></Typography>
+                        <br/>
                     </CardContent>
+                    <div style={{background: 'rgba(0, 0, 0, 0.03)'}}>
+                        <Typography style={{color: '#666', padding: '20px', fontSize: '0.85em'}}>{t('experience.eod.time')}</Typography>
+                    </div>
                 </ProjectCard>
                 <ProjectCard>
                     <WorkHeader>
@@ -116,8 +122,13 @@ const Experience: React.FC<WithTranslation> = ({t}) => {
                         </Typography>
                         <Typography style={{fontStyle: 'italic'}}>
                             {t('experience.data.short_description')}
-                        </Typography>
+                        </Typography> <br/>
+                        <Typography dangerouslySetInnerHTML={{__html: t(`experience.data.job`)}}></Typography>
+                        <br/>
                     </CardContent>
+                    <div style={{background: 'rgba(0, 0, 0, 0.03)'}}>
+                        <Typography style={{color: '#666', padding: '20px', fontSize: '0.85em'}}>{t('experience.data.time')}</Typography>
+                    </div>
                 </ProjectCard>
             </div>
         </Wrapper>
