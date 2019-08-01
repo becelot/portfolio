@@ -57,7 +57,7 @@ const ProjectContent = styled.div`
   `}
 `;
 
-const ProjectHeader: React.FC = ({children}) => {
+export const ProjectHeader: React.FC = ({children}) => {
     return (
         <>
             <Typography variant={'h6'} style={{fontWeight: 'bold', color: '#008073', margin: '0.5rem'}}>{children}</Typography>

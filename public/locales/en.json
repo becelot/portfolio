@@ -79,5 +79,8 @@
       "project": "Project",
       "short_description": "Application that enables the user to add vocabulary by lesson and category. Randomly generates questionnaires by lesson, category, customizable filters, or from all added words.<br/><br/>A Windows application based on C#/WPF + MahApps I developed for my japanese courses I took in university. Most of the already available tools were missing key features, such as customizable questionnaires."
     }
+  },
+  "skills": {
+    "header": "Skills"
   }
 }

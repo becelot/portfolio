@@ -10,6 +10,7 @@ import {createMuiTheme} from "@material-ui/core/styles";
 import {ThemeProvider} from "@material-ui/styles";
 import config from 'react-reveal/globals';
 import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 
 const Page = styled.div`
  display: block;
@@ -21,6 +22,10 @@ const theme = createMuiTheme({
         htmlFontSize: 10,
     },
 });
+
+const BgWrapper = styled.div`
+  background: url(bg/bg.png) repeat;
+`;
 
 config({ ssrFadeout: true });
 
@@ -37,6 +42,9 @@ const App: React.FC = () => {
                         </section>
                         <section id='projects'>
                             <Projects />
+                        </section>
+                        <section id={'skills'}>
+                            <Skills />
                         </section>
                         <section id='work'>
                             <Experience />

@@ -79,5 +79,8 @@
       "project": "Projekt",
       "short_description": "Anwendung, mit der der Benutzer Vokabeln nach Lektion und Kategorie hinzufügen kann. Generiert zufällig Fragebögen nach Lektion, Kategorie, aus verschiedenen kombinierten Filtern, oder aus allen hinzugefügten Wörtern.<br/> <br/> Eine Windows-Anwendung basierend auf C # / WPF + MahApps, die ich für meine Japanischkurse an der Universität entwickelt habe. Den meisten bereits verfügbaren Tools fehlten wichtige Funktionen, wie z. B. anpassbare Fragebögen."
     }
+  },
+  "skills": {
+    "header": "Erfahrungen"
   }
 }
