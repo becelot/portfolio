@@ -178,7 +178,7 @@ const LandingPage: React.FC = () => {
                             <StaggerInView animation={FlipInX} stagger={0.5}>
                                 <SocialLink title={'Github'} icon={faGithub} link={'https://github.com/becelot'}/>
                                 <SocialLink title={'LinkedIn'} icon={faLinkedin} link={'https://www.linkedin.com/in/benedict-becker-9a20b018b/'}/>
-                                <SocialLink title={'Mail'} icon={faEnvelope}/>
+                                <SocialLink title={'Mail'} icon={faEnvelope} link={'mailto:benedict.becker93@gmail.com'}/>
                                 <SocialLink title={'Resume'} icon={faNewspaper} link={'https://drive.google.com/file/d/1u9picbnQzrc6-eVvyWK0wkvSPHFIV_Ll/view?usp=sharing'}/>
                             </StaggerInView>
                         </SocialLinkPadding>
