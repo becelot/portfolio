@@ -102,7 +102,7 @@ interface TechBannerOptions {
 
 const TechBanner: React.FC<TechBannerOptions> = ({logo, name}) => {
     return (
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '1 0 0'}}>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '0 0 16.6%'}}>
             <img style={{height: '100px', marginBottom: '10px'}} src={logo} alt={name} />
             {name}
         </div>
@@ -120,6 +120,24 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
                     <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
                     <Row>
                         <TechBanner logo={'icons/html5.svg'} name={'HTML5'}/>
+                        <TechBanner logo={'icons/css3.svg'} name={'CSS3'}/>
+                        <TechBanner logo={'icons/sass.svg'} name={'Sass'}/>
+                        <TechBanner logo={'icons/wpf.png'} name={'WPF'}/>
+                        <TechBanner logo={'icons/angular.svg'} name={'Angular'}/>
+                        <TechBanner logo={'icons/react.svg'} name={'React'}/>
+                        <TechBanner logo={'icons/enyo.png'} name={'Enyo'}/>
+                    </Row>
+                </ProjectCard>
+                <ProjectCard style={{padding: '20px'}}>
+                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>Programmiersprachen</Typography>
+                    <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
+                    <Row>
+                        <TechBanner logo={'icons/java.svg'} name={'Java'}/>
+                        <TechBanner logo={'icons/CSharp.svg'} name={'C#'}/>
+                        <TechBanner logo={'icons/python.svg'} name={'Python'}/>
+                        <TechBanner logo={'icons/python.svg'} name={'Python'}/>
+                        <TechBanner logo={'icons/R.svg'} name={'R'}/>
+                        <TechBanner logo={'icons/javascript.svg'} name={'JavaScript'}/>
                     </Row>
                 </ProjectCard>
             </Content>
