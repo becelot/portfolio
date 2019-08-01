@@ -139,7 +139,7 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
                         <VocTrainer />
                         <ProjectCard>
                             <div style={{textAlign: 'center', width: '100%', boxSizing: "border-box", height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
-                                <a href={'https://github.com/becelot'} style={{textDecoration: 'none'}}>
+                                <a href={'https://github.com/becelot'} target={'_blank'} style={{textDecoration: 'none'}}>
                                     <Typography variant={'h6'}>
                                         {t('projects.more')}
                                     </Typography>
