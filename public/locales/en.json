@@ -66,6 +66,7 @@
       "project": "Project",
       "short_description": "Android application that downloads and visualizes current and future meals in university canteens. A backend downloads the week's new menus from the university server, parses the downloaded website using RegEx, and saves the results. The Android application can connect to the backend in order to download the dishes. The backend acts as a proxy server that minimizes expensive requests. In particular, new canteens and universities can be implemented in the backend without having to recompile the Android application<br /><br />The android application is also able to display the dishes without connecting to the developed backend, but by parsing the HTML response of the university server itself. A shared module implements the extraction of dishes once, which is then shared between the Android application and the backend server.<br/><br/>The backend is currently hosted on <a href=\"https://heroku.com\" target=\"_blank\">Heroku</a>, a cloud application platform."
     },
+    "more": "More projects available on by GitHub",
     "read_more": "Read more",
     "source_nda": "Source Code is currently under NDA.",
     "unnamed": {

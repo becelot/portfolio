@@ -16,6 +16,7 @@ import withAnimation from "../utils/withAnimation";
 import MensaApp from "./projects/MensaApp";
 import media from "../utils/media";
 import VocTrainer from "./projects/VocTrainer";
+import {ProjectCard} from "./projects/components";
 
 const HeaderRuleExpand = Expand('30%', 1);
 
@@ -136,6 +137,15 @@ const Projects: React.FC<WithTranslation> = ({t}) => {
                         <DeckHistoryTracker />
                         <MensaApp />
                         <VocTrainer />
+                        <ProjectCard>
+                            <div style={{textAlign: 'center', width: '100%', boxSizing: "border-box", height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+                                <a href={'https://github.com/becelot'} style={{textDecoration: 'none'}}>
+                                    <Typography variant={'h6'}>
+                                        {t('projects.more')}
+                                    </Typography>
+                                </a>
+                            </div>
+                        </ProjectCard>
                     </StaggerInView>
                 </Content>
             </Wrapper>
