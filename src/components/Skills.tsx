@@ -102,7 +102,7 @@ interface TechBannerOptions {
 
 const TechBanner: React.FC<TechBannerOptions> = ({logo, name}) => {
     return (
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '0 0 16.6%'}}>
+        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '0 0 16.6%', marginBottom: '25px', minWidth: '140px'}}>
             <img style={{height: '100px', marginBottom: '10px'}} src={logo} alt={name} />
             {name}
         </div>
@@ -116,28 +116,68 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
             <Header>{t('skills.header')}</Header>
             <Content>
                 <ProjectCard style={{padding: '20px'}}>
-                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>Frontend</Typography>
+                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>Application Development</Typography>
+                    <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
+                    <Row>
+                        <TechBanner logo={'icons/CSharp.svg'} name={'C#'}/>
+                        <TechBanner logo={'icons/wpf.png'} name={'WPF'}/>
+                        <TechBanner logo={'icons/java.svg'} name={'Java'}/>
+                        <TechBanner logo={'icons/python.svg'} name={'Python'}/>
+
+                        <TechBanner logo={'icons/R.svg'} name={'R'}/>
+                        <TechBanner logo={'icons/Matlab.png'} name={'MATLAB'}/>
+                        <TechBanner logo={'icons/delphi.jpg'} name={'Delphi'}/>
+                        <TechBanner logo={'icons/haskell.png'} name={'Haskell'}/>
+                    </Row>
+                </ProjectCard>
+                <ProjectCard style={{padding: '20px'}}>
+                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>Web Technologies</Typography>
                     <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
                     <Row>
                         <TechBanner logo={'icons/html5.svg'} name={'HTML5'}/>
                         <TechBanner logo={'icons/css3.svg'} name={'CSS3'}/>
                         <TechBanner logo={'icons/sass.svg'} name={'Sass'}/>
-                        <TechBanner logo={'icons/wpf.png'} name={'WPF'}/>
+                        <TechBanner logo={'icons/javascript.png'} name={'JavaScript'}/>
+                        <TechBanner logo={'icons/ts.png'} name={'TypeScript'}/>
                         <TechBanner logo={'icons/angular.svg'} name={'Angular'}/>
                         <TechBanner logo={'icons/react.svg'} name={'React'}/>
                         <TechBanner logo={'icons/enyo.png'} name={'Enyo'}/>
                     </Row>
                 </ProjectCard>
                 <ProjectCard style={{padding: '20px'}}>
-                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>Programmiersprachen</Typography>
+                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>Backend</Typography>
                     <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
                     <Row>
-                        <TechBanner logo={'icons/java.svg'} name={'Java'}/>
-                        <TechBanner logo={'icons/CSharp.svg'} name={'C#'}/>
-                        <TechBanner logo={'icons/python.svg'} name={'Python'}/>
-                        <TechBanner logo={'icons/python.svg'} name={'Python'}/>
-                        <TechBanner logo={'icons/R.svg'} name={'R'}/>
-                        <TechBanner logo={'icons/javascript.svg'} name={'JavaScript'}/>
+                        <TechBanner logo={'icons/flask.png'} name={'Flask'}/>
+                        <TechBanner logo={'icons/play.png'} name={'Play Framework'}/>
+                        <TechBanner logo={'icons/expressjs.png'} name={'Express.js'}/>
+                        <TechBanner logo={'icons/mysql.svg'} name={'MySQL'}/>
+                        <TechBanner logo={'icons/postgresql.png'} name={'PostgreSQL'}/>
+                        <TechBanner logo={'icons/arangodb.png'} name={'ArangoDB'}/>
+                        <TechBanner logo={'icons/redis.svg'} name={'Redis'}/>
+                        <TechBanner logo={'icons/celery.png'} name={'Celery'}/>
+                    </Row>
+                </ProjectCard>
+                <ProjectCard style={{padding: '20px'}}>
+                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>Build-Tools</Typography>
+                    <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
+                    <Row>
+                        <TechBanner logo={'icons/webpack.svg'} name={'Webpack'}/>
+                        <TechBanner logo={'icons/maven.jpg'} name={'Maven'}/>
+                        <TechBanner logo={'icons/gradle.svg'} name={'Gradle'}/>
+                    </Row>
+                </ProjectCard>
+                <ProjectCard style={{padding: '20px'}}>
+                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>Andere</Typography>
+                    <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
+                    <Row>
+                        <TechBanner logo={'icons/git.png'} name={'Git'}/>
+                        <TechBanner logo={'icons/docker.svg'} name={'Docker'}/>
+                        <TechBanner logo={'icons/heroku.svg'} name={'Heroku'}/>
+                        <TechBanner logo={'icons/firebase.svg'} name={'Firebase'}/>
+                        <TechBanner logo={'icons/circleci.svg'} name={'CircleCI'}/>
+                        <TechBanner logo={'icons/acc.svg'} name={'Adobe Suite'}/>
+
                     </Row>
                 </ProjectCard>
             </Content>
