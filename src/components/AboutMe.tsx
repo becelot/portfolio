@@ -1,8 +1,10 @@
 import {withTranslation, WithTranslation} from "react-i18next";
 import * as React from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import Header from "./general/Header";
 import {Typography} from "@material-ui/core";
+import StaggerInView from "../utils/StaggerInView";
+import SlideInBottom from "../animations/SlideInBottom";
 
 
 const Wrapper = styled.div`
@@ -23,18 +25,68 @@ const Wrapper = styled.div`
 `;
 
 const Content = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  
-  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70vw;
   max-width: 1280px;
+  justify-content: center;
   
-  margin: 20px auto 0 auto;
+  margin: 30px auto 0 auto;
 `;
 
 const ImageMe = styled.img`
-  height: 250px;
-  transform: rotateZ(-7deg);
+  max-height: 300px;
+  transform: rotateZ(-4deg);
+  
+  margin-right: 40px;
+  margin-bottom: 40px;
+  border: 2px solid #a7a7a7;
+  flex: 0 1 0;
+`;
+
+const RightColumn = styled.div`
+  flex: 1 0 0;
+  min-width: 400px;
+  color: white;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+`;
+
+const StationRow = styled.div`
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 30px;
+`;
+
+const Station = css`
+  flex: 1 0 0;
+  padding: 20px;
+  text-align: center;
+  
+  min-width: 250px;
+  min-height: 200px;
+`;
+
+const StationWrapper= styled.div<{bg: string}>`
+  height: 100%;
+  background: url(${props => props.bg}) no-repeat;
+  background-size: contain;
+  background-position: center;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const StationContent = styled.div`
+  padding: 0 20px;
 `;
 
 
@@ -44,10 +96,19 @@ const AboutMe: React.FC<WithTranslation> = ({t}) => {
         <Wrapper>
             <Header color={'white'}>ABOUT ME</Header>
             <Content>
-                <ImageMe src={'bg/me.jpeg'}  />
-                <Typography variant={'h6'} style={{color: 'white'}}>
-                    {t('about.me')}
-                </Typography>
+                <ImageMe src={'bg/me.png'}  />
+                <RightColumn>
+                    <Typography variant={'h5'} style={{textAlign: 'center'}}>
+                        I'm a passionate and motivated Software Engineer with a strong interest in learning the latest technologies.
+                    </Typography>
+                    <StationRow>
+                        <StaggerInView stagger={0.4} animation={SlideInBottom} itemStyle={Station}>
+                            <StationWrapper bg={'icons/germany.svg'}><StationContent><Typography>Born and raised in Lennestadt (Germany), a small village in the Sauerland, I started to learn programming at the age of 11 out of curiosity.</Typography></StationContent></StationWrapper>
+                            <StationWrapper bg={'icons/education.svg'}><StationContent><Typography>I graduated at RWTH Aachen in Computer Science, M. Sc.</Typography></StationContent></StationWrapper>
+                        </StaggerInView>
+                    </StationRow>
+                </RightColumn>
+
             </Content>
         </Wrapper>
     );
