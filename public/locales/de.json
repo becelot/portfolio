@@ -81,6 +81,9 @@
     }
   },
   "skills": {
-    "header": "Erfahrungen"
+    "appdev": "Anwendungsentwicklung",
+    "header": "Erfahrungen",
+    "other": "Andere",
+    "webtech": "Webtechnologien"
   }
 }

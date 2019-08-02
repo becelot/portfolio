@@ -81,6 +81,9 @@
     }
   },
   "skills": {
-    "header": "Skills"
+    "appdev": "Application Development",
+    "header": "Skills",
+    "other": "Other",
+    "webtech": "Web Technologies"
   }
 }
