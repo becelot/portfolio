@@ -99,12 +99,12 @@ const AboutMe: React.FC<WithTranslation> = ({t}) => {
                 <ImageMe src={'bg/me.png'}  />
                 <RightColumn>
                     <Typography variant={'h5'} style={{textAlign: 'center'}}>
-                        I'm a passionate and motivated Software Engineer with a strong interest in learning the latest technologies.
+                        {t('about.me')}
                     </Typography>
                     <StationRow>
                         <StaggerInView stagger={0.4} animation={SlideInBottom} itemStyle={Station}>
-                            <StationWrapper bg={'icons/germany.svg'}><StationContent><Typography>Born and raised in Lennestadt (Germany), a small village in the Sauerland, I started to learn programming at the age of 11 out of curiosity.</Typography></StationContent></StationWrapper>
-                            <StationWrapper bg={'icons/education.svg'}><StationContent><Typography>I graduated at RWTH Aachen in Computer Science, M. Sc.</Typography></StationContent></StationWrapper>
+                            <StationWrapper bg={'icons/germany.svg'}><StationContent><Typography>{t('about.born')}</Typography></StationContent></StationWrapper>
+                            <StationWrapper bg={'icons/education.svg'}><StationContent><Typography>{t('about.education')}</Typography></StationContent></StationWrapper>
                         </StaggerInView>
                     </StationRow>
                 </RightColumn>

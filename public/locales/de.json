@@ -1,4 +1,9 @@
 {
+  "about": {
+    "born": "Geboren und aufgewachsen in Lennestadt (Deutschland), einem kleinen Dorf im Sauerland, fing ich aus Neugier im Alter von 11 Jahren an, Programmieren zu lernen.",
+    "education": "Ich habe an der RWTH Aachen Informatik studiert und mein Hobby zum Beruf gemacht. Dabei habe ich zusätzlich wertvolle Erfahrung in Industrieprojekten gesammelt.",
+    "me": "Ich bin ein leidenschaftlicher und motivierter Software-Ingenieur mit einem starken Interesse am Erlernen der neuesten Technologien."
+  },
   "experience": {
     "data": {
       "job": "Meine Aufgaben umfassten:<br/>  <ul> \t<li><div>Optimierung von bereits implementieren Data-Mining Algorithmen zur Extraktion von Features aus Bildern</div></li> \t<li><div>Recherche und Implementierung weiterer Feature-Extraktions Algorithmen</div></li> \t<li><div>Vergleich und Bewertung der verschiedenen Extraktionsalgorithmen im Bezug auf die Anwendbarkeit von gängigen Vergleichsmetriken</div></li> </ul>",
@@ -47,7 +52,7 @@
       "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich. Freischaltung: Dezember 2019",
       "name": "DSLViz",
       "problem": "Problem",
-      "problem_description": "Domain-specific languages (DSL) are programming languages built for a specific domain. They reduce the vocabulary of general-purpose languages and thus their accessibility for end-users, i.e. users without experience in programming and computer science. However, these languages still have to be tought to the user.",
+      "problem_description": "Domänenspezifische Sprachen (DSL) sind Programmiersprachen, die für eine bestimmte Domäne erstellt wurden. Sie reduzieren das Vokabular von General Purpose Languages und verbessern damit ihre Zugänglichkeit für Endbenutzer, d.H. Benutzer ohne Erfahrung in Programmierung und Informatik. Diese Sprachen müssen dem Benutzer jedoch zunächst noch beigebracht werden.",
       "project": "Projekt",
       "short_description": "Ein auf Angular basierendes Webframework zur Visualisierung von Domänenspezifischen Sprachen.",
       "solution": "Lösung",

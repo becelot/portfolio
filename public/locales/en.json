@@ -1,4 +1,9 @@
 {
+  "about": {
+    "born": "Born and raised in Lennestadt (Germany), a small village in the Sauerland, I started to learn programming at the age of 11 out of curiosity.",
+    "education": "I graduated at RWTH Aachen in Computer Science, M. Sc, turning my hobby into a profession. During my studies, I have gained valuable experience in industrial projects.",
+    "me": "I'm a passionate and motivated Software Engineer with a strong interest in learning the latest technologies."
+  },
   "experience": {
     "data": {
       "job": "My contributions:<br/>  <ul> \t<li><div>Optimization of already implemented data mining algorithms</div></li> \t<li><div>Research and implementation of additional feature extraction algorithms</div></li> \t<li><div>Compare and evaluate the different approaches to the applicability of common comparison metrics</div></li> </ul>",
@@ -47,7 +52,7 @@
       "live_nda": "Live preview is currently under NDA. Available: December 2019",
       "name": "DSLViz",
       "problem": "Problem",
-      "problem_description": "Domain-specific languages (DSL) are programming languages built for a specific domain. They reduce the vocabulary of general-purpose languages and thus their accessibility for end-users, i.e. users without experience in programming and computer science. However, they DSLs suffer from two problems. They don't use the visual capabilities of humans and still have to be tought to the user in the first place.",
+      "problem_description": "Domain-specific languages (DSL) are programming languages built for a specific domain. They reduce the vocabulary of general-purpose languages and thus improve their accessibility for end-users, i.e. users without experience in programming and computer science. However, they DSLs suffer from two problems. They don't use the visual capabilities of humans and still have to be tought to the user in the first place.",
       "project": "Project",
       "short_description": "A web framework based on Angular to visualize domain-specific languages.",
       "solution": "Solution",
