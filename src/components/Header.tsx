@@ -14,6 +14,7 @@ import {
 import {WithTranslation, withTranslation} from "react-i18next";
 import media from "../utils/media";
 import animateScrollTo from "animated-scroll-to";
+import Scrollspy from "react-scrollspy";
 
 const Wrapper = styled.nav`
   width: 100%;
@@ -207,11 +208,13 @@ const Header: React.FC<WithTranslation> = ({t, i18n}) => {
                 <LanguageItem button value='en'><LanguageSelectItem lang={'en'}/></LanguageItem>
             </LanguageSelect>
             <div style={{flex: '1 1 0'}} />
+            <Scrollspy items={['home', 'about', 'projects', 'skills', 'work']} currentClassName={'section-active'} componentTag={'div'} style={{display: "flex"}} offset={-300}>
             <Section onClick={scrollTo('home')}>{t('header.home')}</Section>
             <Section onClick={scrollTo('about')}>{t('header.about-me')}</Section>
             <Section onClick={scrollTo('projects')}>{t('header.projects')}</Section>
             <Section onClick={scrollTo('skills')}>{t('header.skills')}</Section>
             <Section onClick={scrollTo('work')}>{t('header.experience')}</Section>
+            </Scrollspy>
 
 
             <BurgerSection onClick={() => setOpen(!open)}><FontAwesomeIcon icon={faBars}/></BurgerSection>

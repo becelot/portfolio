@@ -28,3 +28,21 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.section-active {
+  background: rgba(93, 25, 22, 0.2);
+}
+
+.section-active:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  text-decoration: none;
+
+  height: 2px;
+  background: #8b0000;
+  left: 0;
+  bottom: 0;
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
