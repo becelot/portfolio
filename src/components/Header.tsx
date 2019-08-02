@@ -27,7 +27,7 @@ const Wrapper = styled.nav`
   box-sizing: border-box;
 `;
 
-const Section = styled.div`
+const Section = styled.a`
   position: relative;
   padding: 0 20px;
   cursor: pointer;
@@ -192,21 +192,28 @@ const Header: React.FC<WithTranslation> = ({t, i18n}) => {
                 <LanguageItem button value='en'><LanguageSelectItem lang={'en'}/></LanguageItem>
             </LanguageSelect>
             <div style={{flex: '1 1 0'}} />
-            <Section>{t('header.home')}</Section>
-            <Section>{t('header.projects')}</Section>
-            <Section>{t('header.skills')}</Section>
-            <Section>{t('header.about-me')}</Section>
+            <Section href={'#home'}>{t('header.home')}</Section>
+            <Section href={'#about'}>{t('header.about-me')}</Section>
+            <Section href={'#projects'}>{t('header.projects')}</Section>
+            <Section href={'#skills'}>{t('header.skills')}</Section>
+            <Section href={'#work'}>{t('header.experience')}</Section>
+
             <BurgerSection onClick={() => setOpen(!open)}><FontAwesomeIcon icon={faBars}/></BurgerSection>
             <SwipeableDrawer anchor={'right'} onClose={() => setOpen(false)}
                              onOpen={() => setOpen(true)} open={open}>
                 <BurgerMenu>
                     <BurgerMenuClose onClick={() => setOpen(false)} />
                     <List component='nav'>
+                        <MenuEntry button>{t('header.home')}</MenuEntry>
+                        <Divider/>
+                        <MenuEntry button>{t('header.about-me')}</MenuEntry>
+                        <Divider/>
                         <MenuEntry button>{t('header.projects')}</MenuEntry>
                         <Divider/>
                         <MenuEntry button>{t('header.skills')}</MenuEntry>
                         <Divider/>
-                        <MenuEntry button>{t('header.about-me')}</MenuEntry>
+                        <MenuEntry button>{t('header.experience')}</MenuEntry>
+                        <Divider/>
                     </List>
                 </BurgerMenu>
             </SwipeableDrawer>
