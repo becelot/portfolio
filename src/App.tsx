@@ -11,6 +11,7 @@ import {ThemeProvider} from "@material-ui/styles";
 import config from 'react-reveal/globals';
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
+import AboutMe from "./components/AboutMe";
 
 const Page = styled.div`
  display: block;
@@ -39,6 +40,9 @@ const App: React.FC = () => {
                     <main>
                         <section id='home'>
                             <LandingPage />
+                        </section>
+                        <section id={'about'}>
+                            <AboutMe />
                         </section>
                         <section id='projects'>
                             <Projects />
