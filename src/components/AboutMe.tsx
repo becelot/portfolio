@@ -5,6 +5,9 @@ import Header from "./general/Header";
 import {Typography} from "@material-ui/core";
 import StaggerInView from "../utils/StaggerInView";
 import SlideInBottom from "../animations/SlideInBottom";
+import AnimateInView from "../utils/AnimateInView";
+import SlideInLeft from "../animations/SlideInLeft";
+import SlideInRight from "../animations/SlideInRight";
 
 
 const Wrapper = styled.div`
@@ -45,15 +48,16 @@ const ImageMe = styled.img`
   flex: 0 1 0;
 `;
 
-const RightColumn = styled.div`
+const RightColumn = css`
   flex: 1 0 0;
   min-width: 400px;
   color: white;
-  
+`;
+
+const RightColumnContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  
 `;
 
 const StationRow = styled.div`
@@ -94,21 +98,24 @@ const StationContent = styled.div`
 const AboutMe: React.FC<WithTranslation> = ({t}) => {
     return (
         <Wrapper>
-            <Header color={'white'}>ABOUT ME</Header>
+            <Header color={'white'}>{t('about.header')}</Header>
             <Content>
-                <ImageMe src={'bg/me.png'}  />
-                <RightColumn>
-                    <Typography variant={'h5'} style={{textAlign: 'center'}}>
-                        {t('about.me')}
-                    </Typography>
-                    <StationRow>
-                        <StaggerInView stagger={0.4} animation={SlideInBottom} itemStyle={Station}>
-                            <StationWrapper bg={'icons/germany.svg'}><StationContent><Typography>{t('about.born')}</Typography></StationContent></StationWrapper>
-                            <StationWrapper bg={'icons/education.svg'}><StationContent><Typography>{t('about.education')}</Typography></StationContent></StationWrapper>
-                        </StaggerInView>
-                    </StationRow>
-                </RightColumn>
-
+                <AnimateInView animation={SlideInLeft(0)} >
+                    <ImageMe src={'bg/me.png'}  />
+                </AnimateInView>
+                <StaggerInView stagger={0.2}  animation={SlideInRight} itemStyle={RightColumn}>
+                    <RightColumnContent>
+                        <Typography variant={'h5'} style={{textAlign: 'center'}}>
+                            {t('about.me')}
+                        </Typography>
+                        <StationRow>
+                            <StaggerInView stagger={0.4} animation={SlideInBottom} itemStyle={Station}>
+                                <StationWrapper bg={'icons/germany.svg'}><StationContent><Typography>{t('about.born')}</Typography></StationContent></StationWrapper>
+                                <StationWrapper bg={'icons/education.svg'}><StationContent><Typography>{t('about.education')}</Typography></StationContent></StationWrapper>
+                            </StaggerInView>
+                        </StationRow>
+                    </RightColumnContent>
+                </StaggerInView>
             </Content>
         </Wrapper>
     );
