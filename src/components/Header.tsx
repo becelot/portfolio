@@ -13,6 +13,7 @@ import {
 } from "@material-ui/core";
 import {WithTranslation, withTranslation} from "react-i18next";
 import media from "../utils/media";
+import animateScrollTo from "animated-scroll-to";
 
 const Wrapper = styled.nav`
   width: 100%;
@@ -27,7 +28,7 @@ const Wrapper = styled.nav`
   box-sizing: border-box;
 `;
 
-const Section = styled.a`
+const Section = styled.div`
   position: relative;
   padding: 0 20px;
   cursor: pointer;
@@ -35,14 +36,16 @@ const Section = styled.a`
   height: 5rem;
   color: white;
   line-height: 5rem;
+  text-decoration: none;
   
   :after {
     content: '';
     position: absolute;
     width: 100%;
+    text-decoration: none;
     
     height: 2px;
-    background: #fff;
+    background: #8b0000;
     left: 0;
     bottom: 0;
     
@@ -54,7 +57,8 @@ const Section = styled.a`
   }
 
   &:hover {
-    
+    text-decoration: none;
+    background: rgba(93, 25, 22, 0.2);
     :after {
       transform: translateY(0);
       opacity: 1;
@@ -176,6 +180,17 @@ const LanguageSelectTheme = {
     }
 };
 
+const scrollTo = (header: string) => {
+    return () => animateScrollTo(document.getElementById(header) || document.body);
+};
+
+const scrollToAndClose = (header: string, close: (open: boolean) => void) => {
+    return () => {
+        animateScrollTo(document.getElementById(header) || document.body);
+        close(false);
+    };
+};
+
 const Header: React.FC<WithTranslation> = ({t, i18n}) => {
     const [open, setOpen] = useState(false);
 
@@ -192,11 +207,12 @@ const Header: React.FC<WithTranslation> = ({t, i18n}) => {
                 <LanguageItem button value='en'><LanguageSelectItem lang={'en'}/></LanguageItem>
             </LanguageSelect>
             <div style={{flex: '1 1 0'}} />
-            <Section href={'#home'}>{t('header.home')}</Section>
-            <Section href={'#about'}>{t('header.about-me')}</Section>
-            <Section href={'#projects'}>{t('header.projects')}</Section>
-            <Section href={'#skills'}>{t('header.skills')}</Section>
-            <Section href={'#work'}>{t('header.experience')}</Section>
+            <Section onClick={scrollTo('home')}>{t('header.home')}</Section>
+            <Section onClick={scrollTo('about')}>{t('header.about-me')}</Section>
+            <Section onClick={scrollTo('projects')}>{t('header.projects')}</Section>
+            <Section onClick={scrollTo('skills')}>{t('header.skills')}</Section>
+            <Section onClick={scrollTo('work')}>{t('header.experience')}</Section>
+
 
             <BurgerSection onClick={() => setOpen(!open)}><FontAwesomeIcon icon={faBars}/></BurgerSection>
             <SwipeableDrawer anchor={'right'} onClose={() => setOpen(false)}
@@ -204,15 +220,15 @@ const Header: React.FC<WithTranslation> = ({t, i18n}) => {
                 <BurgerMenu>
                     <BurgerMenuClose onClick={() => setOpen(false)} />
                     <List component='nav'>
-                        <MenuEntry button>{t('header.home')}</MenuEntry>
+                        <MenuEntry button onClick={scrollToAndClose('home', setOpen)}>{t('header.home')}</MenuEntry>
                         <Divider/>
-                        <MenuEntry button>{t('header.about-me')}</MenuEntry>
+                        <MenuEntry button onClick={scrollToAndClose('about', setOpen)}>{t('header.about-me')}</MenuEntry>
                         <Divider/>
-                        <MenuEntry button>{t('header.projects')}</MenuEntry>
+                        <MenuEntry button onClick={scrollToAndClose('projects', setOpen)}>{t('header.projects')}</MenuEntry>
                         <Divider/>
-                        <MenuEntry button>{t('header.skills')}</MenuEntry>
+                        <MenuEntry button onClick={scrollToAndClose('skills', setOpen)}>{t('header.skills')}</MenuEntry>
                         <Divider/>
-                        <MenuEntry button>{t('header.experience')}</MenuEntry>
+                        <MenuEntry button onClick={scrollToAndClose('work', setOpen)}>{t('header.experience')}</MenuEntry>
                         <Divider/>
                     </List>
                 </BurgerMenu>
