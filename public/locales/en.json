@@ -2,6 +2,7 @@
   "about": {
     "born": "Born and raised in Lennestadt (Germany), a small village in the Sauerland, I started to learn programming at the age of 11 out of curiosity.",
     "education": "I graduated at RWTH Aachen in Computer Science, M. Sc, turning my hobby into a profession. During my studies, I have gained valuable experience in industrial projects.",
+    "header": "ABOUT ME",
     "me": "I'm a passionate and motivated Software Engineer with a strong interest in learning the latest technologies."
   },
   "experience": {
@@ -28,6 +29,7 @@
   },
   "header": {
     "about-me": "About me",
+    "experience": "Experience",
     "home": "Home",
     "projects": "Projects",
     "skills": "Skills"

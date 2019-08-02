@@ -2,7 +2,8 @@
   "about": {
     "born": "Geboren und aufgewachsen in Lennestadt (Deutschland), einem kleinen Dorf im Sauerland, fing ich aus Neugier im Alter von 11 Jahren an, Programmieren zu lernen.",
     "education": "Ich habe an der RWTH Aachen Informatik studiert und mein Hobby zum Beruf gemacht. Dabei habe ich zusätzlich wertvolle Erfahrung in Industrieprojekten gesammelt.",
-    "me": "Ich bin ein leidenschaftlicher und motivierter Software-Ingenieur mit einem starken Interesse am Erlernen der neuesten Technologien."
+    "header": "ÜBER MICH",
+    "me": "Ich bin ein leidenschaftlicher und motivierter Softwareentwickler mit einem starken Interesse am Erlernen der neuesten Technologien."
   },
   "experience": {
     "data": {
@@ -28,9 +29,10 @@
   },
   "header": {
     "about-me": "Über mich",
+    "experience": "Erfahrungen",
     "home": "Home",
     "projects": "Projekte",
-    "skills": "Erfahrung"
+    "skills": "Kompetenzen"
   },
   "projects": {
     "about": "Ich habe über die Jahre eine Vielzahl an Applikationen geschrieben und veröffentlicht. Darunter fallen nicht nur Web Applikationen, sondern auch Android/iOS und .NET Anwendungen.",
@@ -87,7 +89,7 @@
   },
   "skills": {
     "appdev": "Anwendungsentwicklung",
-    "header": "Erfahrungen",
+    "header": "Kompetenzen",
     "other": "Andere",
     "webtech": "Webtechnologien"
   }
