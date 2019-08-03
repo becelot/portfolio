@@ -9,7 +9,7 @@
     "data": {
       "job": "Meine Aufgaben umfassten:<br/>  <ul> \t<li><div>Optimierung von bereits implementieren Data-Mining Algorithmen zur Extraktion von Features aus Bildern</div></li> \t<li><div>Recherche und Implementierung weiterer Feature-Extraktions Algorithmen</div></li> \t<li><div>Vergleich und Bewertung der verschiedenen Extraktionsalgorithmen im Bezug auf die Anwendbarkeit von gängigen Vergleichsmetriken</div></li> </ul>",
       "short_description": "Feature-Extraktion aus der ImageNet-Datenbank",
-      "time": "September 2014 - März 2015 | Aachen",
+      "time": "Oktober 2014 - Februar 2015 | Aachen",
       "title": "Wissenschaftliche Hilfskraft"
     },
     "db": {
@@ -22,7 +22,7 @@
       "header": "Kooperation",
       "job": "Eine Kooperation zwischen der RWTH Aachen und E.ON. Dabei habe ich das Projekt über den gesamten Lifecycle mitbetreut, vom initialen Design bis zur finalen Auslieferung. Meine Aufgaben:<br/> <ul> \t<li><div>Implementierung einer Android Applikation für E.ON Kunden (Java)</li> \t<li><div>Entwurf und Optimierung der Backend Algorithmen und Datenstrukturen (Python)</li> \t<li><div>Entwicklung eines webbasierten User-Interfaces zur Datenvisualisierung und Prozessüberwachung (Angular 6, TypeScript)</li> \t<li><div>Integrationstests mittels Simulator (Java) und WYSIWYG Datengenerator (C#/WPF)</li> \t<li><div>Anpassbares verhalten der Android-Applikation und simulierten Geräten durch eine eigene DSL (MPS)</li> </ul>",
       "short_description": "Entwurf und Implementierung einer Stromausfall-Detektierungssoftware",
-      "time": "April 2017 - Mai 2019 | Aachen",
+      "time": "June 2017 - März 2019 | Aachen",
       "title": "Wissenschaftliche Hilfskraft"
     },
     "header": "Erfahrung"
