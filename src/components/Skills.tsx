@@ -101,12 +101,30 @@ interface TechBannerOptions {
     name: string;
 }
 
+const TechBannerWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 13%;
+  margin-bottom: 25px;
+  min-width: 140px;
+`;
+
+const TechBannerImg = styled.img`
+  height: 100px;
+  margin-bottom: 10px;
+  
+  ${media.lessThan('small')`
+    height: 75px;
+  `}
+`;
+
 const TechBanner: React.FC<TechBannerOptions> = ({logo, name}) => {
     return (
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', flex: '0 0 13%', marginBottom: '25px', minWidth: '140px'}}>
-            <img style={{height: '100px', marginBottom: '10px'}} src={logo} alt={name} />
+        <TechBannerWrapper>
+            <TechBannerImg src={logo} alt={name} />
             {name}
-        </div>
+        </TechBannerWrapper>
     );
 };
 
@@ -126,6 +144,16 @@ const cardItemStyle = css`
     margin: 30px;
 `;
 
+const SkillHeader = styled(Typography).attrs(props => ({variant: 'h4'}))`
+  color: #795548;
+  margin: 2rem;
+  
+  ${media.lessThan('small')`
+    margin: 1rem !important;
+    font-size: 2.8rem !important;
+  `}
+`;
+
 const Skills: React.FC<WithTranslation> = ({t}) => {
     return (
         <Wrapper>
@@ -133,7 +161,7 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
             <Content>
                 <StaggerInView itemStyle={cardItemStyle} animation={SlideInRight} stagger={0.2}>
                 <ProjectCard style={{padding: '20px 20px 0 20px'}}>
-                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>{t('skills.appdev')}</Typography>
+                    <SkillHeader>{t('skills.appdev')}</SkillHeader>
                     <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
                     <Row>
                         <TechBanner logo={'icons/CSharp.svg'} name={'C#'}/>
@@ -148,7 +176,7 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
                     </Row>
                 </ProjectCard>
                 <ProjectCard style={{padding: '20px 20px 0 20px'}}>
-                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>{t('skills.webtech')}</Typography>
+                    <SkillHeader>{t('skills.webtech')}</SkillHeader>
                     <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
                     <Row>
                         <TechBanner logo={'icons/html5.svg'} name={'HTML5'}/>
@@ -166,7 +194,7 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
                     </Row>
                 </ProjectCard>
                 <ProjectCard style={{padding: '20px 20px 0 20px'}}>
-                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>Backend</Typography>
+                    <SkillHeader>Backend</SkillHeader>
                     <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
                     <Row>
                         <TechBanner logo={'icons/flask.png'} name={'Flask'}/>
@@ -180,7 +208,7 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
                     </Row>
                 </ProjectCard>
                 <ProjectCard style={{padding: '20px 20px 0 20px'}}>
-                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>Build-Tools</Typography>
+                    <SkillHeader>Build-Tools</SkillHeader>
                     <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
                     <Row>
                         <TechBanner logo={'icons/webpack.svg'} name={'Webpack'}/>
@@ -189,7 +217,7 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
                     </Row>
                 </ProjectCard>
                 <ProjectCard style={{padding: '20px 20px 0 20px'}}>
-                    <Typography variant={'h4'} style={{color: '#795548', margin: '2rem'}}>{t('skills.other')}</Typography>
+                    <SkillHeader>{t('skills.other')}</SkillHeader>
                     <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
                     <Row>
                         <TechBanner logo={'icons/git.png'} name={'Git'}/>
