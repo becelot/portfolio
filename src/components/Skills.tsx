@@ -118,7 +118,6 @@ export const ProjectCard = withStyles({
         height: '100%',
         '@media (max-width: 768px)': {
             maxWidth: '95vw',
-            minWidth: '95vw'
         }
     }
 })(Card);
@@ -159,6 +158,7 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
                         <TechBanner logo={'icons/ts.png'} name={'TypeScript'}/>
                         <TechBanner logo={'icons/angular.svg'} name={'Angular'}/>
                         <TechBanner logo={'icons/react.svg'} name={'React'}/>
+                        <TechBanner logo={'icons/redux.svg'} name={'Redux'}/>
                         <TechBanner logo={'icons/jquery.svg'} name={'jQuery'}/>
                         <TechBanner logo={'icons/nodejs.svg'} name={'NodeJS'}/>
                         <TechBanner logo={'icons/enyo.png'} name={'Enyo'}/>
