@@ -14,6 +14,7 @@ const DeckHistoryTracker: React.FC<WithTranslation> = ({t}) => {
             technologyBadges={['React', 'Redux', 'HTML', 'CSS', 'Webpack', 'Python', 'Flask', 'PostgreSQL', 'JWT', 'Authorization', 'C#', 'WPF', 'CI/CD', 'Heroku-Cloud']}
             image={'projects/deck-history-tracker.jpg'}
             projectPrefix={'dht'}
+            livePreview={'https://dht.findbecker.de'}
             sourcePreview={[
                 {
                     link: 'https://github.com/becelot/dh-twitch-frontend',
