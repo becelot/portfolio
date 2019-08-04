@@ -146,7 +146,7 @@ const cardItemStyle = css`
 
 const SkillHeader = styled(Typography).attrs(props => ({variant: 'h4'}))`
   color: #795548;
-  margin: 2rem;
+  margin: 1.4rem !important;
   
   ${media.lessThan('small')`
     margin: 1rem !important;
