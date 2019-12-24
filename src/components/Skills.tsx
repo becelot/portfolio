@@ -198,6 +198,7 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
                     <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
                     <Row>
                         <TechBanner logo={'icons/flask.png'} name={'Flask'}/>
+                        <TechBanner logo={'icons/serverless.svg'} name={'Serverless'}/>
                         <TechBanner logo={'icons/play.png'} name={'Play Framework'}/>
                         <TechBanner logo={'icons/expressjs.png'} name={'Express.js'}/>
                         <TechBanner logo={'icons/mysql.svg'} name={'MySQL'}/>
