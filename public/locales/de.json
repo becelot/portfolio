@@ -6,6 +6,13 @@
     "me": "Ich bin ein leidenschaftlicher und motivierter Softwareentwickler mit einem starken Interesse an den neuesten Technologien."
   },
   "experience": {
+    "cancom": {
+      "header": "Cancom",
+      "job": "<ul><li>Entwurf und Implementierung eines Cloud-Metaframeworks</li><li>Aufbau und Evaluierung verschiedener Ansätze für BigData Streaming Ansätze und Analysemöglichkeiten auf Basis von AWS</li></ul>",
+      "short_description": "System Architekt und DevOps für neue Produkte auf Basis von AWS",
+      "time": "Seit Oktober 2019 | Aachen",
+      "title": "Cloud Developer"
+    },
     "data": {
       "job": "Meine Aufgaben umfassten:<br/>  <ul> \t<li><div>Optimierung von bereits implementieren Data-Mining Algorithmen zur Extraktion von Features aus Bildern</div></li> \t<li><div>Recherche und Implementierung weiterer Feature-Extraktions Algorithmen</div></li> \t<li><div>Vergleich und Bewertung der verschiedenen Extraktionsalgorithmen im Bezug auf die Anwendbarkeit von gängigen Vergleichsmetriken</div></li> </ul>",
       "short_description": "Feature-Extraktion aus der ImageNet-Datenbank",

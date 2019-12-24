@@ -6,6 +6,13 @@
     "me": "I'm a passionate and motivated Software Engineer with a strong interest in the latest technologies."
   },
   "experience": {
+    "cancom": {
+      "header": "Cancom",
+      "job": "<ul><li>Design and implement a Cloud meta framework</li><li>Build and evaluate different approaches for BigData ingestion and analytics on AWS</li></ul>",
+      "short_description": "System architect and DevOps for new products based on AWS",
+      "time": "Since October 2019 | Aachen",
+      "title": "Cloud Developer"
+    },
     "data": {
       "job": "My contributions:<br/>  <ul> \t<li><div>Optimization of already implemented data mining algorithms</div></li> \t<li><div>Research and implementation of additional feature extraction algorithms</div></li> \t<li><div>Compare and evaluate the different approaches to the applicability of common comparison metrics</div></li> </ul>",
       "short_description": "Feature extraction from the ImageNet database",

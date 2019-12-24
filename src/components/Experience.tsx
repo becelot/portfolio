@@ -90,6 +90,28 @@ const Experience: React.FC<WithTranslation> = ({t}) => {
                 <StaggerInView animation={SlideInRight} stagger={0.2}>
                     <ProjectCard>
                         <WorkHeader>
+                            <img src={'bg/cancom.svg'} alt={'Cancom Logo'} height={'29px'} style={{margin: '0 30px 0 15px'}} />
+                            {t('experience.cancom.header')}
+                        </WorkHeader>
+
+                        <CardContent>
+                            <Typography variant={'h6'}>
+                                {t('experience.cancom.title')}
+                            </Typography>
+                            <Typography style={{fontStyle: 'italic'}}>
+                                {t('experience.cancom.short_description')}
+                            </Typography> <br/>
+
+                            <Typography dangerouslySetInnerHTML={{__html: t(`experience.cancom.job`)}}></Typography>
+                        </CardContent>
+
+                        <div style={{background: 'rgba(0, 0, 0, 0.03)'}}>
+                            <Typography style={{color: '#666', padding: '20px', fontSize: '0.85em'}}>{t('experience.cancom.time')}</Typography>
+                        </div>
+                    </ProjectCard>
+
+                    <ProjectCard>
+                        <WorkHeader>
                             <img src={'bg/rwth-aachen-university-vector-logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 30px 0 15px'}} />
                             {t('experience.eod.header')}
                             <div style={{flex: '1 1 0'}} />
