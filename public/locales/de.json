@@ -8,7 +8,7 @@
   "experience": {
     "cancom": {
       "header": "Cancom",
-      "job": "<ul><li>Entwurf und Implementierung eines Cloud-Metaframeworks</li><li>Aufbau und Evaluierung verschiedener Ansätze für BigData Streaming Ansätze und Analysemöglichkeiten auf Basis von AWS</li><li>Implementierung eines Datalake zur Datenanalyse, Optimierung und als zentralen Reportinglösung.</li></ul>",
+      "job": "<ul><li>Entwurf und Implementierung eines Frameworks zum standardisierten Kunden-Onboardings auf AWS</li><li>Aufbau und Evaluierung verschiedener Ansätze für BigData Streaming Ansätze und Analysemöglichkeiten auf Basis von AWS</li><li>Analyse und Sichtung der existierenden Datenquellen (Jasper, Excel, ...)</li><li>Anpassungen der existierenden Reportings an neue Kundenanforderungen (Jasper)</li><li>Implementierung eines Datalake zur Datenanalyse, Optimierung und als zentralen Reportinglösung.</li></ul>",
       "short_description": "System Architekt und DevOps für neue Produkte auf Basis von AWS",
       "time": "Seit Oktober 2019 | Aachen",
       "title": "Cloud Developer"

@@ -8,7 +8,7 @@
   "experience": {
     "cancom": {
       "header": "Cancom",
-      "job": "<ul><li>Design and implement a Cloud meta framework</li><li>Build and evaluate different approaches for BigData ingestion and analytics on AWS</li><li>Implement a datalake for data analytics, optimization and as a central reporting solution</li></ul>",
+      "job": "<ul><li>Design and implement a framework for standardized customer onboarding processes on AWS</li><li>Build and evaluate different approaches for BigData ingestion and analytics on AWS</li><li>Analyze and discover existing data sources (Jasper, Excel, ...)</li><li>Adjust the existing reportings to new customer needs (Jasper)</li><li>Implement a datalake for data analytics, optimization and as a central reporting solution</li></ul>",
       "short_description": "System architect and DevOps for new products based on AWS",
       "time": "Since October 2019 | Aachen",
       "title": "Cloud Developer"
