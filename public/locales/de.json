@@ -58,7 +58,7 @@
       "solution_description": "Diese Erweiterung verfolgt kürzlich gespielte Decks und visualisiert sie in einem Overlay, das im Stream des Streamers installiert ist. Benutzer können die neuesten Decklisten durchsuchen und in ihr Spiel importieren, ohne den Stream zu verlassen. Sie können auch sehen, wie sich das Deck im Laufe der Zeit entwickelt hat und welche Entscheidungen ein Streamer getroffen hat. Hauptmerkmale sind:"
     },
     "dslviz": {
-      "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich. Freischaltung: Dezember 2019",
+      "live_nda": "Eine Live Preview ist wegen NDA nicht zugänglich.",
       "name": "DSLViz",
       "problem": "Problem",
       "problem_description": "Domänenspezifische Sprachen (DSL) sind Programmiersprachen, die für eine bestimmte Domäne erstellt wurden. Sie reduzieren das Vokabular von General Purpose Languages und verbessern damit ihre Zugänglichkeit für Endbenutzer, d.H. Benutzer ohne Erfahrung in Programmierung und Informatik. Diese Sprachen müssen dem Benutzer jedoch zunächst noch beigebracht werden.",

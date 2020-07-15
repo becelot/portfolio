@@ -58,7 +58,7 @@
       "solution_description": "This extension tracks recently played decks and visualizes them in an overlay installed into the streamers stream. Users can browse recent decklists and import them into their game, without leaving the stream. They can also see, how the deck evolved over time, and what choices a streamer made. Key features are:"
     },
     "dslviz": {
-      "live_nda": "Live preview is currently under NDA. Available: December 2019",
+      "live_nda": "Live preview is currently under NDA.",
       "name": "DSLViz",
       "problem": "Problem",
       "problem_description": "Domain-specific languages (DSL) are programming languages built for a specific domain. They reduce the vocabulary of general-purpose languages and thus improve their accessibility for end-users, i.e. users without experience in programming and computer science. However, they DSLs suffer from two problems. They don't use the visual capabilities of humans and still have to be tought to the user in the first place.",
