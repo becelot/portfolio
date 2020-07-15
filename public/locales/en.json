@@ -8,7 +8,7 @@
   "experience": {
     "cancom": {
       "header": "Cancom",
-      "job": "<ul><li>Design and implement a Cloud meta framework</li><li>Build and evaluate different approaches for BigData ingestion and analytics on AWS</li></ul>",
+      "job": "<ul><li>Design and implement a Cloud meta framework</li><li>Build and evaluate different approaches for BigData ingestion and analytics on AWS</li><li>Implement a datalake for data analytics, optimization and as a central reporting solution</li></ul>",
       "short_description": "System architect and DevOps for new products based on AWS",
       "time": "Since October 2019 | Aachen",
       "title": "Cloud Developer"
@@ -26,7 +26,7 @@
       "title": "Tutor for Databases course at RWTH Aachen"
     },
     "eod": {
-      "header": "Cooperation",
+      "header": "E.ON",
       "job": "A cooperation between RWTH Aachen University and E.ON. I supported the project throughout the entire lifecycle, from the initial design to the final deployment. My contributions include:<br/> <ul> \t<li><div>Developed Android Application used by E.ON end-users (Java)</div></li> \t<li><div>Optimized and designed backend algorithms and data structures (Python)</div></li>  \t<li><div>Implemented a web-based User-Interface for data visualization and process monitoring (Angular, TypeScript)</div></li>  \t<li><div>Integrationstests, including a simulator (Java) and a WYSIWYG data generator (C#/WPF)</div></li>  \t<li><div>Definition of a DSL that allows to describe the behavior of the Android application and the simulated devices (MPS)</div></li> </ul>",
       "short_description": "Design and implementation of an energy outage detection system",
       "time": "June 2017 - March 2019 | Aachen",

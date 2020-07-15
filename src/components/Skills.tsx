@@ -112,10 +112,12 @@ const TechBannerWrapper = styled.div`
 
 const TechBannerImg = styled.img`
   height: 100px;
+  max-width: 100px;
   margin-bottom: 10px;
   
   ${media.lessThan('small')`
     height: 75px;
+    max-width: 75px;
   `}
 `;
 
@@ -201,6 +203,7 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
                         <TechBanner logo={'icons/serverless.svg'} name={'Serverless'}/>
                         <TechBanner logo={'icons/play.png'} name={'Play Framework'}/>
                         <TechBanner logo={'icons/expressjs.png'} name={'Express.js'}/>
+                        <TechBanner logo={'icons/sqlserver.svg'} name={'SQL Server'}/>
                         <TechBanner logo={'icons/mysql.svg'} name={'MySQL'}/>
                         <TechBanner logo={'icons/postgresql.png'} name={'PostgreSQL'}/>
                         <TechBanner logo={'icons/arangodb.png'} name={'ArangoDB'}/>
@@ -209,9 +212,21 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
                     </Row>
                 </ProjectCard>
                 <ProjectCard style={{padding: '20px 20px 0 20px'}}>
+                    <SkillHeader>Cloud</SkillHeader>
+                    <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
+                    <Row>
+                        <TechBanner logo={'icons/aws.svg'} name={'AWS'}/>
+                        <TechBanner logo={'icons/heroku.svg'} name={'Heroku'}/>
+                        <TechBanner logo={'icons/firebase.svg'} name={'Firebase'}/>
+                        <TechBanner logo={'icons/digital_ocean.svg'} name={'Digital Ocean'}/>
+                    </Row>
+                </ProjectCard>
+                <ProjectCard style={{padding: '20px 20px 0 20px'}}>
                     <SkillHeader>Build-Tools</SkillHeader>
                     <Divider style={{margin: '-5px 0 5px 0', marginBottom: '20px'}}/>
                     <Row>
+                        <TechBanner logo={'icons/jenkins.svg'} name={'Jenkins'}/>
+                        <TechBanner logo={'icons/circleci.svg'} name={'CircleCI'}/>
                         <TechBanner logo={'icons/webpack.svg'} name={'Webpack'}/>
                         <TechBanner logo={'icons/maven.jpg'} name={'Maven'}/>
                         <TechBanner logo={'icons/gradle.svg'} name={'Gradle'}/>
@@ -223,11 +238,9 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
                     <Row>
                         <TechBanner logo={'icons/git.png'} name={'Git'}/>
                         <TechBanner logo={'icons/docker.svg'} name={'Docker'}/>
-                        <TechBanner logo={'icons/heroku.svg'} name={'Heroku'}/>
-                        <TechBanner logo={'icons/firebase.svg'} name={'Firebase'}/>
-                        <TechBanner logo={'icons/circleci.svg'} name={'CircleCI'}/>
+                        <TechBanner logo={'icons/powershell.svg'} name={'Powershell'}/>
+                        <TechBanner logo={'icons/jasper.webp'} name={'JasperReporting'}/>
                         <TechBanner logo={'icons/acc.svg'} name={'Adobe Suite'}/>
-
                     </Row>
                 </ProjectCard>
                 </StaggerInView>

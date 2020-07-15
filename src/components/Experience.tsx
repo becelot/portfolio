@@ -112,10 +112,11 @@ const Experience: React.FC<WithTranslation> = ({t}) => {
 
                     <ProjectCard>
                         <WorkHeader>
-                            <img src={'bg/rwth-aachen-university-vector-logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 30px 0 15px'}} />
+                            <img src={'bg/EON_Logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 30px 0 15px'}}  />
                             {t('experience.eod.header')}
                             <div style={{flex: '1 1 0'}} />
-                            <img src={'bg/EON_Logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 15px', float: 'right'}} />
+                            <img src={'bg/rwth-aachen-university-vector-logo.svg'} alt={'RWTH Logo'} height={'29px'} style={{margin: '0 15px', float: 'right'}}  />
+
                         </WorkHeader>
                         <Divider style={{margin: '-5px 0 0 0'}}/>
 

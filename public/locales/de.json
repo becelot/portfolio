@@ -8,7 +8,7 @@
   "experience": {
     "cancom": {
       "header": "Cancom",
-      "job": "<ul><li>Entwurf und Implementierung eines Cloud-Metaframeworks</li><li>Aufbau und Evaluierung verschiedener Ansätze für BigData Streaming Ansätze und Analysemöglichkeiten auf Basis von AWS</li></ul>",
+      "job": "<ul><li>Entwurf und Implementierung eines Cloud-Metaframeworks</li><li>Aufbau und Evaluierung verschiedener Ansätze für BigData Streaming Ansätze und Analysemöglichkeiten auf Basis von AWS</li><li>Implementierung eines Datalake zur Datenanalyse, Optimierung und als zentralen Reportinglösung.</li></ul>",
       "short_description": "System Architekt und DevOps für neue Produkte auf Basis von AWS",
       "time": "Seit Oktober 2019 | Aachen",
       "title": "Cloud Developer"
@@ -26,7 +26,7 @@
       "title": "Tutor - Datenbanken Vorlesung RWTH Aachen"
     },
     "eod": {
-      "header": "Kooperation",
+      "header": "E.ON",
       "job": "Eine Kooperation zwischen der RWTH Aachen und E.ON. Dabei habe ich das Projekt über den gesamten Lifecycle mitbetreut, vom initialen Design bis zur finalen Auslieferung. Meine Aufgaben:<br/> <ul> \t<li><div>Implementierung einer Android Applikation für E.ON Kunden (Java)</li> \t<li><div>Entwurf und Optimierung der Backend Algorithmen und Datenstrukturen (Python)</li> \t<li><div>Entwicklung eines webbasierten User-Interfaces zur Datenvisualisierung und Prozessüberwachung (Angular 6, TypeScript)</li> \t<li><div>Integrationstests mittels Simulator (Java) und WYSIWYG Datengenerator (C#/WPF)</li> \t<li><div>Anpassbares verhalten der Android-Applikation und simulierten Geräten durch eine eigene DSL (MPS)</li> </ul>",
       "short_description": "Entwurf und Implementierung einer Stromausfall-Detektierungssoftware",
       "time": "Juni 2017 - März 2019 | Aachen",
