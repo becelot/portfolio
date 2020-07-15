@@ -240,6 +240,7 @@ const Skills: React.FC<WithTranslation> = ({t}) => {
                         <TechBanner logo={'icons/docker.svg'} name={'Docker'}/>
                         <TechBanner logo={'icons/powershell.svg'} name={'Powershell'}/>
                         <TechBanner logo={'icons/jasper.webp'} name={'JasperReporting'}/>
+                        <TechBanner logo={'icons/mps.svg'} name={'Jetbrains MPS'}/>
                         <TechBanner logo={'icons/acc.svg'} name={'Adobe Suite'}/>
                     </Row>
                 </ProjectCard>
