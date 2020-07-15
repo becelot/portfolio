@@ -71,7 +71,7 @@
       "solution-3": "No user-installation needed. Just run it in the browser!",
       "solution-4": "Plugin-System: Extend the expressiveness of the framework",
       "solution_description": "DSLViz is a framework that enables developers to implement the well-known AST datastructure used in DSL development, but represented in the form of visual web component. Simultaneously, it allows to specify, how users can interact with AST nodes. This information is aggregated by the framework, allowing end-users to create models for the DSL visually, rather than relying on the user to learn the abstract syntax of the programming language. Key features are:",
-      "source_nda": "Source Code is currently under NDA. Available: December 2019"
+      "source_nda": "Source Code is currently under NDA."
     },
     "live_nda": "Live preview is currently under NDA.",
     "mensa": {
